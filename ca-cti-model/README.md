@@ -1,149 +1,140 @@
-# lab7-mongodb — MongoDB Labs 7.1 and 7.2
+CA CTI Model — AI-Powered Cyber Threat Intelligence Assistant
+Final Assessment: Building and Deploying an LLM/SLM-Backed Chat Application on MongoDB
+Course: 23CSE528 — NoSQL Database using MongoDB
+Repository: https://github.com/gouravramgopidesh/ca-cti-model
+1. Project overview
+CA CTI Model is a Dockerized cyber threat intelligence (CTI) application integrating an Express-powered web dashboard, a Python FastAPI chatbot, MongoDB, and a locally hosted Ollama language model. It supports ordinary conversational questions, questions about MongoDB Labs 1–18, and evidence-backed questions about locally stored threat-intelligence articles. The application is designed for educational demonstration rather than autonomous security operations.
 
-lab7-mongodb is a MongoDB learning project with an Express API and browser dashboard. It demonstrates threat-intelligence feed ingestion, search and analyst classification, document modeling with `$bsonSize`, and WiredTiger working-set monitoring.
+The chatbot provides platform-aware security guidance and helps explain the distinction between anticipated, active, evolving, and resolved threats. Threat reports must still be validated against original advisories: an ingested news article does not automatically prove that an attack is active.
+2. Main features
+- CTI dashboard: Browse, search, filter, and review stored security articles and their sources.
+- AI assistant: General-purpose chat using the local qwen2.5:3b model through Ollama; no hosted LLM API key required.
+- MongoDB-backed RAG: Ingest source text and retrieve relevant chunks for CTI and course questions.
+- Conversation history: Store user and assistant messages in MongoDB using session identifiers and timestamps.
+- Labs 1–18 overview: A dedicated website section with summaries and available source material.
+- Platform-aware advice: Discuss Windows, Linux, macOS, Android, iOS, and other platforms when supported by available information.
+- Containerized stack: Independent website, chatbot backend, MongoDB, and Ollama services, with health checks and persistent volumes.
+Scope note: The website can show an overview of all 18 labs, but its detailed RAG coverage depends on which original lab documents have been supplied and ingested. The repository does not necessarily contain every separate Lab 1–18 project.
 
-## Quick start — Windows final submission
+3. Architecture
+Browser — http://localhost:3019
+      |
+      v
+Express web app (app container; port 3000 internally)
+      |                  \
+      | CTI API           \ same-origin chatbot API
+      v                    v
+MongoDB (mongo) <----> FastAPI (chatbot) ----> Ollama (ollama)
+  |  CTI data              |                    |
+  |  knowledge chunks      |                    +-- qwen2.5:3b
+  |  chat sessions         +-- embedding-based retrieval
+  +-- metrics                                 +-- all-minilm
+Docker Desktop contains a separate Compose project called ca-cti-model with four services:
+Service	Purpose	Host access
+app	CTI website and integrated assistant interface	http://localhost:3019
+chatbot	FastAPI RAG and conversation backend	Internal port 8000
+mongo	CTI collections, knowledge chunks and chat history	127.0.0.1:27029
+ollama	Local language model and embedding model	Internal port 11434
 
-Extract the ZIP, open Docker Desktop, and double-click `START-WINDOWS.bat`. The final package uses a separately named Compose project and initializes a **new** MongoDB volume from the included dump (including the working set). Existing volumes are never overwritten. Open `http://localhost:3000`. If those host ports are already occupied, stop the previous project or configure different ports in `.env` before running. The Windows launcher opens port 3000 by default.
 
-Double-click `RUN-LABS.bat` to run Lab 7.1 and the two-sample Lab 7.2 exercise. New evidence is written directly into the host `evidence/` folder. For continuous monitoring run `docker compose exec app npm run working-set`. This regenerates only the workingSet test collection. Stop with Ctrl+C.
+The original Lab 7 deployment remains separate: lab7-mongodb serves its original CTI website at http://localhost:3000, while ca-cti-model serves the CTI website with the chatbot and Labs section at http://localhost:3019.
+4. Requirements
+- Windows 10/11 with Docker Desktop and Docker Compose enabled.
+- Sufficient free RAM and disk space for MongoDB, the Node/Python images, and Ollama model weights.
+- Internet access for the first download of Docker images, local models, and optional live CTI feed synchronization.
+- A modern browser for the CTI interface.
+The LLM runs inside the Ollama Docker container; installing Ollama separately on Windows is not required.
+5. Getting started — Windows
+1. Open Docker Desktop.
+2. Open the ca-cti-model project folder in VS Code or PowerShell. Make sure the directory contains docker-compose.yml.
+3. Run the following commands:
+cd "C:\mongodb-projects\ca-cti-model"
+docker compose -p ca-cti-model up -d --build
+docker compose -p ca-cti-model exec -T ollama ollama pull qwen2.5:3b
+docker compose -p ca-cti-model exec -T ollama ollama pull all-minilm
+docker compose -p ca-cti-model exec -T chatbot python ingest.py
+docker compose -p ca-cti-model ps
+Alternatively, double-click START-AI-WINDOWS.bat, which performs startup, model downloads, and knowledge ingestion.
+4. Open the website and explore:
+   - Dashboard: http://localhost:3019
+   - AI assistant: http://localhost:3019/#assistant
+   - Labs 1–18: http://localhost:3019/#labs18
+5. In MongoDB Compass, connect to mongodb://127.0.0.1:27029 and inspect database lab7-mongodb.
+The first start may initialize the CA project's own MongoDB volume from the bundled Lab 7 database archive. It does not automatically synchronize later edits made to the separate Lab 7 deployment.
+Verify the running system
+docker compose -p ca-cti-model ps
+docker compose -p ca-cti-model exec -T chatbot python -c "from urllib.request import urlopen; print(urlopen('http://127.0.0.1:8000/health',timeout=10).read().decode())"
+Or run VERIFY-AND-INGEST-WINDOWS.bat, which rebuilds the stack if needed, pulls the models, ingests knowledge, checks readiness and executes basic chatbot tests.
+6. MongoDB data and RAG workflow
+1. Ingestion: chatbot/ingest.py reads supplied knowledge files and selected local CTI records, splits content into chunks, computes embeddings and stores them in MongoDB.
+2. Retrieval: For a CTI or Lab question, the backend searches stored knowledge for relevant evidence.
+3. Generation: Relevant context is passed to the Ollama language model to produce an answer.
+4. Conversation storage: User and assistant exchanges are written to chat_sessions for session-based follow-up and review.
+The MongoDB database includes collections such as articles, sources, indicators, annualReports, chat_knowledge, chat_sessions, and chat_metrics (depending on startup and ingestion state).
 
-`STOP-WINDOWS.bat` stops this project without deleting its database. See `SUBMISSION-CHECKLIST.md` and `LAB71-EXTENSION.md` for the final requirements mapping and experiment.
+Vector-search distinction: In the supplied local MongoDB Community Docker configuration, embeddings are persisted in MongoDB, but retrieval may use application-side similarity calculations. Do not describe this setup as native indexed MongoDB $vectorSearch unless you configure and verify a supported deployment such as MongoDB Atlas / Atlas Local.
+7. Labs 1–18 and assessment integration
+The Labs 1–18 website section summarizes the coursework and links to information available within the CA project. Main topics include foundational NoSQL concepts; MongoDB connectivity, CRUD, schema design, queries, aggregation and indexing; replica sets, failover and sharding; database security and operational monitoring; application-oriented MongoDB use; vector search and retrieval-augmented generation; and the final comparative capstone.
 
-## Data provenance and limitations
+The final assessment particularly draws on:
+Prior exercise	Concept used in CA CTI Model
+2	MongoDB setup and client connectivity
+4–6	Queries, aggregation and indexing principles
+12	Environment-variable configuration and security practices
+13	Docker Compose deployment and health checks
+14	Monitoring and operational readiness
+17	Embeddings, vector retrieval and RAG
 
-- Live article records are imported from public RSS feed URLs listed in the client source of [CTI Digest](https://ctidigest.com/). The project reads those publisher feeds directly; CTI Digest does not expose a documented API used here. Articles are stored with their original publisher URL, an ingestion source, and `isTrainingData: false`.
-- Article severity/category use simple keyword heuristics and confidence is a fixed placeholder (55), not publisher-provided or verified threat verdicts. An analyst must review each item before acting on it.
-- Bundled example articles and indicators are synthetic and visibly labeled `SAMPLE`. They are not actionable IOCs or claims about real campaigns. CTI Digest's RSS articles generally do not provide a normalized IOC dataset.
-- Annual report metadata is discovered from the public [Awesome Annual Security Reports](https://github.com/jacobdjwilson/awesome-annual-security-reports/) repository file tree.
-- Feed availability, RSS formats, and upstream content can change. A failed source is reported; existing database data is retained.
 
-## Run locally
+Detailed explanations require the corresponding source documents to be present in chatbot/knowledge/ and re-ingested. The website's lab summaries are not equivalent to including all original lab project directories.
+8. Demonstration questions
+Use New conversation to test independent topics; choose the appropriate chat mode if the automatic mode picks the wrong context.
+Test	Example question	What to check
+General chat	What is artificial intelligence?	Relevant explanation, not unrelated previous answers
+Follow-up	What is a MongoDB replica set? then Explain that more simply.	Uses the preceding topic
+Local CTI	What are the five latest articles stored in MongoDB?	Uses local records and differentiates reports from confirmed active threats
+Lab material	Explain Lab 17 and MongoDB vector search.	Explains course content and identifies retrieved evidence when available
+Platform advice	How can I protect Windows from ransomware?	Prevention, detection and recovery guidance
+Threat lifecycle	Explain anticipated, active, evolving and resolved threats.	Correctly distinguishes four threat states
+Memory	Ask a question, refresh/reopen the session, and inspect MongoDB chat_sessions	Checks message persistence; explicit fact memorization is a separate feature
 
-Requirements: Node.js 18+ and MongoDB 6+ running locally, or an accessible MongoDB URI.
 
-```powershell
-npm install
-Copy-Item .env.example .env
-npm run seed
-npm start
-```
+Known limitation: A small local language model can produce inaccurate, repetitive or unsupported answers. RAG improves access to project sources but does not guarantee correctness or live web knowledge. Always verify critical answers against the underlying records and publisher advisories.
+9. Project structure
+ca-cti-model/
+├── backend/                  Express routes, feeds, CTI ingestion and analytics
+├── chatbot/
+│   ├── main.py               FastAPI chatbot implementation
+│   ├── ingest.py             Knowledge ingestion
+│   ├── knowledge/             Available Lab and CTI source texts
+│   ├── requirements.txt
+│   └── Dockerfile
+├── frontend/                 CTI website, assistant UI and Labs 1–18 page
+├── labs/                     Lab 7 scripts and database checks
+├── evidence/                 Report and experiment evidence
+├── database-dump/            Bundled Lab 7 restore archive (review before sharing)
+├── Dockerfile                Express app image
+├── docker-compose.yml        Four-service Docker application
+├── .env.example              Example host-side configuration (no credentials)
+├── START-AI-WINDOWS.bat      Start services, pull models and ingest documents
+├── VERIFY-AND-INGEST-WINDOWS.bat
+├── RUN-AI-CHECKS.bat         Chatbot checks
+└── README.md                 Project documentation
+10. Security and limitations
+- Use .env or a proper secret manager for credentials. Never commit .env, API keys, tokens or passwords.
+- This is an educational local deployment; it is not hardened for unrestricted public hosting.
+- HTTP service ports are bound to the loopback interface in the provided Compose file. Use HTTPS, authentication, access control, robust rate limiting, audit logging, and a secrets manager for production exposure.
+- Do not treat heuristic severity labels or model-generated classifications as confirmed threat intelligence.
+- The app does not autonomously scan devices, exploit vulnerabilities or apply system fixes.
+- Review database-dump/, evidence/, and old backup files before publishing the repository publicly.
+11. Stopping safely
+# Stop just the CA project containers (data is retained)
+docker compose -p ca-cti-model stop
 
-Open <http://localhost:3000>. Do not open `frontend/index.html` directly: the frontend and API use root-relative URLs that require the Express server.
+# Or remove CA containers/networks while retaining named volumes
+docker compose -p ca-cti-model down
+Never use docker compose down -v unless you intentionally want to delete this project's MongoDB and Ollama volumes. Do not delete the separate original lab7-mongodb project to stop the CA application.
+12. Submission
+Project repository: https://github.com/gouravramgopidesh/ca-cti-model
 
-`npm run seed` **recreates the demo collections** (`articles`, `sources`, `indicators`, and `annualReports`) and then attempts a live sync. Back up any data you need first. To add newly available RSS articles and annual reports without reseeding, run `npm run sync-cti`, or use **Sync intelligence** in the dashboard. The app also attempts a sync after it starts. Set `MONGODB_URI`, `DB_NAME`, and `PORT` in `.env` as needed. Live sync requires outbound HTTPS access from the machine running Node.
-
-## Run with Docker and connect with MongoDB Compass
-
-Requirements: Docker Desktop with Docker Compose enabled.
-
-From the project directory:
-
-```powershell
-docker compose up --build -d
-docker compose ps
-```
-
-Open <http://localhost:3000>. The first launch builds the Node app image, starts MongoDB, waits for MongoDB's health check, and restores the bundled archive into a new volume before the app creates indexes and syncs live data. The restore does not repeat on later starts. MongoDB data persists in the named `mongo_data` volume across container restarts.
-
-In MongoDB Compass, create a new connection using:
-
-```text
-mongodb://localhost:27018
-```
-
-Open the `lab7-mongodb` database and its `articles`, `sources`, `indicators`, and `annualReports` collections. Port `27018` is intentionally used on the host to avoid colliding with a MongoDB installation already listening on `27017`; inside Compose, the app connects to `mongo:27017`. To use another host port, set `MONGODB_PORT` in `.env` before starting.
-
-Useful Docker commands:
-
-```powershell
-docker compose logs -f app
-docker compose logs -f mongo
-docker compose exec app npm run sync-cti
-docker compose exec app node backend/working-set.js --once
-docker compose exec app npm run working-set
-docker compose down
-```
-
-The one-shot working-set mode inserts the dataset and emits two samples approximately 10 seconds apart, waits for its initial report-discovery request to finish, then exits; use it for a quick lab run. The regular working-set command runs continuously; stop it with Ctrl+C. `docker compose down` stops containers but keeps database contents. **Do not use `docker compose down -v` unless you intentionally want to permanently delete the MongoDB volume and all its data.** The sample Compose database has no authentication and publishes a host port, so use it only on a trusted local machine; do not expose it to a network or use it for production.
-
-## Lab 7.1 — Analyze the schema
-
-### Collections and relationship choices
-
-| Relationship / fields | Design | Why |
-| --- | --- | --- |
-| `articles.sourceId` → `sources.name` | Reference to the canonical source catalog | Many articles can come from one publisher; canonical URL/type/reliability metadata is managed in one place. |
-| `articles.source` | Embedded publisher snapshot | The feed needs publisher name and URL with the article. This avoids a lookup to render article provenance, at the cost of duplicate, potentially stale publisher metadata. |
-| `articles.sourceAssessment` | Embedded analyst verdict | The bounded `verdict` and review time are read with the article, so feed triage does not need an assessment lookup. This verdict assesses the reported activity, not whether the publisher itself is malicious. |
-| `indicators` → article/source provenance | Reference through source name; extend to article ObjectIds in production | Indicators can recur across many reports and need independent search/update. A bounded `indicatorSnapshots: [{value, kind, confidence}]` embedded in each article makes article detail reads faster, but complicates cross-article IOC search and consistency. |
-| `annualReports` → publisher | Publisher name/URL snapshot | The external index supplies report and publisher data together. A separate publisher collection would reduce repetition but require lookups. |
-| `articles.tags`, severity, category, classification | Embedded scalars and bounded arrays | These values are small and normally read with the article. |
-
-The analyst control on each feed card cycles the embedded `sourceAssessment.verdict` and the compatible `classification` field through `confirmed-threat`, `benign`, and `needs-review`. This is an assessment of the report's threat activity; it does **not** declare the publisher to be a threat actor or judge publisher trustworthiness. The canonical publisher relationship remains referenced while a small publisher snapshot is embedded on each article.
-
-### Measure document sizes
-
-The live Lab panel aggregates `$bsonSize` for `articles`, `sources`, `indicators`, and `annualReports`, showing average/minimum/maximum size and comparing the largest measured document with 16 MiB (16,777,216 bytes). Run the same check in `mongosh`:
-
-```javascript
-db.articles.aggregate([
-  { $project: { bytes: { $bsonSize: "$$ROOT" } } },
-  { $group: {
-      _id: null,
-      count: { $sum: 1 },
-      averageBytes: { $avg: "$bytes" },
-      maxBytes: { $max: "$bytes" },
-      minBytes: { $min: "$bytes" }
-  } }
-])
-```
-
-Repeat for each collection to verify no measured document approaches MongoDB's 16 MiB BSON document limit. The dashboard uses live database measurements rather than hard-coded size results.
-
-## Lab 7.2 — Working set and WiredTiger
-
-Run:
-
-```powershell
-npm run working-set
-```
-
-The script saves JSONL evidence automatically and recreates only the `workingSet` collection, inserts 100,000 documents with an approximately 1,900-character synthetic payload plus a reference to annual-report metadata when available, measures its actual BSON bytes, creates a `seq` index, and performs 1,000 random indexed reads per sample. It prints a sample about every 10 seconds and syncs CTI RSS articles plus annual reports every 10 minutes by default (`REPORT_SYNC_INTERVAL_MS` can change the sync interval).
-
-The output includes:
-
-- `bytes currently in the cache` and `maximum bytes configured` from `db.serverStatus().wiredTiger.cache`.
-- The BSON size of the test collection and an **estimated cache-fit percentage** based on configured WiredTiger capacity versus collection BSON size.
-- Deltas for pages read into cache and pages requested from cache, plus a **teaching approximation** of hit percentage: `1 - (delta pages read into cache / delta pages requested from cache)`.
-
-WiredTiger counters and cache occupancy are server-wide, not collection-specific. The fit percentage is a capacity estimate, not a direct measurement of what fraction of this collection is resident in memory. Indexes, other collections, allocator overhead, compression, and other databases also affect actual cache usage. A user with `serverStatus` privilege is required. Stop the script with Ctrl+C.
-
-## Search, classification, and API
-
-- `GET /api/articles?q=&severity=&category=` — search and filter the feed.
-- `PATCH /api/articles/:id/classification` — save the analyst threat verdict, including its embedded `sourceAssessment`.
-- `GET /api/sources`, `GET /api/indicators?q=` — source catalog and IOC table.
-- `GET /api/lab/schema`, `GET /api/lab/cache` — BSON size and WiredTiger metrics.
-- `POST /api/intelligence/sync` — import unseen CTI RSS articles and annual security reports.
-- `GET /api/reports`, `POST /api/reports/discover` — annual report library and standalone report discovery.
-- `GET /api/health` — database connection status.
-
-## Project layout
-
-```text
-frontend/                  Dashboard HTML, CSS, and JavaScript
-backend/server.js          Express API and dashboard server
-backend/data.js            Clearly labeled synthetic training records
-backend/feeds.js            RSS endpoints listed by CTI Digest
-backend/intelligence.js    RSS/report importing and MongoDB upserts
-backend/seed.js             Demo data and index setup
-backend/sync.js             Non-destructive live-data sync command
-backend/working-set.js      Lab 7.2 generator, cache monitor, and periodic report sync
-Dockerfile                 Node web app image
-docker-compose.yml         MongoDB and app services with persistent storage
-.dockerignore              Excludes local secrets and dependencies from image builds
-lab7-mongodb-report.docx  Word-format lab report with measured results and run instructions
-```
-
-The submission ZIP includes the original Word report alongside the source project. Its collection counts and cache measurements are a snapshot from report preparation; refresh them after changing or re-syncing the dataset.
+The assignment requests a private GitHub repository, a faculty collaborator invitation, and a PDF containing the repository URL. Check with the instructor before using a public repository. Include a working source checkout, Docker instructions, and actual screenshots/evidence of the tested features. Avoid publishing private data or credentials.
