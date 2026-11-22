@@ -1,0 +1,71 @@
+{
+    "collections":  {
+                        "articles":  {
+                                         "_id":  null,
+                                         "count":  414,
+                                         "averageBytes":  1135.9396135265702,
+                                         "maxBytes":  2605,
+                                         "minBytes":  654
+                                     },
+                        "sources":  {
+                                        "_id":  null,
+                                        "count":  32,
+                                        "averageBytes":  129.125,
+                                        "maxBytes":  177,
+                                        "minBytes":  105
+                                    },
+                        "indicators":  {
+                                           "_id":  null,
+                                           "count":  1,
+                                           "averageBytes":  189,
+                                           "maxBytes":  189,
+                                           "minBytes":  189
+                                       },
+                        "annualReports":  {
+                                              "_id":  null,
+                                              "count":  1192,
+                                              "averageBytes":  519.1610738255033,
+                                              "maxBytes":  672,
+                                              "minBytes":  453
+                                          }
+                    },
+    "articles":  {
+                     "_id":  null,
+                     "count":  414,
+                     "averageBytes":  1135.9396135265702,
+                     "maxBytes":  2605,
+                     "minBytes":  654
+                 },
+    "sources":  32,
+    "indicators":  1,
+    "annualReports":  1192,
+    "limitBytes":  16777216,
+    "largestDocumentBytes":  2605,
+    "percentOfLimit":  0.0155,
+    "relationships":  [
+                          {
+                              "name":  "Article → source",
+                              "kind":  "reference plus embedded snapshot",
+                              "reason":  "The source catalog is canonical; each article also embeds the small publisher snapshot used to render it without a lookup.",
+                              "alternative":  "Remove the snapshot and fetch the publisher record by sourceId at read time, reducing duplication but adding a lookup."
+                          },
+                          {
+                              "name":  "Article → threat assessment",
+                              "kind":  "embedded",
+                              "reason":  "The analyst verdict is bounded and consumed with the article, so it lives in sourceAssessment on that article.",
+                              "alternative":  "A separate assessment collection could provide a central history, but displaying the verdict would require another query or lookup."
+                          },
+                          {
+                              "name":  "Indicators → article/source provenance",
+                              "kind":  "reference",
+                              "reason":  "An indicator can recur in many reports and is independently searchable and updateable.",
+                              "alternative":  "Embed a bounded indicator snapshot on each article; this helps article detail reads but makes cross-report IOC search and consistency harder."
+                          },
+                          {
+                              "name":  "Annual reports → publisher",
+                              "kind":  "publisher snapshot",
+                              "reason":  "The source list is externally maintained and reports are stored with their publisher name and URL.",
+                              "alternative":  "A separate publisher collection avoids repeating publisher metadata but requires lookups."
+                          }
+                      ]
+}

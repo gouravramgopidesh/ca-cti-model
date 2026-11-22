@@ -1,0 +1,21 @@
+{
+  "name": "lab7-mongodb",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cyber threat intelligence platform and MongoDB Lab 7 activities",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node --watch backend/server.js",
+    "seed": "node backend/seed.js",
+    "sync-cti": "node backend/sync.js",
+    "working-set": "node backend/working-set.js",
+    "lab71": "node backend/lab71-compare.js",
+    "lab72": "node backend/working-set.js --once"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongodb": "^6.12.0",
+    "rss-parser": "^3.13.0"
+  }
+}

@@ -1,0 +1,1 @@
+Place genuine lab material in lab01/ through lab18/ (Markdown, TXT, PDF). Only supplied files are ingested; no lab material is fabricated. Run `docker compose exec chatbot python ingest.py`. Existing Lab 7 records are ingested automatically.

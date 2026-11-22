@@ -1,0 +1,81 @@
+name: ca-cti-model
+services:
+  chatbot:
+    build: ./chatbot
+    restart: unless-stopped
+    environment:
+      MONGO_URI: mongodb://mongo:27017
+      MONGO_DB: lab7-mongodb
+      OLLAMA_URL: http://ollama:11434
+      CHAT_MODEL: ${CHAT_MODEL:-qwen2.5:3b}
+      EMBED_MODEL: ${EMBED_MODEL:-all-minilm}
+      VECTOR_INDEX_ENABLED: ${VECTOR_INDEX_ENABLED:-false}
+    volumes:
+      - ./chatbot/knowledge:/app/knowledge:ro
+    depends_on:
+      mongo:
+        condition: service_healthy
+      ollama:
+        condition: service_started
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health',timeout=3)"]
+      interval: 15s
+      timeout: 5s
+      retries: 8
+      start_period: 15s
+
+  ollama:
+    image: ollama/ollama:latest
+    restart: unless-stopped
+    volumes:
+      - ollama_models:/root/.ollama
+
+  mongo:
+    image: mongo:8.0
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${MONGODB_PORT:-27029}:27017"
+    volumes:
+      - mongo_data:/data/db
+      - ./database-dump/lab7.archive.gz:/seed/lab7.archive.gz:ro
+      - ./labs/01-restore.sh:/docker-entrypoint-initdb.d/01-restore.sh:ro
+    healthcheck:
+      test: ["CMD", "mongosh", "--host", "mongo", "--quiet", "--eval", "quit(db.adminCommand('ping').ok === 1 ? 0 : 1)"]
+      interval: 5s
+      timeout: 5s
+      retries: 60
+      start_period: 30s
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      PORT: 3000
+      MONGODB_URI: mongodb://mongo:27017
+      DB_NAME: lab7-mongodb
+      WORKING_SET_SIZE: ${WORKING_SET_SIZE:-100000}
+      REPORT_SYNC_INTERVAL_MS: ${REPORT_SYNC_INTERVAL_MS:-600000}
+      CHATBOT_INTERNAL_URL: http://chatbot:8000
+    ports:
+      - "127.0.0.1:${PORT:-3019}:3000"
+    volumes:
+      - ./evidence:/app/evidence
+    depends_on:
+      mongo:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - -e
+        - "fetch('http://127.0.0.1:3000/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
+volumes:
+  ollama_models:
+  mongo_data:

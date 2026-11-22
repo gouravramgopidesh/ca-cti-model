@@ -1,0 +1,257 @@
+[
+  {
+    "number": 1,
+    "title": "NoSQL database families",
+    "summary": "Classify database products and map application workloads, including CTI, to document, key-value, wide-column, and graph models.",
+    "source_available": true,
+    "source_files": [
+      "source-README.md"
+    ],
+    "evidence_status": "Project README available",
+    "topics": [
+      "Classify database products and map application workloads",
+      "including CTI",
+      "to document"
+    ]
+  },
+  {
+    "number": 2,
+    "title": "MongoDB setup and CRUD",
+    "summary": "Verify local/Atlas connectivity, compare server versions, and perform bookstore CRUD and historical price updates.",
+    "source_available": true,
+    "source_files": [
+      "source-README.md"
+    ],
+    "evidence_status": "Project README available",
+    "topics": [
+      "Verify local/Atlas connectivity",
+      "compare server versions",
+      "and perform bookstore CRUD and historical price updates."
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Embedded and referenced schemas",
+    "summary": "Embed course rosters and schedules, reference prerequisites, and compare blog comment references versus embedding.",
+    "source_available": true,
+    "source_files": [
+      "source-README.md"
+    ],
+    "evidence_status": "Project README available",
+    "topics": [
+      "Embed course rosters and schedules",
+      "reference prerequisites",
+      "and compare blog comment references versus embedding."
+    ]
+  },
+  {
+    "number": 4,
+    "title": "MongoDB queries",
+    "summary": "Course exercise covering MongoDB querying; exact project output not yet supplied.",
+    "source_available": false,
+    "source_files": [],
+    "evidence_status": "Source files not included; summary only",
+    "topics": [
+      "Course exercise covering MongoDB querying; exact project output not yet supplied."
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Aggregation",
+    "summary": "Course exercise covering MongoDB aggregation; exact project output not yet supplied.",
+    "source_available": false,
+    "source_files": [],
+    "evidence_status": "Source files not included; summary only",
+    "topics": [
+      "Course exercise covering MongoDB aggregation; exact project output not yet supplied."
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Indexes and data access",
+    "summary": "Course exercise covering MongoDB indexing and query evaluation; exact project output not yet supplied.",
+    "source_available": false,
+    "source_files": [],
+    "evidence_status": "Source files not included; summary only",
+    "topics": [
+      "Course exercise covering MongoDB indexing and query evaluation; exact project output not yet supplied."
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Production schema and working set",
+    "summary": "CTI Digest dashboard: real-source aggregation, embedded/reference schema trade-offs, $bsonSize, and WiredTiger working-set analysis.",
+    "source_available": true,
+    "source_files": [
+      "source-README.md"
+    ],
+    "evidence_status": "Project README available",
+    "topics": [
+      "CTI Digest dashboard: real-source aggregation",
+      "embedded/reference schema trade-offs",
+      "$bsonSize"
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Replication and replica sets",
+    "summary": "MongoDB replica set topology, replication monitoring, and primary election behavior.",
+    "source_available": true,
+    "source_files": [
+      "source-README.md"
+    ],
+    "evidence_status": "Project README available",
+    "topics": [
+      "MongoDB replica set topology",
+      "replication monitoring",
+      "and primary election behavior."
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Replication and failover",
+    "summary": "Replica set validation and election/failover experiments based on the lab project.",
+    "source_available": true,
+    "source_files": [
+      "source-README.md"
+    ],
+    "evidence_status": "Project README available",
+    "topics": [
+      "Replica set validation and election/failover experiments based on the lab project."
+    ]
+  },
+  {
+    "number": 10,
+    "title": "Transactions and durability",
+    "summary": "MongoDB transactions, atomic updates, journaling, and persistence guarantees.",
+    "source_available": true,
+    "source_files": [
+      "source-README.md"
+    ],
+    "evidence_status": "Project README available",
+    "topics": [
+      "MongoDB transactions",
+      "atomic updates",
+      "journaling"
+    ]
+  },
+  {
+    "number": 11,
+    "title": "Sharding and hotspot analysis",
+    "summary": "Shard-key choices, distribution analysis, and hotspot evaluation.",
+    "source_available": true,
+    "source_files": [
+      "source-README.md"
+    ],
+    "evidence_status": "Project README available",
+    "topics": [
+      "Shard-key choices",
+      "distribution analysis",
+      "and hotspot evaluation."
+    ]
+  },
+  {
+    "number": 12,
+    "title": "MongoDB security",
+    "summary": "Database security controls including role-based permissions, credentials, and encrypted transport.",
+    "source_available": true,
+    "source_files": [
+      "source-README.md"
+    ],
+    "evidence_status": "Project README available",
+    "topics": [
+      "Database security controls including role-based permissions",
+      "credentials",
+      "and encrypted transport."
+    ]
+  },
+  {
+    "number": 13,
+    "title": "Containerized MongoDB deployment",
+    "summary": "Docker Compose and Kubernetes deployment, replica failover, and monitoring exporter.",
+    "source_available": true,
+    "source_files": [
+      "source-README.md"
+    ],
+    "evidence_status": "Project README available",
+    "topics": [
+      "Docker Compose and Kubernetes deployment",
+      "replica failover",
+      "and monitoring exporter."
+    ]
+  },
+  {
+    "number": 14,
+    "title": "Production database services",
+    "summary": "MongoDB backups, recovery, operational monitoring, RPO/RTO and restore verification.",
+    "source_available": true,
+    "source_files": [
+      "source-README.md"
+    ],
+    "evidence_status": "Project README available",
+    "topics": [
+      "MongoDB backups",
+      "recovery",
+      "operational monitoring"
+    ]
+  },
+  {
+    "number": 15,
+    "title": "TaskTracker multi-tenant API",
+    "summary": "JWT authentication, RBAC, tenant separation, rate limiting, TTL and migration.",
+    "source_available": true,
+    "source_files": [
+      "source-README.md"
+    ],
+    "evidence_status": "Project README available",
+    "topics": [
+      "JWT authentication",
+      "RBAC",
+      "tenant separation"
+    ]
+  },
+  {
+    "number": 16,
+    "title": "Polyglot persistence",
+    "summary": "MongoDB, Cassandra, and Neo4j interoperability; analytics across document, wide-column and graph databases.",
+    "source_available": true,
+    "source_files": [
+      "source-README.md"
+    ],
+    "evidence_status": "Project README available",
+    "topics": [
+      "MongoDB",
+      "Cassandra",
+      "and Neo4j interoperability; analytics across document"
+    ]
+  },
+  {
+    "number": 17,
+    "title": "Vector search and RAG",
+    "summary": "MongoDB Atlas Local vector search, embedding retrieval, Ollama and FAISS alternatives.",
+    "source_available": true,
+    "source_files": [
+      "source-README.md"
+    ],
+    "evidence_status": "Project README available",
+    "topics": [
+      "MongoDB Atlas Local vector search",
+      "embedding retrieval",
+      "Ollama and FAISS alternatives."
+    ]
+  },
+  {
+    "number": 18,
+    "title": "Comparative CTI capstone",
+    "summary": "Comparative database workloads and false-positive review, with multi-source data and benchmark evidence.",
+    "source_available": true,
+    "source_files": [
+      "source-README.md"
+    ],
+    "evidence_status": "Project README available",
+    "topics": [
+      "Comparative database workloads and false-positive review",
+      "with multi-source data and benchmark evidence."
+    ]
+  }
+]

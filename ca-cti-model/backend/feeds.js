@@ -1,0 +1,32 @@
+const feeds = [
+  { name: 'BleepingComputer', url: 'https://www.bleepingcomputer.com/feed/' },
+  { name: 'The Hacker News', url: 'https://feeds.feedburner.com/TheHackersNews?format=xml' },
+  { name: 'Krebs on Security', url: 'https://krebsonsecurity.com/feed/' },
+  { name: 'Dark Reading', url: 'https://www.darkreading.com/rss.xml' },
+  { name: 'Infosecurity Magazine', url: 'https://www.infosecurity-magazine.com/rss/news/' },
+  { name: 'SecurityWeek', url: 'https://www.securityweek.com/feed/' },
+  { name: 'Help Net Security', url: 'https://www.helpnetsecurity.com/feed/' },
+  { name: 'CSO Online', url: 'https://www.csoonline.com/feed/?languages=en' },
+  { name: 'Computer Weekly Security', url: 'https://www.computerweekly.com/rss/IT-security.xml' },
+  { name: 'Schneier on Security', url: 'https://www.schneier.com/feed/atom/' },
+  { name: 'Troy Hunt', url: 'https://www.troyhunt.com/rss/' },
+  { name: 'Graham Cluley', url: 'https://www.grahamcluley.com/feed/' },
+  { name: 'Naked Security', url: 'https://news.sophos.com/en-us/category/threat-research/feed/' },
+  { name: 'We Live Security', url: 'https://www.welivesecurity.com/feed/' },
+  { name: 'The Record', url: 'https://therecord.media/feed/' },
+  { name: 'Check Point Research', url: 'https://research.checkpoint.com/feed/' },
+  { name: 'Juniper Threat Research', url: 'https://blogs.juniper.net/threat-research/feed' },
+  { name: 'SecPod Blog', url: 'https://www.secpod.com/blog/feed/' },
+  { name: 'Microsoft Security Blog', url: 'https://www.microsoft.com/en-us/security/blog/feed/' },
+  { name: 'Trellix Threat Research', url: 'https://www.trellix.com/feed/' },
+  { name: 'SentinelOne Labs', url: 'https://www.sentinelone.com/labs/feed/' },
+  { name: 'SpecterOps', url: 'https://specterops.io/blog/feed/' },
+  { name: 'Trend Micro Security', url: 'https://feeds.trendmicro.com/TrendMicroSimplySecurity' },
+  { name: 'Fortra Security Blog', url: 'https://www.fortra.com/blog/rss.xml' },
+  { name: 'UpGuard Blog', url: 'https://www.upguard.com/blog/rss.xml' },
+  { name: 'VirusTotal Blog', url: 'https://blog.virustotal.com/feeds/posts/default' },
+  { name: 'Sophos Security Operations', url: 'https://news.sophos.com/en-us/category/security-operations/feed/' },
+  { name: 'Sophos AI Research', url: 'https://news.sophos.com/en-us/category/ai-research/feed/' }
+];
+
+module.exports = feeds;
