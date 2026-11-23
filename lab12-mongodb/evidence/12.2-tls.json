@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "tests": [
+    {
+      "test": "authenticated encrypted find",
+      "passed": true,
+      "document": {
+        "_id": 1,
+        "message": "Encrypted training record"
+      },
+      "protocol": "TLSv1.3",
+      "cipher": "TLS_AES_256_GCM_SHA384",
+      "server_certificate": {
+        "subject": [
+          [
+            [
+              "commonName",
+              "mongo-tls"
+            ]
+          ]
+        ],
+        "issuer": [
+          [
+            [
+              "commonName",
+              "Lab12-Local-CA"
+            ]
+          ]
+        ],
+        "version": 3,
+        "serialNumber": "0FDE75D442EC98D80DBDD71BFB99B2EC8C3BACD1",
+        "notBefore": "Nov 17 16:31:47 2026 GMT",
+        "notAfter": "Nov 17 16:31:47 2027 GMT",
+        "subjectAltName": [
+          [
+            "DNS",
+            "mongo-tls"
+          ],
+          [
+            "DNS",
+            "localhost"
+          ],
+          [
+            "IP Address",
+            "127.0.0.1"
+          ]
+        ]
+      }
+    },
+    {
+      "test": "plaintext",
+      "rejected": true,
+      "passed": true,
+      "error": "mongo-tls:27017: connection closed (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 4.0s, Topology Description: <TopologyDescription id: 6afc82f4cbf29330ff1b8b5c, topology_type: Unknown, servers: [<ServerDescription ('mongo-tls', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('mongo-tls:27017: connection closed (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>"
+    },
+    {
+      "test": "TLS without client certificate",
+      "rejected": true,
+      "passed": true,
+      "error": "mongo-tls:27017: connection closed (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 4.0s, Topology Description: <TopologyDescription id: 6afc82f8cbf29330ff1b8b5d, topology_type: Unknown, servers: [<ServerDescription ('mongo-tls', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('mongo-tls:27017: connection closed (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>"
+    }
+  ],
+  "client_certificate": "subject=CN=lab12-client\nissuer=CN=Lab12-Local-CA\nnotBefore=Nov 17 16:31:47 2026 GMT\nnotAfter=Nov 17 16:31:47 2027 GMT\nsha256 Fingerprint=28:57:6B:5D:40:4E:78:EA:10:69:51:5D:EC:79:0F:E1:3E:BC:78:17:E9:95:FC:12:B9:42:1C:34:88:1A:C0:8A\n",
+  "ca_certificate": "subject=CN=Lab12-Local-CA\nissuer=CN=Lab12-Local-CA\nnotBefore=Nov 17 16:31:47 2026 GMT\nnotAfter=Nov 17 16:31:47 2027 GMT\nsha256 Fingerprint=80:42:DE:54:67:3C:FD:25:0E:D1:EB:10:80:CC:BC:D8:CD:B2:35:8C:95:D4:0B:24:0A:6F:9D:65:D4:C5:BA:3C\n"
+}

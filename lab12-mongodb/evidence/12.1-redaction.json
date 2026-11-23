@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "tests": [
+    {
+      "user": "app_user_read",
+      "visible": {
+        "_id": 1,
+        "name": "Demo analyst",
+        "department": "Security"
+      },
+      "salary_hidden": true
+    },
+    {
+      "test": "app_user_read raw employee read",
+      "allowed": false,
+      "code": 13,
+      "passed": true
+    },
+    {
+      "user": "app_user_write",
+      "visible": {
+        "_id": 1,
+        "name": "Demo analyst",
+        "department": "Security"
+      },
+      "salary_hidden": true
+    },
+    {
+      "test": "app_user_write raw employee read",
+      "allowed": false,
+      "code": 13,
+      "passed": true
+    },
+    {
+      "user": "hr_user",
+      "visible": {
+        "_id": 1,
+        "name": "Demo analyst",
+        "department": "Security",
+        "salary": 85000
+      },
+      "salary_visible": true
+    }
+  ]
+}

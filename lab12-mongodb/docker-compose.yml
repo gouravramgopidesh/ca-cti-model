@@ -1,0 +1,51 @@
+name: lab12-mongodb
+services:
+  mongo:
+    image: mongo:8.0
+    command: [mongod, --auth, --bind_ip_all, --wiredTigerCacheSizeGB, '0.25']
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: labadmin
+      MONGO_INITDB_ROOT_PASSWORD: ${LAB12_ADMIN_PASSWORD:?Run setup first}
+    volumes: [auth-data:/data/db]
+    healthcheck:
+      test: [CMD, mongosh, --quiet, --eval, 'if (!db.adminCommand({ping:1}).ok) quit(1)']
+      interval: 3s
+      timeout: 5s
+      retries: 40
+  certgen:
+    profiles: [tools]
+    image: ${LAB12_IMAGE:-lab12-mongodb-runner:local}
+    build: .
+    command: [python, activity-12.2/generate-certs.py]
+    volumes: [ca-private:/ca-private, server-certs:/server-certs, client-certs:/client-certs]
+  mongo-tls:
+    image: mongo:8.0
+    # Initialize normally on a private Unix-local bootstrap server, then enforce TLS.
+    entrypoint: [bash, /opt/lab12/tls-start.sh]
+    environment:
+      LAB12_ADMIN_PASSWORD: ${LAB12_ADMIN_PASSWORD:?Run setup first}
+    volumes:
+      - tls-data:/data/db
+      - server-certs:/certs:ro
+      - ./activity-12.2/tls-start.sh:/opt/lab12/tls-start.sh:ro
+    healthcheck:
+      test: [CMD-SHELL, 'mongosh --quiet --host localhost --tls --tlsCAFile /certs/ca.crt --tlsCertificateKeyFile /certs/server.pem --eval "if (!db.adminCommand({ping:1}).ok) quit(1)"']
+      interval: 3s
+      timeout: 6s
+      retries: 50
+  runner:
+    profiles: [tools]
+    image: ${LAB12_IMAGE:-lab12-mongodb-runner:local}
+    build: .
+    environment:
+      LAB12_ADMIN_PASSWORD: ${LAB12_ADMIN_PASSWORD:?Run setup first}
+      LAB12_READ_PASSWORD: ${LAB12_READ_PASSWORD:?Run setup first}
+      LAB12_WRITE_PASSWORD: ${LAB12_WRITE_PASSWORD:?Run setup first}
+      LAB12_HR_PASSWORD: ${LAB12_HR_PASSWORD:?Run setup first}
+    volumes: [./evidence:/work/evidence, client-certs:/client-certs:ro]
+volumes:
+  auth-data:
+  tls-data:
+  ca-private:
+  server-certs:
+  client-certs:

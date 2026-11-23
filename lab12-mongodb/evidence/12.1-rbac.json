@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "tests": [
+    {
+      "test": "authorization enabled",
+      "passed": true
+    },
+    {
+      "test": "anonymous report read",
+      "allowed": false,
+      "code": 13,
+      "passed": true
+    },
+    {
+      "test": "incorrect password",
+      "allowed": false,
+      "code": 18,
+      "passed": true
+    },
+    {
+      "test": "reader find",
+      "allowed": true,
+      "passed": true
+    },
+    {
+      "test": "reader aggregate",
+      "allowed": true,
+      "passed": true
+    },
+    {
+      "test": "reader insert",
+      "allowed": false,
+      "code": 13,
+      "passed": true
+    },
+    {
+      "test": "reader update",
+      "allowed": false,
+      "code": 13,
+      "passed": true
+    },
+    {
+      "test": "reader delete",
+      "allowed": false,
+      "code": 13,
+      "passed": true
+    },
+    {
+      "test": "reader private collection",
+      "allowed": false,
+      "code": 13,
+      "passed": true
+    },
+    {
+      "test": "writer insert",
+      "allowed": true,
+      "passed": true
+    },
+    {
+      "test": "writer read",
+      "allowed": true,
+      "passed": true
+    },
+    {
+      "test": "writer update",
+      "allowed": true,
+      "passed": true
+    },
+    {
+      "test": "writer delete",
+      "allowed": true,
+      "passed": true
+    },
+    {
+      "test": "writer private read",
+      "allowed": false,
+      "code": 13,
+      "passed": true
+    },
+    {
+      "test": "writer private insert",
+      "allowed": false,
+      "code": 13,
+      "passed": true
+    },
+    {
+      "test": "writer admin command",
+      "allowed": false,
+      "code": 13,
+      "passed": true
+    }
+  ]
+}
