@@ -1,0 +1,145 @@
+{
+  "method": "Neo4j Cypher projection; seeded NetworkX weighted Louvain; community memberships written to Neo4j",
+  "source_suspicious_edges": [
+    {
+      "source_a": "IPsum/daily",
+      "source_b": "romainmarcoux/inbound",
+      "shared": 5604
+    },
+    {
+      "source_a": "IPsum/daily",
+      "source_b": "blocklist.de/all",
+      "shared": 3624
+    },
+    {
+      "source_a": "IPsum/daily",
+      "source_b": "blocklist.de/ssh",
+      "shared": 3030
+    },
+    {
+      "source_a": "blocklist.de/all",
+      "source_b": "romainmarcoux/inbound",
+      "shared": 2144
+    },
+    {
+      "source_a": "blocklist.de/ssh",
+      "source_b": "romainmarcoux/inbound",
+      "shared": 2113
+    },
+    {
+      "source_a": "ThreatHive/blocklist",
+      "source_b": "blocklist.de/apache",
+      "shared": 2107
+    },
+    {
+      "source_a": "ShadowWhisperer/Threats",
+      "source_b": "romainmarcoux/inbound",
+      "shared": 1709
+    },
+    {
+      "source_a": "IPsum/daily",
+      "source_b": "blocklist.de/mail",
+      "shared": 1645
+    },
+    {
+      "source_a": "IPsum/daily",
+      "source_b": "ShadowWhisperer/Threats",
+      "shared": 1567
+    },
+    {
+      "source_a": "IPsum/daily",
+      "source_b": "ThreatHive/blocklist",
+      "shared": 1373
+    },
+    {
+      "source_a": "ThreatHive/blocklist",
+      "source_b": "blocklist.de/mail",
+      "shared": 1123
+    },
+    {
+      "source_a": "ShadowWhisperer/Threats",
+      "source_b": "blocklist.de/ssh",
+      "shared": 1025
+    },
+    {
+      "source_a": "ShadowWhisperer/Threats",
+      "source_b": "blocklist.de/all",
+      "shared": 1007
+    },
+    {
+      "source_a": "IPsum/daily",
+      "source_b": "blocklist.de/imap",
+      "shared": 987
+    },
+    {
+      "source_a": "ThreatHive/blocklist",
+      "source_b": "romainmarcoux/inbound",
+      "shared": 568
+    },
+    {
+      "source_a": "blocklist.de/mail",
+      "source_b": "romainmarcoux/inbound",
+      "shared": 546
+    },
+    {
+      "source_a": "ThreatHive/blocklist",
+      "source_b": "blocklist.de/all",
+      "shared": 510
+    },
+    {
+      "source_a": "ShadowWhisperer/Threats",
+      "source_b": "ThreatHive/blocklist",
+      "shared": 509
+    },
+    {
+      "source_a": "blocklist.de/imap",
+      "source_b": "romainmarcoux/inbound",
+      "shared": 272
+    },
+    {
+      "source_a": "ThreatHive/blocklist",
+      "source_b": "blocklist.de/ssh",
+      "shared": 232
+    },
+    {
+      "source_a": "IPsum/daily",
+      "source_b": "blocklist.de/apache",
+      "shared": 154
+    },
+    {
+      "source_a": "ThreatHive/blocklist",
+      "source_b": "blocklist.de/imap",
+      "shared": 147
+    },
+    {
+      "source_a": "ShadowWhisperer/Threats",
+      "source_b": "blocklist.de/mail",
+      "shared": 93
+    },
+    {
+      "source_a": "blocklist.de/apache",
+      "source_b": "romainmarcoux/inbound",
+      "shared": 78
+    },
+    {
+      "source_a": "ShadowWhisperer/Threats",
+      "source_b": "blocklist.de/imap",
+      "shared": 40
+    },
+    {
+      "source_a": "ShadowWhisperer/Threats",
+      "source_b": "blocklist.de/apache",
+      "shared": 6
+    }
+  ],
+  "eligible_networks": 1035,
+  "network_baseline_median": 1.6666666666666667,
+  "selected_networks": 30,
+  "projection_nodes": 3000,
+  "projection_edges": 57504,
+  "projected_mongo_matches": 3000,
+  "all_louvain_communities": 30,
+  "flagged_communities": [],
+  "threshold": ">=3 observations, >=2 publishers, density >=0.35, observations/unique indicators above full eligible-network median",
+  "limitations": "Bounded top 30 networks, 100 observations each. IP prefixes do not establish common ownership; overlapping aggregators are not independent. Candidates are for analyst review, not confirmed false positives. No precision or recall claimed without labels."
+}

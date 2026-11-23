@@ -1,0 +1,468 @@
+{
+  "run_mode": "local",
+  "completed_utc": "2026-11-18T02:07:27.158330+00:00",
+  "manifest": {
+    "collected_at": "2026-11-18T02:05:51.652534+00:00",
+    "dataset_sha256": "cc830e90e21105ee979196083b873ab833c9bd848504bb68cae88d2c220b05bf",
+    "baseline_sha256": "d2109c4aaa2c95822d9d42a006268ef90d56e9e6ea4c0d364c9bbcf7ad6ac9c2",
+    "baseline_count": 100000,
+    "holdout_count": 1000,
+    "distinct_baseline_ips": 60110,
+    "source_counts": {
+      "IPsum/daily": 13337,
+      "blocklist.de/all": 13337,
+      "blocklist.de/ssh": 5110,
+      "blocklist.de/mail": 13337,
+      "blocklist.de/apache": 9229,
+      "blocklist.de/imap": 5640,
+      "ShadowWhisperer/Threats": 13337,
+      "romainmarcoux/inbound": 13337,
+      "ThreatHive/blocklist": 13336
+    },
+    "publisher_counts": {
+      "IPsum": 13337,
+      "blocklist.de": 46653,
+      "ShadowWhisperer": 13337,
+      "romainmarcoux": 13337,
+      "ThreatHive": 13336
+    },
+    "day_counts": {
+      "2026-11-18": 100000
+    },
+    "sources": [
+      {
+        "source": "IPsum/daily",
+        "publisher": "IPsum",
+        "url": "https://raw.githubusercontent.com/stamparm/ipsum/ff5e82cb8daafab6806a939653783e3d3149e77f/ipsum.txt",
+        "feed_time": "2026-11-18T02:04:38+00:00",
+        "retrieved_at": "2026-11-18T02:05:38.611254+00:00",
+        "timestamp_basis": "feed_commit_time",
+        "parsed_capped": 138872,
+        "sha256": "066fc33ea1526a1403004c59f9428c758778d594b71d00e4610f1bc76361b6cb"
+      },
+      {
+        "source": "blocklist.de/all",
+        "publisher": "blocklist.de",
+        "url": "https://lists.blocklist.de/lists/all.txt",
+        "feed_time": "2026-11-18T02:05:41.352933+00:00",
+        "retrieved_at": "2026-11-18T02:05:41.352933+00:00",
+        "timestamp_basis": "retrieval_time",
+        "parsed_capped": 24683,
+        "sha256": "198a897199eba8a6f4dfc44399526b2e498c723171c4ca82ae7a69955fb35884"
+      },
+      {
+        "source": "blocklist.de/ssh",
+        "publisher": "blocklist.de",
+        "url": "https://lists.blocklist.de/lists/ssh.txt",
+        "feed_time": "2026-11-18T02:05:42.454167+00:00",
+        "retrieved_at": "2026-11-18T02:05:42.454167+00:00",
+        "timestamp_basis": "retrieval_time",
+        "parsed_capped": 5110,
+        "sha256": "f1822f89114a8edcfc9b7373b07f99db5b0cb9ccf43bf0f59107b09846112e69"
+      },
+      {
+        "source": "blocklist.de/mail",
+        "publisher": "blocklist.de",
+        "url": "https://lists.blocklist.de/lists/mail.txt",
+        "feed_time": "2026-11-18T02:05:42.728536+00:00",
+        "retrieved_at": "2026-11-18T02:05:42.728536+00:00",
+        "timestamp_basis": "retrieval_time",
+        "parsed_capped": 14465,
+        "sha256": "69e490be730711ffa51940c60bcf34c112a87ac9900a3dcdfb5d68f6947ef3ab"
+      },
+      {
+        "source": "blocklist.de/apache",
+        "publisher": "blocklist.de",
+        "url": "https://lists.blocklist.de/lists/apache.txt",
+        "feed_time": "2026-11-18T02:05:43.144918+00:00",
+        "retrieved_at": "2026-11-18T02:05:43.144918+00:00",
+        "timestamp_basis": "retrieval_time",
+        "parsed_capped": 9229,
+        "sha256": "df6f959f0e49750d143888c0b7ef7a73e11d6d43e54427b9526120313b58b81e"
+      },
+      {
+        "source": "blocklist.de/imap",
+        "publisher": "blocklist.de",
+        "url": "https://lists.blocklist.de/lists/imap.txt",
+        "feed_time": "2026-11-18T02:05:43.532774+00:00",
+        "retrieved_at": "2026-11-18T02:05:43.532774+00:00",
+        "timestamp_basis": "retrieval_time",
+        "parsed_capped": 5640,
+        "sha256": "06120d8eb4a4e68f852aaed171ff2c37d29e8eefa406c441733ac20e3f363053"
+      },
+      {
+        "source": "ShadowWhisperer/Threats",
+        "publisher": "ShadowWhisperer",
+        "url": "https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Lists/Threats",
+        "feed_time": "2026-11-18T02:05:44.009412+00:00",
+        "retrieved_at": "2026-11-18T02:05:44.009412+00:00",
+        "timestamp_basis": "retrieval_time",
+        "parsed_capped": 17681,
+        "sha256": "d1e60892dfc80077cca4494c02e5a4f67d7858f55ea46183d2e43f40c83b32ed"
+      },
+      {
+        "source": "romainmarcoux/inbound",
+        "publisher": "romainmarcoux",
+        "url": "https://raw.githubusercontent.com/romainmarcoux/malicious-ip/main/full-aa.txt",
+        "feed_time": "2026-11-18T02:05:44.885225+00:00",
+        "retrieved_at": "2026-11-18T02:05:44.885225+00:00",
+        "timestamp_basis": "retrieval_time",
+        "parsed_capped": 131072,
+        "sha256": "9db26042e05e058ada16daeab4163c8499a6d94b6ebd1c4dc023254a00128c25"
+      },
+      {
+        "source": "ThreatHive/blocklist",
+        "publisher": "ThreatHive",
+        "url": "https://threathive.net/hiveblocklist.txt",
+        "feed_time": "2026-11-18T02:05:49.463688+00:00",
+        "retrieved_at": "2026-11-18T02:05:49.463688+00:00",
+        "timestamp_basis": "retrieval_time",
+        "parsed_capped": 150000,
+        "sha256": "bed12148455073b256af067f42e79f32dbc20dbf93ad086a2d787479004e7515"
+      }
+    ],
+    "errors": [],
+    "definition": "One genuine public feed observation per feed, UTC snapshot day and IP. Multiple reports of an IP are intentionally retained; not a count of unique attacks or confirmed malicious actors.",
+    "selection": "Round-robin across available feed snapshots in original feed order, capped at 150000 valid observations per snapshot; last 1000 held out for new inserts.",
+    "compressed_sha256": "acce5e84f68ae225d4181ccf47c3da75942cd960e602405fb9f7c646f79de22e"
+  },
+  "environment": {
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+    "python": "3.11.18",
+    "logical_cpus": 20,
+    "cpu_model": "13th Gen Intel(R) Core(TM) i7-13650HX",
+    "visible_memory_bytes": 8125059072,
+    "cgroup_memory_limit": "max",
+    "cgroup_cpu_limit": "max 100000",
+    "topology": "Single-node MongoDB, Cassandra RF1/ONE, Neo4j Community; same Docker network; acknowledged writes, not equivalent production durability.",
+    "versions": {
+      "MongoDB": "8.0.38",
+      "Cassandra": "4.1.12",
+      "Neo4j": "5.26.33"
+    }
+  },
+  "benchmark": [
+    {
+      "operation": "threat_history",
+      "database": "MongoDB",
+      "runs": 10,
+      "median_latency_ms": 1.2597899985848926,
+      "median_records_per_second": null
+    },
+    {
+      "operation": "threat_history",
+      "database": "Cassandra",
+      "runs": 10,
+      "median_latency_ms": 2.5658449994807597,
+      "median_records_per_second": null
+    },
+    {
+      "operation": "threat_history",
+      "database": "Neo4j",
+      "runs": 10,
+      "median_latency_ms": 27.855288999489858,
+      "median_records_per_second": null
+    },
+    {
+      "operation": "target_and_spread",
+      "database": "MongoDB",
+      "runs": 10,
+      "median_latency_ms": 102.02106950055168,
+      "median_records_per_second": null
+    },
+    {
+      "operation": "target_and_spread",
+      "database": "Cassandra",
+      "runs": 10,
+      "median_latency_ms": 275.04795549975825,
+      "median_records_per_second": null
+    },
+    {
+      "operation": "target_and_spread",
+      "database": "Neo4j",
+      "runs": 10,
+      "median_latency_ms": 1049.6657534986298,
+      "median_records_per_second": null
+    },
+    {
+      "operation": "daily_volume",
+      "database": "MongoDB",
+      "runs": 10,
+      "median_latency_ms": 21.49837649994879,
+      "median_records_per_second": null
+    },
+    {
+      "operation": "daily_volume",
+      "database": "Cassandra",
+      "runs": 10,
+      "median_latency_ms": 286.11139449822076,
+      "median_records_per_second": null
+    },
+    {
+      "operation": "daily_volume",
+      "database": "Neo4j",
+      "runs": 10,
+      "median_latency_ms": 38.05374550211127,
+      "median_records_per_second": null
+    },
+    {
+      "operation": "real_time_insert",
+      "database": "MongoDB",
+      "runs": 10,
+      "median_latency_ms": 5.764494000686682,
+      "median_records_per_second": 17351.903074114663
+    },
+    {
+      "operation": "real_time_insert",
+      "database": "Cassandra",
+      "runs": 10,
+      "median_latency_ms": 20.486671000981005,
+      "median_records_per_second": 4894.748817678861
+    },
+    {
+      "operation": "real_time_insert",
+      "database": "Neo4j",
+      "runs": 10,
+      "median_latency_ms": 27.139331999933347,
+      "median_records_per_second": 3685.725637837653
+    }
+  ],
+  "query_parameters": {
+    "history_source": "IPsum/daily",
+    "history_days": [
+      "2026-11-18"
+    ],
+    "spread_type": "reported_attack",
+    "spread_day": "2026-11-18",
+    "spread_result": {
+      "http": {
+        "observations": 9229,
+        "unique_indicators": 9229,
+        "network_prefixes": 1226,
+        "publishers": 1
+      },
+      "imap": {
+        "observations": 5640,
+        "unique_indicators": 5640,
+        "network_prefixes": 4230,
+        "publishers": 1
+      },
+      "mail": {
+        "observations": 13337,
+        "unique_indicators": 13337,
+        "network_prefixes": 5119,
+        "publishers": 1
+      },
+      "ssh": {
+        "observations": 5110,
+        "unique_indicators": 5110,
+        "network_prefixes": 4279,
+        "publishers": 1
+      },
+      "unknown": {
+        "observations": 13337,
+        "unique_indicators": 13337,
+        "network_prefixes": 9045,
+        "publishers": 1
+      }
+    },
+    "daily_result": {
+      "2026-11-18": 100000
+    },
+    "embedded_median_ms": 0.4365014992799843
+  },
+  "baseline_integrity": {
+    "MongoDB full_threats": {
+      "count": 100000,
+      "sha256": "d2109c4aaa2c95822d9d42a006268ef90d56e9e6ea4c0d364c9bbcf7ad6ac9c2"
+    },
+    "Cassandra threats_by_type": {
+      "count": 100000,
+      "sha256": "d2109c4aaa2c95822d9d42a006268ef90d56e9e6ea4c0d364c9bbcf7ad6ac9c2"
+    },
+    "Cassandra threats_by_source": {
+      "count": 100000,
+      "sha256": "d2109c4aaa2c95822d9d42a006268ef90d56e9e6ea4c0d364c9bbcf7ad6ac9c2"
+    },
+    "Neo4j Threat": {
+      "count": 100000,
+      "sha256": "d2109c4aaa2c95822d9d42a006268ef90d56e9e6ea4c0d364c9bbcf7ad6ac9c2"
+    },
+    "embedded_sources_verified": 9,
+    "graph_relationships": {
+      "REPORTED": 100000,
+      "OBSERVES": 100000,
+      "IN_NETWORK": 60110
+    }
+  },
+  "final_integrity": {
+    "MongoDB full_threats": {
+      "count": 101000,
+      "sha256": "cc830e90e21105ee979196083b873ab833c9bd848504bb68cae88d2c220b05bf"
+    },
+    "Cassandra threats_by_type": {
+      "count": 101000,
+      "sha256": "cc830e90e21105ee979196083b873ab833c9bd848504bb68cae88d2c220b05bf"
+    },
+    "Cassandra threats_by_source": {
+      "count": 101000,
+      "sha256": "cc830e90e21105ee979196083b873ab833c9bd848504bb68cae88d2c220b05bf"
+    },
+    "Neo4j Threat": {
+      "count": 101000,
+      "sha256": "cc830e90e21105ee979196083b873ab833c9bd848504bb68cae88d2c220b05bf"
+    },
+    "embedded_sources_verified": 9,
+    "graph_relationships": {
+      "REPORTED": 101000,
+      "OBSERVES": 101000,
+      "IN_NETWORK": 60650
+    }
+  },
+  "graph": {
+    "method": "Neo4j Cypher projection; seeded NetworkX weighted Louvain; community memberships written to Neo4j",
+    "source_suspicious_edges": [
+      {
+        "source_a": "IPsum/daily",
+        "source_b": "romainmarcoux/inbound",
+        "shared": 5604
+      },
+      {
+        "source_a": "IPsum/daily",
+        "source_b": "blocklist.de/all",
+        "shared": 3624
+      },
+      {
+        "source_a": "IPsum/daily",
+        "source_b": "blocklist.de/ssh",
+        "shared": 3030
+      },
+      {
+        "source_a": "blocklist.de/all",
+        "source_b": "romainmarcoux/inbound",
+        "shared": 2144
+      },
+      {
+        "source_a": "blocklist.de/ssh",
+        "source_b": "romainmarcoux/inbound",
+        "shared": 2113
+      },
+      {
+        "source_a": "ThreatHive/blocklist",
+        "source_b": "blocklist.de/apache",
+        "shared": 2107
+      },
+      {
+        "source_a": "ShadowWhisperer/Threats",
+        "source_b": "romainmarcoux/inbound",
+        "shared": 1709
+      },
+      {
+        "source_a": "IPsum/daily",
+        "source_b": "blocklist.de/mail",
+        "shared": 1645
+      },
+      {
+        "source_a": "IPsum/daily",
+        "source_b": "ShadowWhisperer/Threats",
+        "shared": 1567
+      },
+      {
+        "source_a": "IPsum/daily",
+        "source_b": "ThreatHive/blocklist",
+        "shared": 1373
+      },
+      {
+        "source_a": "ThreatHive/blocklist",
+        "source_b": "blocklist.de/mail",
+        "shared": 1123
+      },
+      {
+        "source_a": "ShadowWhisperer/Threats",
+        "source_b": "blocklist.de/ssh",
+        "shared": 1025
+      },
+      {
+        "source_a": "ShadowWhisperer/Threats",
+        "source_b": "blocklist.de/all",
+        "shared": 1007
+      },
+      {
+        "source_a": "IPsum/daily",
+        "source_b": "blocklist.de/imap",
+        "shared": 987
+      },
+      {
+        "source_a": "ThreatHive/blocklist",
+        "source_b": "romainmarcoux/inbound",
+        "shared": 568
+      },
+      {
+        "source_a": "blocklist.de/mail",
+        "source_b": "romainmarcoux/inbound",
+        "shared": 546
+      },
+      {
+        "source_a": "ThreatHive/blocklist",
+        "source_b": "blocklist.de/all",
+        "shared": 510
+      },
+      {
+        "source_a": "ShadowWhisperer/Threats",
+        "source_b": "ThreatHive/blocklist",
+        "shared": 509
+      },
+      {
+        "source_a": "blocklist.de/imap",
+        "source_b": "romainmarcoux/inbound",
+        "shared": 272
+      },
+      {
+        "source_a": "ThreatHive/blocklist",
+        "source_b": "blocklist.de/ssh",
+        "shared": 232
+      },
+      {
+        "source_a": "IPsum/daily",
+        "source_b": "blocklist.de/apache",
+        "shared": 154
+      },
+      {
+        "source_a": "ThreatHive/blocklist",
+        "source_b": "blocklist.de/imap",
+        "shared": 147
+      },
+      {
+        "source_a": "ShadowWhisperer/Threats",
+        "source_b": "blocklist.de/mail",
+        "shared": 93
+      },
+      {
+        "source_a": "blocklist.de/apache",
+        "source_b": "romainmarcoux/inbound",
+        "shared": 78
+      },
+      {
+        "source_a": "ShadowWhisperer/Threats",
+        "source_b": "blocklist.de/imap",
+        "shared": 40
+      },
+      {
+        "source_a": "ShadowWhisperer/Threats",
+        "source_b": "blocklist.de/apache",
+        "shared": 6
+      }
+    ],
+    "eligible_networks": 1035,
+    "network_baseline_median": 1.6666666666666667,
+    "selected_networks": 30,
+    "projection_nodes": 3000,
+    "projection_edges": 57504,
+    "projected_mongo_matches": 3000,
+    "all_louvain_communities": 30,
+    "flagged_communities": [],
+    "threshold": ">=3 observations, >=2 publishers, density >=0.35, observations/unique indicators above full eligible-network median",
+    "limitations": "Bounded top 30 networks, 100 observations each. IP prefixes do not establish common ownership; overlapping aggregators are not independent. Candidates are for analyst review, not confirmed false positives. No precision or recall claimed without labels."
+  },
+  "logical_bytes_per_observation": 410.76818
+}

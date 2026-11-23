@@ -1,0 +1,13 @@
+operation,database,runs,median_latency_ms,median_records_per_second
+threat_history,MongoDB,10,1.2597899985848926,
+threat_history,Cassandra,10,2.5658449994807597,
+threat_history,Neo4j,10,27.855288999489858,
+target_and_spread,MongoDB,10,102.02106950055168,
+target_and_spread,Cassandra,10,275.04795549975825,
+target_and_spread,Neo4j,10,1049.6657534986298,
+daily_volume,MongoDB,10,21.49837649994879,
+daily_volume,Cassandra,10,286.11139449822076,
+daily_volume,Neo4j,10,38.05374550211127,
+real_time_insert,MongoDB,10,5.764494000686682,17351.903074114663
+real_time_insert,Cassandra,10,20.486671000981005,4894.748817678861
+real_time_insert,Neo4j,10,27.139331999933347,3685.725637837653

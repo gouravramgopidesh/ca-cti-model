@@ -1,0 +1,15 @@
+{
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+  "python": "3.11.18",
+  "logical_cpus": 20,
+  "cpu_model": "13th Gen Intel(R) Core(TM) i7-13650HX",
+  "visible_memory_bytes": 8125059072,
+  "cgroup_memory_limit": "max",
+  "cgroup_cpu_limit": "max 100000",
+  "topology": "Single-node MongoDB, Cassandra RF1/ONE, Neo4j Community; same Docker network; acknowledged writes, not equivalent production durability.",
+  "versions": {
+    "MongoDB": "8.0.38",
+    "Cassandra": "4.1.12",
+    "Neo4j": "5.26.33"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "collected_at": "2026-11-18T02:05:51.652534+00:00",
+  "dataset_sha256": "cc830e90e21105ee979196083b873ab833c9bd848504bb68cae88d2c220b05bf",
+  "baseline_sha256": "d2109c4aaa2c95822d9d42a006268ef90d56e9e6ea4c0d364c9bbcf7ad6ac9c2",
+  "baseline_count": 100000,
+  "holdout_count": 1000,
+  "distinct_baseline_ips": 60110,
+  "source_counts": {
+    "IPsum/daily": 13337,
+    "blocklist.de/all": 13337,
+    "blocklist.de/ssh": 5110,
+    "blocklist.de/mail": 13337,
+    "blocklist.de/apache": 9229,
+    "blocklist.de/imap": 5640,
+    "ShadowWhisperer/Threats": 13337,
+    "romainmarcoux/inbound": 13337,
+    "ThreatHive/blocklist": 13336
+  },
+  "publisher_counts": {
+    "IPsum": 13337,
+    "blocklist.de": 46653,
+    "ShadowWhisperer": 13337,
+    "romainmarcoux": 13337,
+    "ThreatHive": 13336
+  },
+  "day_counts": {
+    "2026-11-18": 100000
+  },
+  "sources": [
+    {
+      "source": "IPsum/daily",
+      "publisher": "IPsum",
+      "url": "https://raw.githubusercontent.com/stamparm/ipsum/ff5e82cb8daafab6806a939653783e3d3149e77f/ipsum.txt",
+      "feed_time": "2026-11-18T02:04:38+00:00",
+      "retrieved_at": "2026-11-18T02:05:38.611254+00:00",
+      "timestamp_basis": "feed_commit_time",
+      "parsed_capped": 138872,
+      "sha256": "066fc33ea1526a1403004c59f9428c758778d594b71d00e4610f1bc76361b6cb"
+    },
+    {
+      "source": "blocklist.de/all",
+      "publisher": "blocklist.de",
+      "url": "https://lists.blocklist.de/lists/all.txt",
+      "feed_time": "2026-11-18T02:05:41.352933+00:00",
+      "retrieved_at": "2026-11-18T02:05:41.352933+00:00",
+      "timestamp_basis": "retrieval_time",
+      "parsed_capped": 24683,
+      "sha256": "198a897199eba8a6f4dfc44399526b2e498c723171c4ca82ae7a69955fb35884"
+    },
+    {
+      "source": "blocklist.de/ssh",
+      "publisher": "blocklist.de",
+      "url": "https://lists.blocklist.de/lists/ssh.txt",
+      "feed_time": "2026-11-18T02:05:42.454167+00:00",
+      "retrieved_at": "2026-11-18T02:05:42.454167+00:00",
+      "timestamp_basis": "retrieval_time",
+      "parsed_capped": 5110,
+      "sha256": "f1822f89114a8edcfc9b7373b07f99db5b0cb9ccf43bf0f59107b09846112e69"
+    },
+    {
+      "source": "blocklist.de/mail",
+      "publisher": "blocklist.de",
+      "url": "https://lists.blocklist.de/lists/mail.txt",
+      "feed_time": "2026-11-18T02:05:42.728536+00:00",
+      "retrieved_at": "2026-11-18T02:05:42.728536+00:00",
+      "timestamp_basis": "retrieval_time",
+      "parsed_capped": 14465,
+      "sha256": "69e490be730711ffa51940c60bcf34c112a87ac9900a3dcdfb5d68f6947ef3ab"
+    },
+    {
+      "source": "blocklist.de/apache",
+      "publisher": "blocklist.de",
+      "url": "https://lists.blocklist.de/lists/apache.txt",
+      "feed_time": "2026-11-18T02:05:43.144918+00:00",
+      "retrieved_at": "2026-11-18T02:05:43.144918+00:00",
+      "timestamp_basis": "retrieval_time",
+      "parsed_capped": 9229,
+      "sha256": "df6f959f0e49750d143888c0b7ef7a73e11d6d43e54427b9526120313b58b81e"
+    },
+    {
+      "source": "blocklist.de/imap",
+      "publisher": "blocklist.de",
+      "url": "https://lists.blocklist.de/lists/imap.txt",
+      "feed_time": "2026-11-18T02:05:43.532774+00:00",
+      "retrieved_at": "2026-11-18T02:05:43.532774+00:00",
+      "timestamp_basis": "retrieval_time",
+      "parsed_capped": 5640,
+      "sha256": "06120d8eb4a4e68f852aaed171ff2c37d29e8eefa406c441733ac20e3f363053"
+    },
+    {
+      "source": "ShadowWhisperer/Threats",
+      "publisher": "ShadowWhisperer",
+      "url": "https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Lists/Threats",
+      "feed_time": "2026-11-18T02:05:44.009412+00:00",
+      "retrieved_at": "2026-11-18T02:05:44.009412+00:00",
+      "timestamp_basis": "retrieval_time",
+      "parsed_capped": 17681,
+      "sha256": "d1e60892dfc80077cca4494c02e5a4f67d7858f55ea46183d2e43f40c83b32ed"
+    },
+    {
+      "source": "romainmarcoux/inbound",
+      "publisher": "romainmarcoux",
+      "url": "https://raw.githubusercontent.com/romainmarcoux/malicious-ip/main/full-aa.txt",
+      "feed_time": "2026-11-18T02:05:44.885225+00:00",
+      "retrieved_at": "2026-11-18T02:05:44.885225+00:00",
+      "timestamp_basis": "retrieval_time",
+      "parsed_capped": 131072,
+      "sha256": "9db26042e05e058ada16daeab4163c8499a6d94b6ebd1c4dc023254a00128c25"
+    },
+    {
+      "source": "ThreatHive/blocklist",
+      "publisher": "ThreatHive",
+      "url": "https://threathive.net/hiveblocklist.txt",
+      "feed_time": "2026-11-18T02:05:49.463688+00:00",
+      "retrieved_at": "2026-11-18T02:05:49.463688+00:00",
+      "timestamp_basis": "retrieval_time",
+      "parsed_capped": 150000,
+      "sha256": "bed12148455073b256af067f42e79f32dbc20dbf93ad086a2d787479004e7515"
+    }
+  ],
+  "errors": [],
+  "definition": "One genuine public feed observation per feed, UTC snapshot day and IP. Multiple reports of an IP are intentionally retained; not a count of unique attacks or confirmed malicious actors.",
+  "selection": "Round-robin across available feed snapshots in original feed order, capped at 150000 valid observations per snapshot; last 1000 held out for new inserts.",
+  "compressed_sha256": "acce5e84f68ae225d4181ccf47c3da75942cd960e602405fb9f7c646f79de22e"
+}

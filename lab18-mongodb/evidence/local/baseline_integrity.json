@@ -1,0 +1,24 @@
+{
+  "MongoDB full_threats": {
+    "count": 100000,
+    "sha256": "d2109c4aaa2c95822d9d42a006268ef90d56e9e6ea4c0d364c9bbcf7ad6ac9c2"
+  },
+  "Cassandra threats_by_type": {
+    "count": 100000,
+    "sha256": "d2109c4aaa2c95822d9d42a006268ef90d56e9e6ea4c0d364c9bbcf7ad6ac9c2"
+  },
+  "Cassandra threats_by_source": {
+    "count": 100000,
+    "sha256": "d2109c4aaa2c95822d9d42a006268ef90d56e9e6ea4c0d364c9bbcf7ad6ac9c2"
+  },
+  "Neo4j Threat": {
+    "count": 100000,
+    "sha256": "d2109c4aaa2c95822d9d42a006268ef90d56e9e6ea4c0d364c9bbcf7ad6ac9c2"
+  },
+  "embedded_sources_verified": 9,
+  "graph_relationships": {
+    "REPORTED": 100000,
+    "OBSERVES": 100000,
+    "IN_NETWORK": 60110
+  }
+}
