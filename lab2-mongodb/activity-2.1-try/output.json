@@ -1,0 +1,29 @@
+[
+  {
+    "_id": "server_comparison",
+    "local_community": {
+      "version": "8.3.8",
+      "gitVersion": "35e8c8a57f78157ed9fac1a9e90ee6c1818adab6",
+      "bits": 64,
+      "versionArray": [
+        8,
+        3,
+        8,
+        0
+      ]
+    },
+    "atlas": {
+      "version": "8.0.37",
+      "gitVersion": "8ece10cbfc3379404a0dffdfb448b9e873b494f7",
+      "bits": 64,
+      "versionArray": [
+        8,
+        0,
+        37,
+        0
+      ]
+    },
+    "comparison_scope": "Local Community Server vs Atlas; no Docker (assignment deviation)",
+    "same_version": false
+  }
+]

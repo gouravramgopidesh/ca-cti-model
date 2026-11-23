@@ -1,0 +1,19 @@
+[
+  {
+    "_id": "environment",
+    "python": "3.12.10",
+    "pymongo": "4.20.0",
+    "local_deployment": "MongoDB Community Server",
+    "local_version": "8.3.8",
+    "atlas_version": "8.0.37",
+    "optional_packages": {
+      "fastapi": false,
+      "streamlit": false,
+      "voyageai": false,
+      "neo4j": false,
+      "cassandra": false,
+      "rich": false,
+      "dotenv": true
+    }
+  }
+]
