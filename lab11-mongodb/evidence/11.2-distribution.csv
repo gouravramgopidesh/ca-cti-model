@@ -1,0 +1,5 @@
+collection,shard,count,data_bytes,storage_bytes
+hotspot_data,shardA,500,158500,45056
+hotspot_data,shardB,9500,3011500,458752
+even_data,shardB,4951,1569467,98304
+even_data,shardA,5049,1600533,278528

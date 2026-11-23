@@ -1,0 +1,5 @@
+key,strategy,cardinality,hottest_value_count,distribution,targeting
+order_id,range,10000,1,Sequential IDs can hotspot; random IDs distribute better,Order equality targeted; customer query broadcasts
+customer_id,range,999,2000,Skew possible from frequent customers,Customer equality and ranges can target shards
+order_date,range,10000,1,Monotonic writes concentrate in newest range,Date ranges can target overlapping shards
+customer_id,hashed,999,2000,Distributes distinct customers; hot customer still stays together,Customer equality targets; ranges broadcast

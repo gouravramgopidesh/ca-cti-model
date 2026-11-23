@@ -1,0 +1,52 @@
+{
+  "shards": [
+    {
+      "_id": "shardA",
+      "host": "shardA/shard-a:27017",
+      "state": 1,
+      "topologyTime": {
+        "$timestamp": {
+          "t": 1794931723,
+          "i": 10
+        }
+      },
+      "replSetConfigVersion": -1
+    },
+    {
+      "_id": "shardB",
+      "host": "shardB/shard-b:27017",
+      "state": 1,
+      "topologyTime": {
+        "$timestamp": {
+          "t": 1794931723,
+          "i": 28
+        }
+      },
+      "replSetConfigVersion": -1
+    }
+  ],
+  "ok": 1.0,
+  "$clusterTime": {
+    "clusterTime": {
+      "$timestamp": {
+        "t": 1794931996,
+        "i": 1
+      }
+    },
+    "signature": {
+      "hash": {
+        "$binary": {
+          "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+          "subType": "00"
+        }
+      },
+      "keyId": 0
+    }
+  },
+  "operationTime": {
+    "$timestamp": {
+      "t": 1794931996,
+      "i": 1
+    }
+  }
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "key": "order_id",
+    "strategy": "range",
+    "cardinality": 10000,
+    "hottest_value_count": 1,
+    "distribution": "Sequential IDs can hotspot; random IDs distribute better",
+    "targeting": "Order equality targeted; customer query broadcasts"
+  },
+  {
+    "key": "customer_id",
+    "strategy": "range",
+    "cardinality": 999,
+    "hottest_value_count": 2000,
+    "distribution": "Skew possible from frequent customers",
+    "targeting": "Customer equality and ranges can target shards"
+  },
+  {
+    "key": "order_date",
+    "strategy": "range",
+    "cardinality": 10000,
+    "hottest_value_count": 1,
+    "distribution": "Monotonic writes concentrate in newest range",
+    "targeting": "Date ranges can target overlapping shards"
+  },
+  {
+    "key": "customer_id",
+    "strategy": "hashed",
+    "cardinality": 999,
+    "hottest_value_count": 2000,
+    "distribution": "Distributes distinct customers; hot customer still stays together",
+    "targeting": "Customer equality targets; ranges broadcast"
+  }
+]

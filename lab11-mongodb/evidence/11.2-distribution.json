@@ -1,0 +1,30 @@
+[
+  {
+    "collection": "hotspot_data",
+    "shard": "shardA",
+    "count": 500,
+    "data_bytes": 158500,
+    "storage_bytes": 45056
+  },
+  {
+    "collection": "hotspot_data",
+    "shard": "shardB",
+    "count": 9500,
+    "data_bytes": 3011500,
+    "storage_bytes": 458752
+  },
+  {
+    "collection": "even_data",
+    "shard": "shardB",
+    "count": 4951,
+    "data_bytes": 1569467,
+    "storage_bytes": 98304
+  },
+  {
+    "collection": "even_data",
+    "shard": "shardA",
+    "count": 5049,
+    "data_bytes": 1600533,
+    "storage_bytes": 278528
+  }
+]

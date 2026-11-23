@@ -1,0 +1,36 @@
+name: lab11-mongodb
+x-mongo: &mongo
+  image: mongo:8.0
+  restart: unless-stopped
+  healthcheck:
+    test: [CMD, mongosh, --quiet, --eval, 'if (!db.adminCommand({ping:1}).ok) quit(1)']
+    interval: 5s
+    timeout: 5s
+    retries: 40
+services:
+  config:
+    <<: *mongo
+    command: [mongod, --configsvr, --replSet, cfg, --port, '27017', --bind_ip_all, --wiredTigerCacheSizeGB, '0.25']
+    volumes: [config-data:/data/configdb]
+  shard-a:
+    <<: *mongo
+    command: [mongod, --shardsvr, --replSet, shardA, --port, '27017', --bind_ip_all, --wiredTigerCacheSizeGB, '0.25']
+    volumes: [shard-a-data:/data/db]
+  shard-b:
+    <<: *mongo
+    command: [mongod, --shardsvr, --replSet, shardB, --port, '27017', --bind_ip_all, --wiredTigerCacheSizeGB, '0.25']
+    volumes: [shard-b-data:/data/db]
+  mongos:
+    <<: *mongo
+    command: [mongos, --configdb, 'cfg/config:27017', --port, '27017', --bind_ip_all]
+  runner:
+    profiles: [tools]
+    image: ${LAB11_IMAGE:-lab11-mongodb-runner:local}
+    build: .
+    environment:
+      MONGO_URI: mongodb://mongos:27017/?serverSelectionTimeoutMS=10000
+    volumes: ['./evidence:/work/evidence']
+volumes:
+  config-data:
+  shard-a-data:
+  shard-b-data:
