@@ -1,0 +1,38 @@
+name: mongodb-lab9
+x-mongo: &mongo
+  image: mongo:8.0
+  command: [mongod, --replSet, rs0, --bind_ip_all, --wiredTigerCacheSizeGB, '0.25']
+  restart: unless-stopped
+  healthcheck:
+    test: [CMD, mongosh, --quiet, --eval, 'if (!db.adminCommand({ping:1}).ok) quit(1)']
+    interval: 5s
+    timeout: 5s
+    retries: 30
+services:
+  mongo1:
+    <<: *mongo
+    volumes: [mongo1-data:/data/db]
+  mongo2:
+    <<: *mongo
+    volumes: [mongo2-data:/data/db]
+  mongo3:
+    <<: *mongo
+    volumes: [mongo3-data:/data/db]
+  runner:
+    profiles: [tools]
+    image: ${LAB9_IMAGE:-mongodb-lab9-runner:local}
+    build: .
+    environment:
+      MONGO_URI: mongodb://mongo1:27017,mongo2:27017,mongo3:27017/?replicaSet=rs0
+    volumes: ['./evidence:/work/evidence']
+  observer:
+    profiles: [tools]
+    image: ${LAB9_IMAGE:-mongodb-lab9-runner:local}
+    command: [python, -u, activity-9.2/observer.py]
+    environment:
+      MONGO_URI: mongodb://mongo1:27017,mongo2:27017,mongo3:27017/?replicaSet=rs0
+    volumes: ['./evidence:/work/evidence']
+volumes:
+  mongo1-data:
+  mongo2-data:
+  mongo3-data:

@@ -1,0 +1,38 @@
+[
+  {
+    "utc": "2026-11-17T06:32:59.614054+00:00",
+    "run": "c100878db7fb485491da69c705b2026f",
+    "concern": "w:1",
+    "w": 1,
+    "j": null,
+    "attempted": 1000,
+    "successful": 1000,
+    "total_seconds": 0.563535285999933,
+    "average_ms": 0.563535285999933,
+    "errors": []
+  },
+  {
+    "utc": "2026-11-17T06:33:03.819049+00:00",
+    "run": "f0105f2164134b0083654ade805e7915",
+    "concern": "w:majority",
+    "w": "majority",
+    "j": null,
+    "attempted": 1000,
+    "successful": 1000,
+    "total_seconds": 4.191958557000362,
+    "average_ms": 4.191958557000362,
+    "errors": []
+  },
+  {
+    "utc": "2026-11-17T06:33:07.127395+00:00",
+    "run": "bf85df2cb1eb49f28e0744ce00214869",
+    "concern": "w:all",
+    "w": 3,
+    "j": null,
+    "attempted": 1000,
+    "successful": 1000,
+    "total_seconds": 3.2878669930005344,
+    "average_ms": 3.2878669930005344,
+    "errors": []
+  }
+]

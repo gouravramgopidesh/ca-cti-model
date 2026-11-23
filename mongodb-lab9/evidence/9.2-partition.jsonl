@@ -1,0 +1,34 @@
+{"utc": "2026-11-17T06:25:02.552604+00:00", "event": "healthy", "primary": "mongo1:27017"}
+{"utc": "2026-11-17T06:25:06.869560+00:00", "event": "phase-one", "detail": "mongo1"}
+{"utc": "2026-11-17T06:25:08.413170+00:00", "event": "disconnected", "detail": "mongo2"}
+{"utc": "2026-11-17T06:25:09.542502+00:00", "event": "write", "phase": "one-secondary", "w": 1, "doc_id": "cb659464155649aba5897083e606228a-1", "ok": true, "ms": 29.488303999642085}
+{"utc": "2026-11-17T06:25:09.562452+00:00", "event": "write", "phase": "one-secondary", "w": "majority", "doc_id": "cb659464155649aba5897083e606228a-majority", "ok": true, "ms": 9.89435199971922}
+{"utc": "2026-11-17T06:25:41.322730+00:00", "event": "reconnected", "detail": "mongo2"}
+{"utc": "2026-11-17T06:25:42.518316+00:00", "event": "catch-up-verified", "host": "mongo2", "doc_id": "cb659464155649aba5897083e606228a-majority"}
+{"utc": "2026-11-17T06:25:43.968340+00:00", "event": "healthy", "primary": "mongo1:27017"}
+{"utc": "2026-11-17T06:25:46.826272+00:00", "event": "phase-two", "detail": "mongo1"}
+{"utc": "2026-11-17T06:25:48.455475+00:00", "event": "disconnected", "detail": "mongo2"}
+{"utc": "2026-11-17T06:25:50.235931+00:00", "event": "disconnected", "detail": "mongo3"}
+{"utc": "2026-11-17T06:25:54.457516+00:00", "event": "write", "phase": "no-majority", "w": "majority", "doc_id": "01faf4558c6b413ca7eaf60c70a25925-majority", "ok": false, "error": "WTimeoutError", "detail": "waiting for replication timed out, full error: {'code': 64, 'codeName': 'WriteConcernFailed', 'errmsg': 'waiting for replication timed out', 'errInfo': {'wtimeout': True, 'writeConcern': {'w': 'majority', 'wtimeout': 3000, 'provenance': 'clientSupplied'}}}", "ms": 3023.0412170003547}
+{"utc": "2026-11-17T06:25:57.202933+00:00", "event": "primary-stepdown-observed", "host": "mongo1"}
+{"utc": "2026-11-17T06:26:02.107927+00:00", "event": "reconnected", "detail": "mongo2"}
+{"utc": "2026-11-17T06:26:03.463366+00:00", "event": "reconnected", "detail": "mongo3"}
+{"utc": "2026-11-17T06:26:07.252195+00:00", "event": "healthy", "primary": "mongo1:27017"}
+{"utc": "2026-11-17T06:26:08.831965+00:00", "event": "recovered", "detail": ""}
+{"utc": "2026-11-17T06:35:10.252566+00:00", "event": "healthy", "primary": "mongo1:27017"}
+{"utc": "2026-11-17T06:35:14.489477+00:00", "event": "phase-one", "detail": "mongo1"}
+{"utc": "2026-11-17T06:35:16.280102+00:00", "event": "disconnected", "detail": "mongo2"}
+{"utc": "2026-11-17T06:35:17.569938+00:00", "event": "write", "phase": "one-secondary", "w": 1, "doc_id": "392bc75a1ba6423fb7813025ae6ece15-1", "ok": true, "ms": 6.697060000078636}
+{"utc": "2026-11-17T06:35:17.580669+00:00", "event": "write", "phase": "one-secondary", "w": "majority", "doc_id": "392bc75a1ba6423fb7813025ae6ece15-majority", "ok": true, "ms": 4.614999999830616}
+{"utc": "2026-11-17T06:35:49.396135+00:00", "event": "reconnected", "detail": "mongo2"}
+{"utc": "2026-11-17T06:35:50.651043+00:00", "event": "catch-up-verified", "host": "mongo2", "doc_id": "392bc75a1ba6423fb7813025ae6ece15-majority"}
+{"utc": "2026-11-17T06:35:52.460494+00:00", "event": "healthy", "primary": "mongo1:27017"}
+{"utc": "2026-11-17T06:35:55.919438+00:00", "event": "phase-two", "detail": "mongo1"}
+{"utc": "2026-11-17T06:35:57.567280+00:00", "event": "disconnected", "detail": "mongo2"}
+{"utc": "2026-11-17T06:35:59.273489+00:00", "event": "disconnected", "detail": "mongo3"}
+{"utc": "2026-11-17T06:36:03.539954+00:00", "event": "write", "phase": "no-majority", "w": "majority", "doc_id": "afd3c528732e4330b87473cbdec0c789-majority", "ok": false, "error": "WTimeoutError", "detail": "waiting for replication timed out, full error: {'code': 64, 'codeName': 'WriteConcernFailed', 'errmsg': 'waiting for replication timed out', 'errInfo': {'wtimeout': True, 'writeConcern': {'w': 'majority', 'wtimeout': 3000, 'provenance': 'clientSupplied'}}}", "ms": 3014.9981989998196}
+{"utc": "2026-11-17T06:36:08.477701+00:00", "event": "primary-stepdown-observed", "host": "mongo1"}
+{"utc": "2026-11-17T06:36:13.525680+00:00", "event": "reconnected", "detail": "mongo2"}
+{"utc": "2026-11-17T06:36:14.800387+00:00", "event": "reconnected", "detail": "mongo3"}
+{"utc": "2026-11-17T06:36:18.134663+00:00", "event": "healthy", "primary": "mongo1:27017"}
+{"utc": "2026-11-17T06:36:19.885382+00:00", "event": "recovered", "detail": ""}

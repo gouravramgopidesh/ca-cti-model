@@ -1,0 +1,74 @@
+[
+  {
+    "utc": "2026-11-17T06:34:39.065180+00:00",
+    "run": "c165b4c0a6354f4aa1080b264007c54c",
+    "concern": "w:1",
+    "w": 1,
+    "j": true,
+    "attempted": 1000,
+    "successful": 1000,
+    "total_seconds": 3.0201826949996757,
+    "average_ms": 3.0201826949996757,
+    "errors": []
+  },
+  {
+    "utc": "2026-11-17T06:34:43.096153+00:00",
+    "run": "1273c6938be141ae8a7e5ed17047c2e9",
+    "concern": "w:majority",
+    "w": "majority",
+    "j": true,
+    "attempted": 1000,
+    "successful": 1000,
+    "total_seconds": 4.018580549000035,
+    "average_ms": 4.018580549000035,
+    "errors": []
+  },
+  {
+    "utc": "2026-11-17T06:34:50.010898+00:00",
+    "run": "ad89e4aca35b45999a937709e204c7d9",
+    "concern": "w:all",
+    "w": 3,
+    "j": true,
+    "attempted": 1000,
+    "successful": 1000,
+    "total_seconds": 6.901277556999958,
+    "average_ms": 6.901277556999958,
+    "errors": []
+  },
+  {
+    "utc": "2026-11-17T06:34:50.506366+00:00",
+    "run": "00d1e873c6024632bb6117aba759c340",
+    "concern": "w:1",
+    "w": 1,
+    "j": false,
+    "attempted": 1000,
+    "successful": 1000,
+    "total_seconds": 0.4895480969998971,
+    "average_ms": 0.4895480969998971,
+    "errors": []
+  },
+  {
+    "utc": "2026-11-17T06:34:54.604716+00:00",
+    "run": "e4d3b61d5093408188b1ab12df13ed04",
+    "concern": "w:majority",
+    "w": "majority",
+    "j": false,
+    "attempted": 1000,
+    "successful": 1000,
+    "total_seconds": 4.0863407770002595,
+    "average_ms": 4.0863407770002595,
+    "errors": []
+  },
+  {
+    "utc": "2026-11-17T06:34:57.667343+00:00",
+    "run": "23109d3f0ec941f1a47f1d1a9804b349",
+    "concern": "w:all",
+    "w": 3,
+    "j": false,
+    "attempted": 1000,
+    "successful": 1000,
+    "total_seconds": 3.0505187470007513,
+    "average_ms": 3.0505187470007513,
+    "errors": []
+  }
+]
