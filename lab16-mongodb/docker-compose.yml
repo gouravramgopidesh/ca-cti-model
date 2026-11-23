@@ -1,0 +1,51 @@
+name: lab16-mongodb
+services:
+  mongo:
+    image: mongo:8.0
+    command: [mongod, --wiredTigerCacheSizeGB, '0.25']
+    volumes: [mongo_data:/data/db]
+    healthcheck:
+      test: [CMD, mongosh, --quiet, --eval, 'db.adminCommand({ping:1}).ok']
+      interval: 10s
+      timeout: 10s
+      retries: 30
+  cassandra:
+    image: cassandra:4.1
+    environment:
+      MAX_HEAP_SIZE: 768M
+      HEAP_NEWSIZE: 192M
+      CASSANDRA_CLUSTER_NAME: Lab16
+    volumes: [cass_data:/var/lib/cassandra]
+    healthcheck:
+      test: [CMD-SHELL, 'cqlsh -e "DESCRIBE KEYSPACES"']
+      interval: 15s
+      timeout: 15s
+      retries: 40
+      start_period: 60s
+  neo4j:
+    image: neo4j:5.26-community
+    environment:
+      NEO4J_AUTH: neo4j/lab16demo123
+      NEO4J_server_memory_heap_initial__size: 256m
+      NEO4J_server_memory_heap_max__size: 512m
+      NEO4J_server_memory_pagecache_size: 256m
+    volumes: [neo_data:/data]
+    healthcheck:
+      test: [CMD-SHELL, 'cypher-shell -u neo4j -p lab16demo123 "RETURN 1"']
+      interval: 10s
+      timeout: 15s
+      retries: 40
+      start_period: 30s
+  app:
+    image: gouravram77/lab16-mongodb:1.0
+    build: .
+    command: [python, -u, -c, 'import time; time.sleep(10**9)']
+    depends_on:
+      mongo: {condition: service_healthy}
+      cassandra: {condition: service_healthy}
+      neo4j: {condition: service_healthy}
+    volumes: [./evidence:/lab/evidence]
+volumes:
+  mongo_data:
+  cass_data:
+  neo_data:

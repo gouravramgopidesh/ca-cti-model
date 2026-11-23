@@ -1,0 +1,139 @@
+{
+  "transaction": {
+    "available": true,
+    "data": {
+      "txn_id": "T000",
+      "user_id": "U1",
+      "amount": 100,
+      "merchant": "Demo merchant",
+      "timestamp": "2025-01-01 00:00:00",
+      "risk_score": 0.9
+    }
+  },
+  "profile": {
+    "available": true,
+    "data": [
+      {
+        "user_id": "U1",
+        "event_time": "2025-01-01 00:14:00",
+        "txn_id": "T014",
+        "amount": 114.0,
+        "merchant": "Demo merchant"
+      },
+      {
+        "user_id": "U1",
+        "event_time": "2025-01-01 00:13:00",
+        "txn_id": "T013",
+        "amount": 113.0,
+        "merchant": "Demo merchant"
+      },
+      {
+        "user_id": "U1",
+        "event_time": "2025-01-01 00:12:00",
+        "txn_id": "T012",
+        "amount": 112.0,
+        "merchant": "Demo merchant"
+      },
+      {
+        "user_id": "U1",
+        "event_time": "2025-01-01 00:11:00",
+        "txn_id": "T011",
+        "amount": 111.0,
+        "merchant": "Demo merchant"
+      },
+      {
+        "user_id": "U1",
+        "event_time": "2025-01-01 00:10:00",
+        "txn_id": "T010",
+        "amount": 110.0,
+        "merchant": "Demo merchant"
+      },
+      {
+        "user_id": "U1",
+        "event_time": "2025-01-01 00:09:00",
+        "txn_id": "T009",
+        "amount": 109.0,
+        "merchant": "Demo merchant"
+      },
+      {
+        "user_id": "U1",
+        "event_time": "2025-01-01 00:08:00",
+        "txn_id": "T008",
+        "amount": 108.0,
+        "merchant": "Demo merchant"
+      },
+      {
+        "user_id": "U1",
+        "event_time": "2025-01-01 00:07:00",
+        "txn_id": "T007",
+        "amount": 107.0,
+        "merchant": "Demo merchant"
+      },
+      {
+        "user_id": "U1",
+        "event_time": "2025-01-01 00:06:00",
+        "txn_id": "T006",
+        "amount": 106.0,
+        "merchant": "Demo merchant"
+      },
+      {
+        "user_id": "U1",
+        "event_time": "2025-01-01 00:05:00",
+        "txn_id": "T005",
+        "amount": 105.0,
+        "merchant": "Demo merchant"
+      }
+    ]
+  },
+  "graph": {
+    "available": true,
+    "data": [
+      {
+        "accounts": [
+          "U1",
+          "U2"
+        ],
+        "hops": 1,
+        "closes_ring": false
+      },
+      {
+        "accounts": [
+          "U1",
+          "U2",
+          "U3"
+        ],
+        "hops": 2,
+        "closes_ring": false
+      },
+      {
+        "accounts": [
+          "U1",
+          "U2",
+          "U4"
+        ],
+        "hops": 2,
+        "closes_ring": false
+      },
+      {
+        "accounts": [
+          "U1",
+          "U2",
+          "U3",
+          "U1"
+        ],
+        "hops": 3,
+        "closes_ring": true
+      },
+      {
+        "accounts": [
+          "U1",
+          "U2",
+          "U4",
+          "U5"
+        ],
+        "hops": 3,
+        "closes_ring": false
+      }
+    ]
+  }
+}

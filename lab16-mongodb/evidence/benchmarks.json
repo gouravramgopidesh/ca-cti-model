@@ -1,0 +1,142 @@
+[
+  {
+    "activity": "16.1",
+    "backend": "MongoDB",
+    "operation": "courses_for_student",
+    "runs": 20,
+    "mean_ms": 0.32210274985118303,
+    "median_ms": 0.33095149956352543,
+    "min_ms": 0.22919199909665622,
+    "max_ms": 0.4388209999888204
+  },
+  {
+    "activity": "16.1",
+    "backend": "Cassandra",
+    "operation": "courses_for_student",
+    "runs": 20,
+    "mean_ms": 1.435922049859073,
+    "median_ms": 1.3127590009389678,
+    "min_ms": 0.8694719999766676,
+    "max_ms": 2.3235239987116074
+  },
+  {
+    "activity": "16.1",
+    "backend": "Neo4j",
+    "operation": "courses_for_student",
+    "runs": 20,
+    "mean_ms": 2.1414425501461665,
+    "median_ms": 2.024753999648965,
+    "min_ms": 1.6077339987532469,
+    "max_ms": 3.253427999879932
+  },
+  {
+    "activity": "16.1",
+    "backend": "MongoDB",
+    "operation": "students_in_course",
+    "runs": 20,
+    "mean_ms": 0.3259588002038072,
+    "median_ms": 0.3192944996044389,
+    "min_ms": 0.266278000708553,
+    "max_ms": 0.4968450011801906
+  },
+  {
+    "activity": "16.1",
+    "backend": "Cassandra",
+    "operation": "students_in_course",
+    "runs": 20,
+    "mean_ms": 1.251644200146984,
+    "median_ms": 1.1523104994921596,
+    "min_ms": 0.9049360014614649,
+    "max_ms": 2.320105000762851
+  },
+  {
+    "activity": "16.1",
+    "backend": "Neo4j",
+    "operation": "students_in_course",
+    "runs": 20,
+    "mean_ms": 2.6685765498768887,
+    "median_ms": 2.4344885005120886,
+    "min_ms": 1.9395990002522012,
+    "max_ms": 5.107864999445155
+  },
+  {
+    "activity": "16.1",
+    "backend": "MongoDB",
+    "operation": "students_sharing_course",
+    "runs": 20,
+    "mean_ms": 0.7261782501700509,
+    "median_ms": 0.7115255002645426,
+    "min_ms": 0.6030950007698266,
+    "max_ms": 0.8988629997475073
+  },
+  {
+    "activity": "16.1",
+    "backend": "Cassandra",
+    "operation": "students_sharing_course",
+    "runs": 20,
+    "mean_ms": 5.589995599893882,
+    "median_ms": 5.348448499717051,
+    "min_ms": 4.297404999306309,
+    "max_ms": 8.056990000113728
+  },
+  {
+    "activity": "16.1",
+    "backend": "Neo4j",
+    "operation": "students_sharing_course",
+    "runs": 20,
+    "mean_ms": 2.552535450013238,
+    "median_ms": 2.157449000151246,
+    "min_ms": 1.6199069996218896,
+    "max_ms": 8.427839000432868
+  },
+  {
+    "activity": "16.2",
+    "backend": "MongoDB",
+    "operation": "get_transaction",
+    "runs": 20,
+    "mean_ms": 0.2901342999393819,
+    "median_ms": 0.26386650006315904,
+    "min_ms": 0.24827199922583532,
+    "max_ms": 0.48325699935958255
+  },
+  {
+    "activity": "16.2",
+    "backend": "Cassandra",
+    "operation": "get_user_profile",
+    "runs": 20,
+    "mean_ms": 1.221798449932976,
+    "median_ms": 1.1590430003707297,
+    "min_ms": 0.9945370002242271,
+    "max_ms": 2.1325739999156212
+  },
+  {
+    "activity": "16.2",
+    "backend": "Neo4j",
+    "operation": "graph_1_hop",
+    "runs": 20,
+    "mean_ms": 1.4579350499843713,
+    "median_ms": 1.4370600001711864,
+    "min_ms": 1.1627650001173606,
+    "max_ms": 1.8946999989566393
+  },
+  {
+    "activity": "16.2",
+    "backend": "Neo4j",
+    "operation": "graph_2_hop",
+    "runs": 20,
+    "mean_ms": 2.351876250213536,
+    "median_ms": 1.7649565006649937,
+    "min_ms": 1.3454699983412866,
+    "max_ms": 6.593541000256664
+  },
+  {
+    "activity": "16.2",
+    "backend": "Neo4j",
+    "operation": "graph_3_hop",
+    "runs": 20,
+    "mean_ms": 4.013066299921775,
+    "median_ms": 3.846283500024583,
+    "min_ms": 1.9387579995964188,
+    "max_ms": 6.749869999111979
+  }
+]
