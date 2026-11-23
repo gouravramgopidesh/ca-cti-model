@@ -1,0 +1,32 @@
+[
+  {
+    "index": "ix_category_price",
+    "total_ops": 10,
+    "delta_ops": 10
+  },
+  {
+    "index": "ix_price",
+    "total_ops": 10,
+    "delta_ops": 10
+  },
+  {
+    "index": "ix_rating_stock",
+    "total_ops": 10,
+    "delta_ops": 10
+  },
+  {
+    "index": "ix_name",
+    "total_ops": 10,
+    "delta_ops": 10
+  },
+  {
+    "index": "ix_tags",
+    "total_ops": 10,
+    "delta_ops": 10
+  },
+  {
+    "index": "_id_",
+    "total_ops": 0,
+    "delta_ops": 0
+  }
+]

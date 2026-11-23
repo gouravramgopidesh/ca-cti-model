@@ -1,0 +1,13 @@
+{
+  "collection": "products_index_benchmark",
+  "batch_size": 10000,
+  "secondary_indexes": [
+    "category+price",
+    "price",
+    "tags",
+    "rating+stock",
+    "name"
+  ],
+  "retained_index": "category+price",
+  "note": "Wall-clock timings depend on local MongoDB load and index cache."
+}

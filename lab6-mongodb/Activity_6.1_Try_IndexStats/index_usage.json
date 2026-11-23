@@ -1,0 +1,6 @@
+{
+  "collection": "products_50k",
+  "query_repetitions": 10,
+  "aggregation_stage": "$indexStats",
+  "note": "Measures observed delta in accesses.ops during multiple executions; runtime index usage can vary."
+}

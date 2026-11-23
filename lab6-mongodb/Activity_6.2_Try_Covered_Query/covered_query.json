@@ -1,0 +1,14 @@
+{
+  "collection": "products_index_benchmark",
+  "category": "Electronics",
+  "projection": {
+    "_id": 0,
+    "category": 1,
+    "price": 1
+  },
+  "expected_totalDocsExamined": 0,
+  "expected_stages": [
+    "IXSCAN"
+  ],
+  "excluded_stage": "FETCH"
+}

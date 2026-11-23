@@ -1,0 +1,20 @@
+{
+  "document_count": 50000,
+  "collection": "products_50k",
+  "fields": [
+    "name",
+    "category",
+    "price",
+    "rating",
+    "stock",
+    "tags"
+  ],
+  "five_queries": [
+    "category_price_sort",
+    "price_range",
+    "tag_match",
+    "rating_stock",
+    "name_prefix"
+  ],
+  "note": "Documents are generated with deterministic random data in Python, then inserted into MongoDB. This JSON records the experiment dataset configuration."
+}

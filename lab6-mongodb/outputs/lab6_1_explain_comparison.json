@@ -1,0 +1,186 @@
+{
+  "docs": 50000,
+  "before": [
+    {
+      "query": "category_price_sort",
+      "stages": [
+        "SORT",
+        "COLLSCAN"
+      ],
+      "totalDocsExamined": 50000,
+      "totalKeysExamined": 0,
+      "nReturned": 100,
+      "executionTimeMillis": 19
+    },
+    {
+      "query": "price_range",
+      "stages": [
+        "LIMIT",
+        "COLLSCAN"
+      ],
+      "totalDocsExamined": 694,
+      "totalKeysExamined": 0,
+      "nReturned": 100,
+      "executionTimeMillis": 0
+    },
+    {
+      "query": "tag_match",
+      "stages": [
+        "LIMIT",
+        "COLLSCAN"
+      ],
+      "totalDocsExamined": 419,
+      "totalKeysExamined": 0,
+      "nReturned": 100,
+      "executionTimeMillis": 0
+    },
+    {
+      "query": "rating_stock",
+      "stages": [
+        "LIMIT",
+        "COLLSCAN"
+      ],
+      "totalDocsExamined": 684,
+      "totalKeysExamined": 0,
+      "nReturned": 100,
+      "executionTimeMillis": 0
+    },
+    {
+      "query": "name_prefix",
+      "stages": [
+        "LIMIT",
+        "COLLSCAN"
+      ],
+      "totalDocsExamined": 952,
+      "totalKeysExamined": 0,
+      "nReturned": 100,
+      "executionTimeMillis": 0
+    }
+  ],
+  "after": [
+    {
+      "query": "category_price_sort",
+      "stages": [
+        "LIMIT",
+        "FETCH",
+        "IXSCAN"
+      ],
+      "totalDocsExamined": 100,
+      "totalKeysExamined": 100,
+      "nReturned": 100,
+      "executionTimeMillis": 5
+    },
+    {
+      "query": "price_range",
+      "stages": [
+        "LIMIT",
+        "FETCH",
+        "IXSCAN"
+      ],
+      "totalDocsExamined": 100,
+      "totalKeysExamined": 100,
+      "nReturned": 100,
+      "executionTimeMillis": 2
+    },
+    {
+      "query": "tag_match",
+      "stages": [
+        "LIMIT",
+        "FETCH",
+        "IXSCAN"
+      ],
+      "totalDocsExamined": 100,
+      "totalKeysExamined": 100,
+      "nReturned": 100,
+      "executionTimeMillis": 2
+    },
+    {
+      "query": "rating_stock",
+      "stages": [
+        "LIMIT",
+        "FETCH",
+        "IXSCAN"
+      ],
+      "totalDocsExamined": 100,
+      "totalKeysExamined": 100,
+      "nReturned": 100,
+      "executionTimeMillis": 4
+    },
+    {
+      "query": "name_prefix",
+      "stages": [
+        "LIMIT",
+        "FETCH",
+        "IXSCAN"
+      ],
+      "totalDocsExamined": 100,
+      "totalKeysExamined": 100,
+      "nReturned": 100,
+      "executionTimeMillis": 1
+    }
+  ],
+  "indexes": {
+    "_id_": {
+      "v": 2,
+      "key": [
+        [
+          "_id",
+          1
+        ]
+      ]
+    },
+    "ix_category_price": {
+      "v": 2,
+      "key": [
+        [
+          "category",
+          1
+        ],
+        [
+          "price",
+          1
+        ]
+      ]
+    },
+    "ix_price": {
+      "v": 2,
+      "key": [
+        [
+          "price",
+          1
+        ]
+      ]
+    },
+    "ix_tags": {
+      "v": 2,
+      "key": [
+        [
+          "tags",
+          1
+        ]
+      ]
+    },
+    "ix_rating_stock": {
+      "v": 2,
+      "key": [
+        [
+          "rating",
+          1
+        ],
+        [
+          "stock",
+          1
+        ]
+      ]
+    },
+    "ix_name": {
+      "v": 2,
+      "key": [
+        [
+          "name",
+          1
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "insert_without_indexes_seconds": 0.16114120000202092,
+  "insert_with_five_indexes_seconds": 0.2737235000022338,
+  "slowdown_percent": 69.8656209577693,
+  "five_index_query_results": [
+    {
+      "query": "category_price_sort",
+      "stages": [
+        "LIMIT",
+        "FETCH",
+        "IXSCAN"
+      ],
+      "totalDocsExamined": 100,
+      "totalKeysExamined": 100,
+      "nReturned": 100,
+      "executionTimeMillis": 0
+    },
+    {
+      "query": "price_range",
+      "stages": [
+        "LIMIT",
+        "FETCH",
+        "IXSCAN"
+      ],
+      "totalDocsExamined": 100,
+      "totalKeysExamined": 100,
+      "nReturned": 100,
+      "executionTimeMillis": 0
+    },
+    {
+      "query": "tag_match",
+      "stages": [
+        "LIMIT",
+        "FETCH",
+        "IXSCAN"
+      ],
+      "totalDocsExamined": 100,
+      "totalKeysExamined": 100,
+      "nReturned": 100,
+      "executionTimeMillis": 0
+    },
+    {
+      "query": "rating_stock",
+      "stages": [
+        "LIMIT",
+        "FETCH",
+        "IXSCAN"
+      ],
+      "totalDocsExamined": 100,
+      "totalKeysExamined": 100,
+      "nReturned": 100,
+      "executionTimeMillis": 0
+    },
+    {
+      "query": "name_prefix",
+      "stages": [
+        "LIMIT",
+        "FETCH",
+        "IXSCAN"
+      ],
+      "totalDocsExamined": 100,
+      "totalKeysExamined": 100,
+      "nReturned": 100,
+      "executionTimeMillis": 0
+    }
+  ],
+  "one_index_query_results": [
+    {
+      "query": "category_price_sort",
+      "stages": [
+        "LIMIT",
+        "FETCH",
+        "IXSCAN"
+      ],
+      "totalDocsExamined": 100,
+      "totalKeysExamined": 100,
+      "nReturned": 100,
+      "executionTimeMillis": 0
+    },
+    {
+      "query": "price_range",
+      "stages": [
+        "LIMIT",
+        "COLLSCAN"
+      ],
+      "totalDocsExamined": 756,
+      "totalKeysExamined": 0,
+      "nReturned": 100,
+      "executionTimeMillis": 0
+    },
+    {
+      "query": "tag_match",
+      "stages": [
+        "LIMIT",
+        "COLLSCAN"
+      ],
+      "totalDocsExamined": 388,
+      "totalKeysExamined": 0,
+      "nReturned": 100,
+      "executionTimeMillis": 0
+    },
+    {
+      "query": "rating_stock",
+      "stages": [
+        "LIMIT",
+        "COLLSCAN"
+      ],
+      "totalDocsExamined": 774,
+      "totalKeysExamined": 0,
+      "nReturned": 100,
+      "executionTimeMillis": 0
+    },
+    {
+      "query": "name_prefix",
+      "stages": [
+        "LIMIT",
+        "COLLSCAN"
+      ],
+      "totalDocsExamined": 1182,
+      "totalKeysExamined": 0,
+      "nReturned": 100,
+      "executionTimeMillis": 0
+    }
+  ],
+  "retained_index": "ix_category_price",
+  "count": 20000
+}

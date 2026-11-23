@@ -1,0 +1,23 @@
+{
+  "plan_stages": [
+    "LIMIT",
+    "PROJECTION_COVERED",
+    "IXSCAN"
+  ],
+  "totalDocsExamined": 0,
+  "totalKeysExamined": 100,
+  "samples": [
+    {
+      "category": "Electronics",
+      "price": 10.0
+    },
+    {
+      "category": "Electronics",
+      "price": 10.03
+    },
+    {
+      "category": "Electronics",
+      "price": 10.05
+    }
+  ]
+}
