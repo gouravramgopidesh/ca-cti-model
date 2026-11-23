@@ -1,0 +1,93 @@
+[
+  {
+    "_id": {
+      "$oid": "6afd4a821d88eb5b99eb6bd4"
+    },
+    "code": "CS101",
+    "title": "Programming",
+    "instructor": "Dr. Rao",
+    "schedule": {
+      "days": [
+        "Monday",
+        "Wednesday"
+      ],
+      "times": "09:00-10:00",
+      "room": "A101"
+    },
+    "students": [
+      {
+        "name": "Ananya",
+        "id": "S01",
+        "grade": "A"
+      },
+      {
+        "name": "Ravi",
+        "id": "S02",
+        "grade": "B"
+      }
+    ],
+    "prerequisite_codes": []
+  },
+  {
+    "_id": {
+      "$oid": "6afd4a821d88eb5b99eb6bd5"
+    },
+    "code": "CS201",
+    "title": "Data Structures",
+    "instructor": "Dr. Mehta",
+    "schedule": {
+      "days": [
+        "Tuesday",
+        "Thursday"
+      ],
+      "times": "10:00-11:00",
+      "room": "B201"
+    },
+    "students": [
+      {
+        "name": "Ravi",
+        "id": "S02",
+        "grade": "A"
+      },
+      {
+        "name": "Meera",
+        "id": "S03",
+        "grade": "B+"
+      }
+    ],
+    "prerequisite_codes": [
+      "CS101"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "6afd4a821d88eb5b99eb6bd6"
+    },
+    "code": "CS401",
+    "title": "Database Systems",
+    "instructor": "Dr. Rao",
+    "schedule": {
+      "days": [
+        "Monday",
+        "Friday"
+      ],
+      "times": "11:00-12:00",
+      "room": "C301"
+    },
+    "students": [
+      {
+        "name": "Meera",
+        "id": "S03",
+        "grade": "A"
+      },
+      {
+        "name": "Arjun",
+        "id": "S04",
+        "grade": "A-"
+      }
+    ],
+    "prerequisite_codes": [
+      "CS201"
+    ]
+  }
+]
