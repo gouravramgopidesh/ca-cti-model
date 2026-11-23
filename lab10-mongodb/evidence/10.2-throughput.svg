@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="430" viewBox="0 0 800 430">
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="Arial" font-size="13" fill="#172b3a">
+<text x="80" y="28" font-size="20" font-weight="bold">Measured reservation throughput</text>
+<path d="M80 355.0H760" stroke="#dce3e8"/>
+<text x="70" y="359.0" text-anchor="end">0</text>
+<path d="M80 295.0H760" stroke="#dce3e8"/>
+<text x="70" y="299.0" text-anchor="end">136</text>
+<path d="M80 235.0H760" stroke="#dce3e8"/>
+<text x="70" y="239.0" text-anchor="end">273</text>
+<path d="M80 175.0H760" stroke="#dce3e8"/>
+<text x="70" y="179.0" text-anchor="end">409</text>
+<path d="M80 115.00000000000003H760" stroke="#dce3e8"/>
+<text x="70" y="119.00000000000003" text-anchor="end">546</text>
+<path d="M80 55.0H760" stroke="#dce3e8"/>
+<text x="70" y="59.0" text-anchor="end">682</text>
+<text x="80.0" y="375" text-anchor="middle">1</text>
+<text x="306.66666666666663" y="375" text-anchor="middle">4</text>
+<text x="533.3333333333333" y="375" text-anchor="middle">8</text>
+<text x="760.0" y="375" text-anchor="middle">16</text>
+<polyline fill="none" stroke="#007c83" stroke-width="3" points="80.0,288.1910543030421 306.66666666666663,332.3508700074794 533.3333333333333,332.6273156625174 760.0,310.79206050887893"/>
+<circle cx="80.0" cy="288.1910543030421" r="4" fill="#007c83"/>
+<circle cx="306.66666666666663" cy="332.3508700074794" r="4" fill="#007c83"/>
+<circle cx="533.3333333333333" cy="332.6273156625174" r="4" fill="#007c83"/>
+<circle cx="760.0" cy="310.79206050887893" r="4" fill="#007c83"/>
+<text x="100" y="402" fill="#007c83">Transactions</text>
+<polyline fill="none" stroke="#b65c20" stroke-width="3" points="80.0,296.54852712497313 306.66666666666663,218.45149554023243 533.3333333333333,153.78914280972003 760.0,87.14285714285717"/>
+<circle cx="80.0" cy="296.54852712497313" r="4" fill="#b65c20"/>
+<circle cx="306.66666666666663" cy="218.45149554023243" r="4" fill="#b65c20"/>
+<circle cx="533.3333333333333" cy="153.78914280972003" r="4" fill="#b65c20"/>
+<circle cx="760.0" cy="87.14285714285717" r="4" fill="#b65c20"/>
+<text x="100" y="420" fill="#b65c20">Non-transactional</text>
+<text x="420" y="395" text-anchor="middle">Concurrent threads</text>
+<text transform="translate(18 205) rotate(-90)" text-anchor="middle">Successful reservations / second</text>
+</g></svg>

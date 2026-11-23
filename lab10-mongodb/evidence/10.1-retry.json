@@ -1,0 +1,25 @@
+{
+  "run": "ee778969fecf4981b3a0dbf665406ff3",
+  "operation": "ada0687597c749478bf13d1293d190cf",
+  "retry_events": [
+    {
+      "kind": "transaction-retry",
+      "attempt": 1,
+      "delay_s": 0.1,
+      "code": 112,
+      "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899032, 2), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899032, 2)}"
+    }
+  ],
+  "final": {
+    "A": {
+      "balance": 900,
+      "version": 2
+    },
+    "B": {
+      "balance": 600,
+      "version": 1
+    }
+  },
+  "history_count": 1,
+  "passed": true
+}

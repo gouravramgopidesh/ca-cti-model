@@ -1,0 +1,46 @@
+{
+  "run": "76a3758557ad41f79c6d008e5e3b464c",
+  "initial": {
+    "A": {
+      "balance": 1000,
+      "version": 0
+    },
+    "B": {
+      "balance": 500,
+      "version": 0
+    }
+  },
+  "committed": {
+    "A": {
+      "balance": 800,
+      "version": 1
+    },
+    "B": {
+      "balance": 700,
+      "version": 1
+    }
+  },
+  "after_failed_transfers": {
+    "A": {
+      "balance": 800,
+      "version": 1
+    },
+    "B": {
+      "balance": 700,
+      "version": 1
+    }
+  },
+  "history_count": 1,
+  "rollback_insufficient": true,
+  "rollback_after_debit": true,
+  "write_concern": {
+    "w": "majority",
+    "j": true
+  },
+  "replicated_history": {
+    "mongo1": true,
+    "mongo2": true,
+    "mongo3": true
+  },
+  "passed": true
+}

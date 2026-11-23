@@ -1,0 +1,4865 @@
+{
+  "no_retry": {
+    "run": "08d573c90b454e19886b175c1cb25451",
+    "workers": 8,
+    "requests": 8,
+    "transactional": true,
+    "retries_allowed": 0,
+    "successes": 1,
+    "out_of_stock": 0,
+    "conflict_failures": 7,
+    "retries": 0,
+    "elapsed_s": 0.026551427001322736,
+    "successful_per_second": 37.66275914097506,
+    "initial_stock": 5,
+    "remaining_stock": 4,
+    "orders": 1,
+    "reserved_quantity": 1,
+    "consistent": true,
+    "outcomes": [
+      {
+        "status": "write_conflict_exhausted",
+        "retry_count": 0,
+        "retry_events": [],
+        "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 1), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 1)}"
+      },
+      {
+        "status": "write_conflict_exhausted",
+        "retry_count": 0,
+        "retry_events": [],
+        "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 1), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 1)}"
+      },
+      {
+        "status": "write_conflict_exhausted",
+        "retry_count": 0,
+        "retry_events": [],
+        "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 1), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 1)}"
+      },
+      {
+        "status": "write_conflict_exhausted",
+        "retry_count": 0,
+        "retry_events": [],
+        "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 7), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 7)}"
+      },
+      {
+        "status": "write_conflict_exhausted",
+        "retry_count": 0,
+        "retry_events": [],
+        "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 1), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 1)}"
+      },
+      {
+        "status": "write_conflict_exhausted",
+        "retry_count": 0,
+        "retry_events": [],
+        "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 7), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 7)}"
+      },
+      {
+        "status": "write_conflict_exhausted",
+        "retry_count": 0,
+        "retry_events": [],
+        "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 1), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 1)}"
+      },
+      {
+        "status": "success",
+        "retry_count": 0,
+        "retry_events": [],
+        "error": null
+      }
+    ]
+  },
+  "with_retry": {
+    "run": "72cdeeb874d7443b9a72e9b43e621180",
+    "workers": 8,
+    "requests": 8,
+    "transactional": true,
+    "retries_allowed": 5,
+    "successes": 5,
+    "out_of_stock": 3,
+    "conflict_failures": 0,
+    "retries": 19,
+    "elapsed_s": 1.5913804400006484,
+    "successful_per_second": 3.1419262637147676,
+    "initial_stock": 5,
+    "remaining_stock": 0,
+    "orders": 5,
+    "reserved_quantity": 5,
+    "consistent": true,
+    "outcomes": [
+      {
+        "status": "success",
+        "retry_count": 2,
+        "retry_events": [
+          {
+            "kind": "transaction-retry",
+            "attempt": 1,
+            "delay_s": 0.1,
+            "code": 112,
+            "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 10), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 10)}"
+          },
+          {
+            "kind": "transaction-retry",
+            "attempt": 2,
+            "delay_s": 0.2,
+            "code": 112,
+            "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 19), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 19)}"
+          }
+        ],
+        "error": null
+      },
+      {
+        "status": "out_of_stock",
+        "retry_count": 4,
+        "retry_events": [
+          {
+            "kind": "transaction-retry",
+            "attempt": 1,
+            "delay_s": 0.1,
+            "code": 112,
+            "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 10), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 10)}"
+          },
+          {
+            "kind": "transaction-retry",
+            "attempt": 2,
+            "delay_s": 0.2,
+            "code": 112,
+            "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 19), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 19)}"
+          },
+          {
+            "kind": "transaction-retry",
+            "attempt": 3,
+            "delay_s": 0.4,
+            "code": 112,
+            "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 25), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 25)}"
+          },
+          {
+            "kind": "transaction-retry",
+            "attempt": 4,
+            "delay_s": 0.8,
+            "code": 112,
+            "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 30), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 30)}"
+          }
+        ],
+        "error": null
+      },
+      {
+        "status": "success",
+        "retry_count": 1,
+        "retry_events": [
+          {
+            "kind": "transaction-retry",
+            "attempt": 1,
+            "delay_s": 0.1,
+            "code": 112,
+            "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 10), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 10)}"
+          }
+        ],
+        "error": null
+      },
+      {
+        "status": "success",
+        "retry_count": 3,
+        "retry_events": [
+          {
+            "kind": "transaction-retry",
+            "attempt": 1,
+            "delay_s": 0.1,
+            "code": 112,
+            "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 10), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 10)}"
+          },
+          {
+            "kind": "transaction-retry",
+            "attempt": 2,
+            "delay_s": 0.2,
+            "code": 112,
+            "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 20), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 20)}"
+          },
+          {
+            "kind": "transaction-retry",
+            "attempt": 3,
+            "delay_s": 0.4,
+            "code": 112,
+            "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 25), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 25)}"
+          }
+        ],
+        "error": null
+      },
+      {
+        "status": "out_of_stock",
+        "retry_count": 4,
+        "retry_events": [
+          {
+            "kind": "transaction-retry",
+            "attempt": 1,
+            "delay_s": 0.1,
+            "code": 112,
+            "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 10), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 10)}"
+          },
+          {
+            "kind": "transaction-retry",
+            "attempt": 2,
+            "delay_s": 0.2,
+            "code": 112,
+            "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 21), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 21)}"
+          },
+          {
+            "kind": "transaction-retry",
+            "attempt": 3,
+            "delay_s": 0.4,
+            "code": 112,
+            "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 29), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 28)}"
+          },
+          {
+            "kind": "transaction-retry",
+            "attempt": 4,
+            "delay_s": 0.8,
+            "code": 112,
+            "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 30), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 30)}"
+          }
+        ],
+        "error": null
+      },
+      {
+        "status": "success",
+        "retry_count": 1,
+        "retry_events": [
+          {
+            "kind": "transaction-retry",
+            "attempt": 1,
+            "delay_s": 0.1,
+            "code": 112,
+            "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 10), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 10)}"
+          }
+        ],
+        "error": null
+      },
+      {
+        "status": "out_of_stock",
+        "retry_count": 4,
+        "retry_events": [
+          {
+            "kind": "transaction-retry",
+            "attempt": 1,
+            "delay_s": 0.1,
+            "code": 112,
+            "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 10), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 10)}"
+          },
+          {
+            "kind": "transaction-retry",
+            "attempt": 2,
+            "delay_s": 0.2,
+            "code": 112,
+            "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 20), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 20)}"
+          },
+          {
+            "kind": "transaction-retry",
+            "attempt": 3,
+            "delay_s": 0.4,
+            "code": 112,
+            "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 25), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 25)}"
+          },
+          {
+            "kind": "transaction-retry",
+            "attempt": 4,
+            "delay_s": 0.8,
+            "code": 112,
+            "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899035, 30), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899035, 30)}"
+          }
+        ],
+        "error": null
+      },
+      {
+        "status": "success",
+        "retry_count": 0,
+        "retry_events": [],
+        "error": null
+      }
+    ]
+  },
+  "throughput": [
+    {
+      "run": "06e7600938834af2add7ef37d231ce8e",
+      "workers": 1,
+      "requests": 80,
+      "transactional": true,
+      "retries_allowed": 5,
+      "successes": 80,
+      "out_of_stock": 0,
+      "conflict_failures": 0,
+      "retries": 0,
+      "elapsed_s": 0.5265037299996038,
+      "successful_per_second": 151.94574215088693,
+      "initial_stock": 80,
+      "remaining_stock": 0,
+      "orders": 80,
+      "reserved_quantity": 80,
+      "consistent": true,
+      "outcomes": [
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        }
+      ]
+    },
+    {
+      "run": "f1684492212a4d03ac46606d1fb79cbd",
+      "workers": 4,
+      "requests": 80,
+      "transactional": true,
+      "retries_allowed": 5,
+      "successes": 80,
+      "out_of_stock": 0,
+      "conflict_failures": 0,
+      "retries": 10,
+      "elapsed_s": 1.5530468109991489,
+      "successful_per_second": 51.511647577790775,
+      "initial_stock": 80,
+      "remaining_stock": 0,
+      "orders": 80,
+      "reserved_quantity": 80,
+      "consistent": true,
+      "outcomes": [
+        {
+          "status": "success",
+          "retry_count": 4,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899037, 48), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899037, 48)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 2,
+              "delay_s": 0.2,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899037, 74), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899037, 74)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 3,
+              "delay_s": 0.4,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899037, 127), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899037, 127)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 4,
+              "delay_s": 0.8,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899037, 135), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899037, 135)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 3,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899037, 48), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899037, 48)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 2,
+              "delay_s": 0.2,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899037, 75), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899037, 75)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 3,
+              "delay_s": 0.4,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899037, 127), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899037, 127)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 1,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899037, 48), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899037, 48)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 1,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899037, 78), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899037, 78)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 1,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899037, 109), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899037, 109)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        }
+      ]
+    },
+    {
+      "run": "473b8ed034734b6cba9edf55ad742477",
+      "workers": 8,
+      "requests": 80,
+      "transactional": true,
+      "retries_allowed": 5,
+      "successes": 80,
+      "out_of_stock": 0,
+      "conflict_failures": 0,
+      "retries": 22,
+      "elapsed_s": 1.5722368660008215,
+      "successful_per_second": 50.882918299384414,
+      "initial_stock": 80,
+      "remaining_stock": 0,
+      "orders": 80,
+      "reserved_quantity": 80,
+      "consistent": true,
+      "outcomes": [
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 3,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899038, 4), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899038, 4)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 2,
+              "delay_s": 0.2,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899038, 30), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899038, 30)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 3,
+              "delay_s": 0.4,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899039, 37), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899039, 37)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 1,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899038, 6), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899038, 6)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 2,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899038, 5), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899038, 5)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 2,
+              "delay_s": 0.2,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899038, 32), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899038, 32)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 2,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899038, 6), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899038, 6)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 2,
+              "delay_s": 0.2,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899038, 34), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899038, 34)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 4,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899038, 6), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899038, 6)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 2,
+              "delay_s": 0.2,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899038, 33), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899038, 33)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 3,
+              "delay_s": 0.4,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899039, 43), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899039, 43)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 4,
+              "delay_s": 0.8,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899039, 61), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899039, 61)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 3,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899038, 8), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899038, 8)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 2,
+              "delay_s": 0.2,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899038, 37), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899038, 37)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 3,
+              "delay_s": 0.4,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899039, 46), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899039, 46)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 1,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899038, 12), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899038, 12)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 2,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899038, 33), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899038, 33)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 2,
+              "delay_s": 0.2,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899039, 11), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899039, 11)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 1,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899038, 39), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899038, 39)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 1,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899039, 39), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899039, 39)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 1,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899039, 41), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899039, 41)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 1,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899039, 43), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899039, 43)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        }
+      ]
+    },
+    {
+      "run": "a096f32c03be4bf794a1f6a360101f8c",
+      "workers": 16,
+      "requests": 80,
+      "transactional": true,
+      "retries_allowed": 5,
+      "successes": 80,
+      "out_of_stock": 0,
+      "conflict_failures": 0,
+      "retries": 43,
+      "elapsed_s": 0.7956751549991168,
+      "successful_per_second": 100.54354405484585,
+      "initial_stock": 80,
+      "remaining_stock": 0,
+      "orders": 80,
+      "reserved_quantity": 80,
+      "consistent": true,
+      "outcomes": [
+        {
+          "status": "success",
+          "retry_count": 1,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 2), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 2)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 2,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 2), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 2)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 2,
+              "delay_s": 0.2,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 35), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 35)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 3,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 2), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 2)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 2,
+              "delay_s": 0.2,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 40), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 40)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 3,
+              "delay_s": 0.4,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 99), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 99)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 2,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 2), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 2)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 2,
+              "delay_s": 0.2,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 40), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 40)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 1,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 5), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 5)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 3,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 6), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 6)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 2,
+              "delay_s": 0.2,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 45), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 45)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 3,
+              "delay_s": 0.4,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 105), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 105)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 2,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 2), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 2)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 2,
+              "delay_s": 0.2,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 43), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 43)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 3,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 13), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 13)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 2,
+              "delay_s": 0.2,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 50), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 50)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 3,
+              "delay_s": 0.4,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 109), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 109)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 2,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 16), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 16)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 2,
+              "delay_s": 0.2,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 52), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 52)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 1,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 10), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 10)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 2,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 10), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 10)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 2,
+              "delay_s": 0.2,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 45), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 45)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 2,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 13), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 13)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 2,
+              "delay_s": 0.2,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 50), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 50)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 3,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 12), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 12)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 2,
+              "delay_s": 0.2,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 48), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 48)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 3,
+              "delay_s": 0.4,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 107), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 107)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 1,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 13), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 13)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 3,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 18), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 18)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 2,
+              "delay_s": 0.2,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 51), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 51)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 3,
+              "delay_s": 0.4,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 109), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 109)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 1,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 38), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 38)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 1,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 42), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 42)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 2,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 52), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 52)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 2,
+              "delay_s": 0.2,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 86), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 86)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 2,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 63), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 63)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 2,
+              "delay_s": 0.2,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 91), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 91)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 2,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 74), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 74)}"
+            },
+            {
+              "kind": "transaction-retry",
+              "attempt": 2,
+              "delay_s": 0.2,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 102), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 102)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 1,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 84), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 84)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 1,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 97), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 97)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 1,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 99), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 99)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 1,
+          "retry_events": [
+            {
+              "kind": "transaction-retry",
+              "attempt": 1,
+              "delay_s": 0.1,
+              "code": 112,
+              "error": "Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction., full error: {'errorLabels': ['TransientTransactionError'], 'ok': 0.0, 'errmsg': 'Caused by :: Write conflict during plan execution and yielding is disabled. :: Please retry your operation or multi-document transaction.', 'code': 112, 'codeName': 'WriteConflict', '$clusterTime': {'clusterTime': Timestamp(1794899040, 103), 'signature': {'hash': b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00', 'keyId': 0}}, 'operationTime': Timestamp(1794899040, 103)}"
+            }
+          ],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        }
+      ]
+    },
+    {
+      "run": "77da2f4bcd0c46418f964b0b74276f0d",
+      "workers": 1,
+      "requests": 80,
+      "transactional": false,
+      "retries_allowed": 5,
+      "successes": 80,
+      "out_of_stock": 0,
+      "conflict_failures": 0,
+      "retries": 0,
+      "elapsed_s": 0.601783964999413,
+      "successful_per_second": 132.9380718877713,
+      "initial_stock": 80,
+      "remaining_stock": 0,
+      "orders": 80,
+      "reserved_quantity": 80,
+      "consistent": true,
+      "outcomes": [
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        }
+      ]
+    },
+    {
+      "run": "00f5b26532b24b55a49612fff066b83e",
+      "workers": 4,
+      "requests": 80,
+      "transactional": false,
+      "retries_allowed": 5,
+      "successes": 80,
+      "out_of_stock": 0,
+      "conflict_failures": 0,
+      "retries": 0,
+      "elapsed_s": 0.25760193600035564,
+      "successful_per_second": 310.5566722134012,
+      "initial_stock": 80,
+      "remaining_stock": 0,
+      "orders": 80,
+      "reserved_quantity": 80,
+      "consistent": true,
+      "outcomes": [
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        }
+      ]
+    },
+    {
+      "run": "f38886e2e8594d4ca3d099b7ec004615",
+      "workers": 8,
+      "requests": 80,
+      "transactional": false,
+      "retries_allowed": 5,
+      "successes": 80,
+      "out_of_stock": 0,
+      "conflict_failures": 0,
+      "retries": 0,
+      "elapsed_s": 0.174817400999018,
+      "successful_per_second": 457.62034867712845,
+      "initial_stock": 80,
+      "remaining_stock": 0,
+      "orders": 80,
+      "reserved_quantity": 80,
+      "consistent": true,
+      "outcomes": [
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        }
+      ]
+    },
+    {
+      "run": "034c833ceecc471fa8a3e2acc2bb5051",
+      "workers": 16,
+      "requests": 80,
+      "transactional": false,
+      "retries_allowed": 5,
+      "successes": 80,
+      "out_of_stock": 0,
+      "conflict_failures": 0,
+      "retries": 0,
+      "elapsed_s": 0.13132059399868012,
+      "successful_per_second": 609.1961478700291,
+      "initial_stock": 80,
+      "remaining_stock": 0,
+      "orders": 80,
+      "reserved_quantity": 80,
+      "consistent": true,
+      "outcomes": [
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        },
+        {
+          "status": "success",
+          "retry_count": 0,
+          "retry_events": [],
+          "error": null
+        }
+      ]
+    }
+  ],
+  "failure_comparison": [
+    {
+      "initial_stock": 5,
+      "remaining_stock": 5,
+      "orders": 0,
+      "reserved_quantity": 0,
+      "consistent": true,
+      "transactional": true
+    },
+    {
+      "initial_stock": 5,
+      "remaining_stock": 4,
+      "orders": 0,
+      "reserved_quantity": 0,
+      "consistent": false,
+      "transactional": false
+    }
+  ],
+  "passed": true
+}
