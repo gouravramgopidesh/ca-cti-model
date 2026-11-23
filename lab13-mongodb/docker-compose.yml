@@ -1,0 +1,90 @@
+name: lab13-mongodb
+
+services:
+  mongo1:
+    image: mongo:8.0
+    restart: unless-stopped
+    entrypoint: ["bash", "/opt/lab13/mongo-start.sh"]
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: labadmin
+      MONGO_INITDB_ROOT_PASSWORD: ${LAB13_PASSWORD:?Run setup.ps1}
+    volumes:
+      - mongo1-data:/data/db
+      - keyfile:/shared:ro
+      - ./activity-13.1/mongo-start.sh:/opt/lab13/mongo-start.sh:ro
+    healthcheck:
+      test: ["CMD-SHELL", "mongosh --quiet --host mongo1 --eval 'db.adminCommand({ping:1}).ok' | grep -q 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 40
+
+  mongo2:
+    image: mongo:8.0
+    restart: unless-stopped
+    entrypoint: ["bash", "/opt/lab13/mongo-start.sh"]
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: labadmin
+      MONGO_INITDB_ROOT_PASSWORD: ${LAB13_PASSWORD:?Run setup.ps1}
+    volumes:
+      - mongo2-data:/data/db
+      - keyfile:/shared:ro
+      - ./activity-13.1/mongo-start.sh:/opt/lab13/mongo-start.sh:ro
+    healthcheck:
+      test: ["CMD-SHELL", "mongosh --quiet --host mongo2 --eval 'db.adminCommand({ping:1}).ok' | grep -q 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 40
+
+  mongo3:
+    image: mongo:8.0
+    restart: unless-stopped
+    entrypoint: ["bash", "/opt/lab13/mongo-start.sh"]
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: labadmin
+      MONGO_INITDB_ROOT_PASSWORD: ${LAB13_PASSWORD:?Run setup.ps1}
+    volumes:
+      - mongo3-data:/data/db
+      - keyfile:/shared:ro
+      - ./activity-13.1/mongo-start.sh:/opt/lab13/mongo-start.sh:ro
+    healthcheck:
+      test: ["CMD-SHELL", "mongosh --quiet --host mongo3 --eval 'db.adminCommand({ping:1}).ok' | grep -q 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 40
+
+  runner:
+    image: ${LAB13_IMAGE:-lab13-mongodb-runner:local}
+    build: .
+    profiles: [tools]
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: labadmin
+      MONGO_INITDB_ROOT_PASSWORD: ${LAB13_PASSWORD:?Run setup.ps1}
+      MONITOR_PASSWORD: ${LAB13_MONITOR_PASSWORD:?Run setup.ps1}
+    volumes:
+      - ./evidence:/work/evidence
+
+  keygen:
+    image: ${LAB13_IMAGE:-lab13-mongodb-runner:local}
+    profiles: [tools]
+    command: ["python", "activity-13.1/keygen.py"]
+    volumes:
+      - keyfile:/shared
+
+  exporter:
+    image: percona/mongodb_exporter:0.53
+    profiles: [metrics]
+    command:
+      - "--mongodb.uri=mongodb://mongo1:27017/admin?directConnection=true"
+      - "--collector.diagnosticdata"
+      - "--collector.replicasetstatus"
+    environment:
+      MONGODB_USER: labmonitor
+      MONGODB_PASSWORD: ${LAB13_MONITOR_PASSWORD:?Run setup.ps1}
+    ports:
+      - "127.0.0.1:9216:9216"
+
+volumes:
+  keyfile:
+  mongo1-data:
+  mongo2-data:
+  mongo3-data:

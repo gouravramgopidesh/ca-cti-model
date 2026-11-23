@@ -1,0 +1,112 @@
+{
+  "passed": true,
+  "before": [
+    {
+      "name": "mongo1:27017",
+      "state": "SECONDARY",
+      "health": 1.0
+    },
+    {
+      "name": "mongo2:27017",
+      "state": "PRIMARY",
+      "health": 1.0
+    },
+    {
+      "name": "mongo3:27017",
+      "state": "SECONDARY",
+      "health": 1.0
+    }
+  ],
+  "after": [
+    {
+      "name": "mongo1:27017",
+      "state": "PRIMARY",
+      "health": 1.0
+    },
+    {
+      "name": "mongo2:27017",
+      "state": "SECONDARY",
+      "health": 1.0
+    },
+    {
+      "name": "mongo3:27017",
+      "state": "SECONDARY",
+      "health": 1.0
+    }
+  ],
+  "old_primary": "mongo2:27017",
+  "new_primary": "mongo1:27017",
+  "replicated": {
+    "mongo1:27017": true,
+    "mongo2:27017": true,
+    "mongo3:27017": true
+  },
+  "anonymous_denied": true,
+  "reads": [
+    {
+      "utc": "2026-11-17T17:58:44.512430+00:00",
+      "ok": true,
+      "member": "('mongo2', 27017)"
+    },
+    {
+      "utc": "2026-11-17T17:58:45.013736+00:00",
+      "ok": true,
+      "member": "('mongo2', 27017)"
+    },
+    {
+      "utc": "2026-11-17T17:58:45.515328+00:00",
+      "ok": true,
+      "member": "('mongo2', 27017)"
+    },
+    {
+      "utc": "2026-11-17T17:58:46.017249+00:00",
+      "ok": true,
+      "member": "('mongo2', 27017)"
+    },
+    {
+      "utc": "2026-11-17T17:58:46.519019+00:00",
+      "ok": true,
+      "member": "('mongo2', 27017)"
+    },
+    {
+      "utc": "2026-11-17T17:58:47.020474+00:00",
+      "ok": true,
+      "member": "('mongo1', 27017)"
+    },
+    {
+      "utc": "2026-11-17T17:58:47.522070+00:00",
+      "ok": true,
+      "member": "('mongo1', 27017)"
+    },
+    {
+      "utc": "2026-11-17T17:58:48.023525+00:00",
+      "ok": true,
+      "member": "('mongo1', 27017)"
+    },
+    {
+      "utc": "2026-11-17T17:58:48.524979+00:00",
+      "ok": true,
+      "member": "('mongo1', 27017)"
+    },
+    {
+      "utc": "2026-11-17T17:58:49.026344+00:00",
+      "ok": true,
+      "member": "('mongo1', 27017)"
+    },
+    {
+      "utc": "2026-11-17T17:58:49.527875+00:00",
+      "ok": true,
+      "member": "('mongo1', 27017)"
+    },
+    {
+      "utc": "2026-11-17T17:58:50.029360+00:00",
+      "ok": true,
+      "member": "('mongo1', 27017)"
+    },
+    {
+      "utc": "2026-11-17T17:58:50.531069+00:00",
+      "ok": true,
+      "member": "('mongo1', 27017)"
+    }
+  ]
+}

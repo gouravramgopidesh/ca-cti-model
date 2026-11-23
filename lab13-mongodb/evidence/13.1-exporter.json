@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "endpoint": "http://exporter:9216/metrics",
+  "mongo_metric_count": 5846,
+  "examples": [
+    "mongodb_clusterTime_clusterTime{cl_id=\"6afc8a7da0e5d24af6c7a9e6\",cl_role=\"\",rs_nm=\"rs0\",rs_state=\"1\"} 1.794938326e+09",
+    "mongodb_clusterTime_signature_keyId{cl_id=\"6afc8a7da0e5d24af6c7a9e6\",cl_role=\"\",rs_nm=\"rs0\",rs_state=\"1\"} 7.709188983166599e+18",
+    "mongodb_config_image_collection_stats_end{cl_id=\"6afc8a7da0e5d24af6c7a9e6\",cl_role=\"\",rs_nm=\"rs0\",rs_state=\"1\"} 1.794938332003e+12",
+    "mongodb_config_image_collection_stats_localTime{cl_id=\"6afc8a7da0e5d24af6c7a9e6\",cl_role=\"\",rs_nm=\"rs0\",rs_state=\"1\"} 1.794938332002e+12",
+    "mongodb_config_image_collection_stats_start{cl_id=\"6afc8a7da0e5d24af6c7a9e6\",cl_role=\"\",rs_nm=\"rs0\",rs_state=\"1\"} 1.794938332002e+12",
+    "mongodb_config_image_collection_stats_storageStats_capped{cl_id=\"6afc8a7da0e5d24af6c7a9e6\",cl_role=\"\",rs_nm=\"rs0\",rs_state=\"1\"} 0",
+    "mongodb_config_image_collection_stats_storageStats_count{cl_id=\"6afc8a7da0e5d24af6c7a9e6\",cl_role=\"\",rs_nm=\"rs0\",rs_state=\"1\"} 0",
+    "mongodb_config_image_collection_stats_storageStats_freeStorageSize{cl_id=\"6afc8a7da0e5d24af6c7a9e6\",cl_role=\"\",rs_nm=\"rs0\",rs_state=\"1\"} 0",
+    "mongodb_config_image_collection_stats_storageStats_indexDetails_index_name_LSM_bloom_filter_false_positives{cl_id=\"6afc8a7da0e5d24af6c7a9e6\",cl_role=\"\",index_name=\"_id_\",rs_nm=\"rs0\",rs_state=\"1\"} 0",
+    "mongodb_config_image_collection_stats_storageStats_indexDetails_index_name_LSM_bloom_filter_hits{cl_id=\"6afc8a7da0e5d24af6c7a9e6\",cl_role=\"\",index_name=\"_id_\",rs_nm=\"rs0\",rs_state=\"1\"} 0",
+    "mongodb_config_image_collection_stats_storageStats_indexDetails_index_name_LSM_bloom_filter_misses{cl_id=\"6afc8a7da0e5d24af6c7a9e6\",cl_role=\"\",index_name=\"_id_\",rs_nm=\"rs0\",rs_state=\"1\"} 0",
+    "mongodb_config_image_collection_stats_storageStats_indexDetails_index_name_LSM_bloom_filter_pages_evicted_from_cache{cl_id=\"6afc8a7da0e5d24af6c7a9e6\",cl_role=\"\",index_name=\"_id_\",rs_nm=\"rs0\",rs_state=\"1\"} 0"
+  ]
+}

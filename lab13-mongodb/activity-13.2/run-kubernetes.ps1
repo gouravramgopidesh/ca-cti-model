@@ -1,0 +1,53 @@
+﻿param([Parameter(Mandatory=$true)][string]$Image)
+$ErrorActionPreference='Stop'
+Set-Location (Split-Path $PSScriptRoot)
+$ns='lab13-mongodb'
+function K { & kubectl --context docker-desktop @args; if ($LASTEXITCODE -ne 0) { throw "kubectl failed (exit $LASTEXITCODE). See output above." } }
+function Capture($file, [scriptblock]$command) { $out = & $command; $out | Tee-Object -FilePath "evidence/$file"; }
+K get nodes
+$existingNamespace = & kubectl --context docker-desktop get namespace $ns --ignore-not-found -o name
+if (-not $existingNamespace) { K create namespace $ns }
+$existingSecret = & kubectl --context docker-desktop -n $ns get secret mongo-credentials --ignore-not-found -o name
+if (-not $existingSecret) {
+    $rng=[System.Security.Cryptography.RandomNumberGenerator]::Create()
+    $bytes=New-Object byte[] 378; $rng.GetBytes($bytes); $key=[Convert]::ToBase64String($bytes)
+    $bytes=New-Object byte[] 32; $rng.GetBytes($bytes); $pass=[Convert]::ToBase64String($bytes); $rng.Dispose()
+    K -n $ns create secret generic mongo-credentials "--from-literal=keyfile=$key" "--from-literal=password=$pass" | Out-Null
+}
+K apply -f activity-13.2/mongo-headless-svc.yaml -f activity-13.2/mongo-statefulset.yaml
+K -n $ns rollout status statefulset/mongo --timeout=300s
+# Authenticated direct connection; use stdin for JS to avoid Windows quote conversion.
+Get-Content activity-13.2/init.js -Raw | & kubectl --context docker-desktop -n $ns exec -i mongo-0 -c mongo -- bash -c 'mongosh --quiet --host 127.0.0.1 --username ${MONGO_INITDB_ROOT_USERNAME} --password ${MONGO_INITDB_ROOT_PASSWORD} --authenticationDatabase admin --file /dev/stdin'
+if ($LASTEXITCODE -ne 0) { throw 'Replica initiation failed' }
+$record=[guid]::NewGuid().ToString('N')
+function RunJob($mode) {
+    $job="verify-$mode-$($record.Substring(0,8))"
+    $hosts=(0..2 | ForEach-Object { "mongo-$_.mongo-headless-svc.lab13-mongodb.svc.cluster.local:27017" }) -join ','
+    $obj=@{apiVersion='batch/v1';kind='Job';metadata=@{name=$job;namespace=$ns};spec=@{backoffLimit=0;template=@{spec=@{restartPolicy='Never';containers=@(@{name='runner';image=$Image;imagePullPolicy='Always';command=@('python','activity-13.2/k8s_verify.py',$mode);env=@(@{name='MONGO_HOSTS';value=$hosts},@{name='LAB13_RECORD';value=$record},@{name='MONGO_INITDB_ROOT_PASSWORD';valueFrom=@{secretKeyRef=@{name='mongo-credentials';key='password'}}})})}}}}
+    $obj | ConvertTo-Json -Depth 20 | & kubectl --context docker-desktop apply -f -
+    if ($LASTEXITCODE -ne 0) { throw 'Job creation failed' }
+    & kubectl --context docker-desktop -n $ns wait --for=condition=complete "job/$job" --timeout=360s
+    $result=$LASTEXITCODE
+    Capture "13.2-$mode.json" { K -n $ns logs "job/$job" }
+    if ($result -ne 0) { throw "Verification job $mode failed" }
+}
+RunJob seed
+$old=K -n $ns get pod mongo-2 -o 'jsonpath={.metadata.uid}'
+$pvc=K -n $ns get pvc data-mongo-2 -o 'jsonpath={.metadata.uid}'
+Capture '13.2-before.txt' { K -n $ns get 'pods,pvc' -o wide }
+K -n $ns delete pod mongo-2 --wait=true
+$deadline=(Get-Date).AddMinutes(5)
+do {
+    Start-Sleep 2
+    $new=& kubectl --context docker-desktop -n $ns get pod mongo-2 --ignore-not-found -o 'jsonpath={.metadata.uid}'
+} until (($new -and $new -ne $old) -or (Get-Date) -gt $deadline)
+if (-not $new -or $new -eq $old) { throw 'Pod replacement not observed' }
+K -n $ns wait --for=condition=Ready pod/mongo-2 --timeout=300s
+$newPvc=K -n $ns get pvc data-mongo-2 -o 'jsonpath={.metadata.uid}'
+if ($pvc -ne $newPvc) { throw 'PVC identity changed' }
+RunJob check
+Capture '13.2-after.txt' { K -n $ns get 'pods,pvc' -o wide }
+@{passed=$true;old_pod_uid=$old;new_pod_uid=$new;pvc_uid_before=$pvc;pvc_uid_after=$newPvc;record=$record} | ConvertTo-Json | Tee-Object -FilePath evidence/13.2-recovery.json
+Write-Host 'Lab 13.2 passed: pod recreated, PVC retained, data verified.'
+
+
