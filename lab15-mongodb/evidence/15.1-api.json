@@ -1,0 +1,154 @@
+[
+  {
+    "test": "login tenant_1_user",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "login tenant_1_user2",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "login tenant_1_admin",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "login tenant_2_admin",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "login tenant_3_user",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "no token",
+    "status": 401,
+    "passed": true
+  },
+  {
+    "test": "invalid JWT",
+    "status": 401,
+    "passed": true
+  },
+  {
+    "test": "wrong password",
+    "status": 401,
+    "passed": true
+  },
+  {
+    "test": "create own",
+    "status": 201,
+    "passed": true
+  },
+  {
+    "test": "own read",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "own list",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "other owner list",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "admin list",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "other tenant list",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "same tenant regular GET",
+    "status": 404,
+    "passed": true
+  },
+  {
+    "test": "same tenant regular PATCH",
+    "status": 404,
+    "passed": true
+  },
+  {
+    "test": "same tenant regular DELETE",
+    "status": 404,
+    "passed": true
+  },
+  {
+    "test": "different tenant admin GET",
+    "status": 404,
+    "passed": true
+  },
+  {
+    "test": "different tenant admin PATCH",
+    "status": 404,
+    "passed": true
+  },
+  {
+    "test": "different tenant admin DELETE",
+    "status": 404,
+    "passed": true
+  },
+  {
+    "test": "tenant spoof rejected",
+    "status": 422,
+    "passed": true
+  },
+  {
+    "test": "owner spoof rejected",
+    "status": 422,
+    "passed": true
+  },
+  {
+    "test": "owner update",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "admin update",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "admin delete",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "deleted absent",
+    "status": 404,
+    "passed": true
+  },
+  {
+    "test": "create for own deletion",
+    "status": 201,
+    "passed": true
+  },
+  {
+    "test": "owner delete",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "concurrent atomic rate limit",
+    "allowed": 30,
+    "blocked": 5,
+    "counter": 35,
+    "passed": true
+  },
+  {
+    "test": "TTL automatic deletion",
+    "seconds": 54.03965254200011,
+    "passed": true
+  }
+]

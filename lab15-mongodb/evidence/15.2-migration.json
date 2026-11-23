@@ -1,0 +1,155 @@
+{
+  "validation": [
+    {
+      "tenant": "tenant_1",
+      "source": 100,
+      "destination": 100,
+      "leaks": 0,
+      "all_fields_equal": true
+    },
+    {
+      "tenant": "tenant_2",
+      "source": 100,
+      "destination": 100,
+      "leaks": 0,
+      "all_fields_equal": true
+    },
+    {
+      "tenant": "tenant_3",
+      "source": 100,
+      "destination": 100,
+      "leaks": 0,
+      "all_fields_equal": true
+    },
+    {
+      "tenant": "tenant_4",
+      "source": 100,
+      "destination": 100,
+      "leaks": 0,
+      "all_fields_equal": true
+    },
+    {
+      "tenant": "tenant_5",
+      "source": 100,
+      "destination": 100,
+      "leaks": 0,
+      "all_fields_equal": true
+    }
+  ],
+  "benchmarks": [
+    {
+      "operation": "list 100 tasks",
+      "strategy": "document-level",
+      "runs": 30,
+      "median_ms": 0.5181435,
+      "mean_ms": 0.5208088666666667,
+      "p95_ms": 0.63827
+    },
+    {
+      "operation": "list 100 tasks",
+      "strategy": "collection-per-tenant",
+      "runs": 30,
+      "median_ms": 0.4958405,
+      "mean_ms": 0.4961678,
+      "p95_ms": 0.592035
+    },
+    {
+      "operation": "cross-tenant analytics",
+      "strategy": "document-level",
+      "runs": 30,
+      "median_ms": 0.5098465,
+      "mean_ms": 0.5332536,
+      "p95_ms": 0.659385
+    },
+    {
+      "operation": "cross-tenant analytics",
+      "strategy": "collection-per-tenant",
+      "runs": 30,
+      "median_ms": 0.7621985,
+      "mean_ms": 0.7617975333333333,
+      "p95_ms": 0.88494
+    },
+    {
+      "operation": "create task",
+      "strategy": "document-level",
+      "runs": 30,
+      "median_ms": 0.272014,
+      "mean_ms": 0.38239236666666665,
+      "p95_ms": 1.137906
+    },
+    {
+      "operation": "create task",
+      "strategy": "collection-per-tenant",
+      "runs": 30,
+      "median_ms": 0.2707585,
+      "mean_ms": 0.35409003333333333,
+      "p95_ms": 0.916627
+    }
+  ],
+  "analytics": [
+    {
+      "_id": "tenant_1",
+      "count": 100
+    },
+    {
+      "_id": "tenant_2",
+      "count": 100
+    },
+    {
+      "_id": "tenant_3",
+      "count": 100
+    },
+    {
+      "_id": "tenant_4",
+      "count": 100
+    },
+    {
+      "_id": "tenant_5",
+      "count": 100
+    }
+  ],
+  "shared_index": {
+    "_id_": {
+      "v": 2,
+      "key": [
+        [
+          "_id",
+          1
+        ]
+      ]
+    },
+    "tenant_id_1_created_at_-1": {
+      "v": 2,
+      "key": [
+        [
+          "tenant_id",
+          1
+        ],
+        [
+          "created_at",
+          -1
+        ]
+      ]
+    }
+  },
+  "tenant_index": {
+    "_id_": {
+      "v": 2,
+      "key": [
+        [
+          "_id",
+          1
+        ]
+      ]
+    },
+    "created_at_-1": {
+      "v": 2,
+      "key": [
+        [
+          "created_at",
+          -1
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+operation,strategy,runs,median_ms,mean_ms,p95_ms
+list 100 tasks,document-level,30,0.5181435,0.5208088666666667,0.63827
+list 100 tasks,collection-per-tenant,30,0.4958405,0.4961678,0.592035
+cross-tenant analytics,document-level,30,0.5098465,0.5332536,0.659385
+cross-tenant analytics,collection-per-tenant,30,0.7621985,0.7617975333333333,0.88494
+create task,document-level,30,0.272014,0.38239236666666665,1.137906
+create task,collection-per-tenant,30,0.2707585,0.35409003333333333,0.916627
