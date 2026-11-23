@@ -1,0 +1,258 @@
+{
+  "products": [
+    {
+      "product_id": "P001",
+      "name": "Wireless Mouse",
+      "category": "Electronics",
+      "base_price": 25
+    },
+    {
+      "product_id": "P002",
+      "name": "Bluetooth Headphones",
+      "category": "Electronics",
+      "base_price": 65
+    },
+    {
+      "product_id": "P003",
+      "name": "USB Keyboard",
+      "category": "Electronics",
+      "base_price": 30
+    },
+    {
+      "product_id": "P004",
+      "name": "Laptop Stand",
+      "category": "Office",
+      "base_price": 45
+    },
+    {
+      "product_id": "P005",
+      "name": "Desk Lamp",
+      "category": "Home",
+      "base_price": 35
+    },
+    {
+      "product_id": "P006",
+      "name": "Gaming Monitor",
+      "category": "Electronics",
+      "base_price": 180
+    },
+    {
+      "product_id": "P007",
+      "name": "Notebook",
+      "category": "Office",
+      "base_price": 12
+    },
+    {
+      "product_id": "P008",
+      "name": "Webcam",
+      "category": "Electronics",
+      "base_price": 85
+    },
+    {
+      "product_id": "P009",
+      "name": "Unused Printer",
+      "category": "Electronics",
+      "base_price": 210
+    },
+    {
+      "product_id": "P010",
+      "name": "Unordered Chair",
+      "category": "Office",
+      "base_price": 120
+    }
+  ],
+  "orders": [
+    {
+      "order_id": "O001",
+      "customer": "Asha",
+      "product_id": "P001",
+      "quantity": 1,
+      "order_date": "2026-01-09",
+      "status": "completed"
+    },
+    {
+      "order_id": "O002",
+      "customer": "Ravi",
+      "product_id": "P002",
+      "quantity": 2,
+      "order_date": "2026-01-14",
+      "status": "completed"
+    },
+    {
+      "order_id": "O003",
+      "customer": "Meera",
+      "product_id": "P007",
+      "quantity": 2,
+      "order_date": "2026-01-19",
+      "status": "pending"
+    },
+    {
+      "order_id": "O004",
+      "customer": "Kiran",
+      "product_id": "P006",
+      "quantity": 2,
+      "order_date": "2026-01-24",
+      "status": "completed"
+    },
+    {
+      "order_id": "O005",
+      "customer": "Asha",
+      "product_id": "P003",
+      "quantity": 2,
+      "order_date": "2026-02-06",
+      "status": "completed"
+    },
+    {
+      "order_id": "O006",
+      "customer": "Ravi",
+      "product_id": "P005",
+      "quantity": 1,
+      "order_date": "2026-02-11",
+      "status": "cancelled"
+    },
+    {
+      "order_id": "O007",
+      "customer": "Meera",
+      "product_id": "P008",
+      "quantity": 1,
+      "order_date": "2026-02-16",
+      "status": "completed"
+    },
+    {
+      "order_id": "O008",
+      "customer": "Dev",
+      "product_id": "P004",
+      "quantity": 1,
+      "order_date": "2026-02-21",
+      "status": "pending"
+    },
+    {
+      "order_id": "O009",
+      "customer": "Kiran",
+      "product_id": "P002",
+      "quantity": 1,
+      "order_date": "2026-03-26",
+      "status": "completed"
+    },
+    {
+      "order_id": "O010",
+      "customer": "Asha",
+      "product_id": "P006",
+      "quantity": 1,
+      "order_date": "2026-03-08",
+      "status": "completed"
+    },
+    {
+      "order_id": "O011",
+      "customer": "Dev",
+      "product_id": "P007",
+      "quantity": 3,
+      "order_date": "2026-03-13",
+      "status": "completed"
+    },
+    {
+      "order_id": "O012",
+      "customer": "Ravi",
+      "product_id": "P008",
+      "quantity": 3,
+      "order_date": "2026-03-18",
+      "status": "completed"
+    },
+    {
+      "order_id": "O013",
+      "customer": "Meera",
+      "product_id": "P001",
+      "quantity": 2,
+      "order_date": "2026-04-23",
+      "status": "pending"
+    },
+    {
+      "order_id": "O014",
+      "customer": "Asha",
+      "product_id": "P004",
+      "quantity": 2,
+      "order_date": "2026-04-05",
+      "status": "completed"
+    },
+    {
+      "order_id": "O015",
+      "customer": "Dev",
+      "product_id": "P003",
+      "quantity": 1,
+      "order_date": "2026-04-10",
+      "status": "completed"
+    },
+    {
+      "order_id": "O016",
+      "customer": "Kiran",
+      "product_id": "P006",
+      "quantity": 1,
+      "order_date": "2026-04-15",
+      "status": "cancelled"
+    },
+    {
+      "order_id": "O017",
+      "customer": "Ravi",
+      "product_id": "P001",
+      "quantity": 1,
+      "order_date": "2026-05-20",
+      "status": "completed"
+    },
+    {
+      "order_id": "O018",
+      "customer": "Meera",
+      "product_id": "P002",
+      "quantity": 2,
+      "order_date": "2026-05-25",
+      "status": "completed"
+    },
+    {
+      "order_id": "O019",
+      "customer": "Dev",
+      "product_id": "P006",
+      "quantity": 2,
+      "order_date": "2026-05-07",
+      "status": "completed"
+    },
+    {
+      "order_id": "O020",
+      "customer": "Asha",
+      "product_id": "P007",
+      "quantity": 4,
+      "order_date": "2026-05-12",
+      "status": "pending"
+    },
+    {
+      "order_id": "O021",
+      "customer": "Kiran",
+      "product_id": "P008",
+      "quantity": 3,
+      "order_date": "2026-06-17",
+      "status": "completed"
+    },
+    {
+      "order_id": "O022",
+      "customer": "Ravi",
+      "product_id": "P004",
+      "quantity": 1,
+      "order_date": "2026-06-22",
+      "status": "completed"
+    },
+    {
+      "order_id": "O023",
+      "customer": "Meera",
+      "product_id": "P003",
+      "quantity": 4,
+      "order_date": "2026-06-04",
+      "status": "cancelled"
+    },
+    {
+      "order_id": "O024",
+      "customer": "Dev",
+      "product_id": "P002",
+      "quantity": 1,
+      "order_date": "2026-06-09",
+      "status": "completed"
+    }
+  ]
+}
