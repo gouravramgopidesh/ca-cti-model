@@ -1,0 +1,38 @@
+name: lab8-mongodb
+x-mongo: &mongo
+  image: mongo:8.0
+  command: [mongod, --replSet, rs0, --bind_ip_all, --wiredTigerCacheSizeGB, '0.25']
+  restart: unless-stopped
+  healthcheck:
+    test: [CMD, mongosh, --quiet, --eval, 'db.adminCommand({ping:1}).ok || quit(1)']
+    interval: 5s
+    timeout: 5s
+    retries: 30
+services:
+  mongo1:
+    <<: *mongo
+    volumes: [mongo1-data:/data/db]
+  mongo2:
+    <<: *mongo
+    volumes: [mongo2-data:/data/db]
+  mongo3:
+    <<: *mongo
+    volumes: [mongo3-data:/data/db]
+  arbiter:
+    <<: *mongo
+    profiles: [arbiter]
+    volumes: [arbiter-data:/data/db]
+  runner:
+    profiles: [tools]
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+    environment:
+      MONGO_URI: mongodb://mongo1:27017,mongo2:27017,mongo3:27017/?replicaSet=rs0
+      DB_NAME: lab8-mongodb
+    volumes: ['.:/work']
+volumes:
+  mongo1-data:
+  mongo2-data:
+  mongo3-data:
+  arbiter-data:

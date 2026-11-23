@@ -1,0 +1,37 @@
+{
+  "utc": "2026-11-17T05:58:40.283106+00:00",
+  "members": [
+    {
+      "name": "mongo1:27017",
+      "state": "PRIMARY",
+      "health": 1.0
+    },
+    {
+      "name": "mongo2:27017",
+      "state": "SECONDARY",
+      "health": 1.0
+    },
+    {
+      "name": "mongo3:27017",
+      "state": "SECONDARY",
+      "health": 1.0
+    }
+  ],
+  "verified": [
+    {
+      "host": "mongo1:27017",
+      "role": "PRIMARY",
+      "document": "6afbed0f49e1f1b9c4f2035e"
+    },
+    {
+      "host": "mongo2:27017",
+      "role": "SECONDARY",
+      "document": "6afbed0f49e1f1b9c4f2035e"
+    },
+    {
+      "host": "mongo3:27017",
+      "role": "SECONDARY",
+      "document": "6afbed0f49e1f1b9c4f2035e"
+    }
+  ]
+}

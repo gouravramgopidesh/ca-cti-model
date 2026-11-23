@@ -1,0 +1,169 @@
+{
+  "utc": "2026-11-17T06:00:12.258171+00:00",
+  "before": [
+    {
+      "name": "mongo1:27017",
+      "state": "PRIMARY",
+      "health": 1.0
+    },
+    {
+      "name": "mongo2:27017",
+      "state": "SECONDARY",
+      "health": 1.0
+    },
+    {
+      "name": "mongo3:27017",
+      "state": "SECONDARY",
+      "health": 1.0
+    },
+    {
+      "name": "arbiter:27017",
+      "state": "ARBITER",
+      "health": 1.0
+    }
+  ],
+  "firstPrimary": "mongo2:27017",
+  "secondOldPrimary": "mongo1:27017",
+  "secondPrimary": "mongo2:27017",
+  "after": [
+    {
+      "name": "mongo1:27017",
+      "state": "SECONDARY",
+      "health": 1.0
+    },
+    {
+      "name": "mongo2:27017",
+      "state": "PRIMARY",
+      "health": 1.0
+    },
+    {
+      "name": "mongo3:27017",
+      "state": "SECONDARY",
+      "health": 1.0
+    },
+    {
+      "name": "arbiter:27017",
+      "state": "ARBITER",
+      "health": 1.0
+    }
+  ],
+  "reads": [
+    {
+      "utc": "2026-11-17T05:59:59.226660+00:00",
+      "ok": true,
+      "server": [
+        "mongo1",
+        27017
+      ],
+      "primary": "mongo1:27017"
+    },
+    {
+      "utc": "2026-11-17T06:00:00.234823+00:00",
+      "ok": true,
+      "server": [
+        "mongo1",
+        27017
+      ],
+      "primary": "mongo1:27017"
+    },
+    {
+      "utc": "2026-11-17T06:00:01.238346+00:00",
+      "ok": true,
+      "server": [
+        "mongo1",
+        27017
+      ],
+      "primary": "mongo1:27017"
+    },
+    {
+      "utc": "2026-11-17T06:00:02.241713+00:00",
+      "ok": true,
+      "server": [
+        "mongo1",
+        27017
+      ],
+      "primary": "mongo1:27017"
+    },
+    {
+      "utc": "2026-11-17T06:00:03.245135+00:00",
+      "ok": true,
+      "server": [
+        "mongo1",
+        27017
+      ],
+      "primary": "mongo1:27017"
+    },
+    {
+      "utc": "2026-11-17T06:00:04.246628+00:00",
+      "ok": true,
+      "server": [
+        "mongo2",
+        27017
+      ],
+      "primary": "mongo2:27017"
+    },
+    {
+      "utc": "2026-11-17T06:00:05.249196+00:00",
+      "ok": true,
+      "server": [
+        "mongo2",
+        27017
+      ],
+      "primary": "mongo2:27017"
+    },
+    {
+      "utc": "2026-11-17T06:00:06.250771+00:00",
+      "ok": true,
+      "server": [
+        "mongo2",
+        27017
+      ],
+      "primary": "mongo2:27017"
+    },
+    {
+      "utc": "2026-11-17T06:00:07.252302+00:00",
+      "ok": true,
+      "server": [
+        "mongo2",
+        27017
+      ],
+      "primary": "mongo2:27017"
+    },
+    {
+      "utc": "2026-11-17T06:00:08.254146+00:00",
+      "ok": true,
+      "server": [
+        "mongo2",
+        27017
+      ],
+      "primary": "mongo2:27017"
+    },
+    {
+      "utc": "2026-11-17T06:00:09.257306+00:00",
+      "ok": true,
+      "server": [
+        "mongo2",
+        27017
+      ],
+      "primary": "mongo2:27017"
+    },
+    {
+      "utc": "2026-11-17T06:00:10.261037+00:00",
+      "ok": true,
+      "server": [
+        "mongo2",
+        27017
+      ],
+      "primary": "mongo2:27017"
+    },
+    {
+      "utc": "2026-11-17T06:00:11.264202+00:00",
+      "ok": true,
+      "server": [
+        "mongo2",
+        27017
+      ],
+      "primary": "mongo2:27017"
+    }
+  ]
+}

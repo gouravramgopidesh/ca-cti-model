@@ -1,0 +1,96 @@
+{
+  "utc": "2026-11-17T06:02:55.967752+00:00",
+  "predicted": "mongo2:27017",
+  "actual": "mongo2:27017",
+  "matched": true,
+  "laterPrimary": "mongo2:27017",
+  "members": [
+    {
+      "name": "mongo1:27017",
+      "state": "SECONDARY",
+      "health": 1.0
+    },
+    {
+      "name": "mongo2:27017",
+      "state": "PRIMARY",
+      "health": 1.0
+    },
+    {
+      "name": "mongo3:27017",
+      "state": "SECONDARY",
+      "health": 1.0
+    },
+    {
+      "name": "arbiter:27017",
+      "state": "ARBITER",
+      "health": 1.0
+    }
+  ],
+  "configuration": {
+    "_id": "rs0",
+    "version": 4,
+    "term": 6,
+    "members": [
+      {
+        "_id": 0,
+        "host": "mongo1:27017",
+        "arbiterOnly": false,
+        "buildIndexes": true,
+        "hidden": false,
+        "priority": 4.0,
+        "tags": {},
+        "secondaryDelaySecs": 0,
+        "votes": 1
+      },
+      {
+        "_id": 1,
+        "host": "mongo2:27017",
+        "arbiterOnly": false,
+        "buildIndexes": true,
+        "hidden": false,
+        "priority": 3.0,
+        "tags": {},
+        "secondaryDelaySecs": 0,
+        "votes": 1
+      },
+      {
+        "_id": 2,
+        "host": "mongo3:27017",
+        "arbiterOnly": false,
+        "buildIndexes": true,
+        "hidden": false,
+        "priority": 1.0,
+        "tags": {},
+        "secondaryDelaySecs": 0,
+        "votes": 1
+      },
+      {
+        "_id": 3,
+        "host": "arbiter:27017",
+        "arbiterOnly": true,
+        "buildIndexes": true,
+        "hidden": false,
+        "priority": 0.0,
+        "tags": {},
+        "secondaryDelaySecs": 0,
+        "votes": 1
+      }
+    ],
+    "protocolVersion": 1,
+    "writeConcernMajorityJournalDefault": true,
+    "settings": {
+      "chainingAllowed": true,
+      "heartbeatIntervalMillis": 2000,
+      "heartbeatTimeoutSecs": 10,
+      "electionTimeoutMillis": 10000,
+      "catchUpTimeoutMillis": -1,
+      "catchUpTakeoverDelayMillis": 30000,
+      "getLastErrorModes": {},
+      "getLastErrorDefaults": {
+        "w": 1,
+        "wtimeout": 0
+      },
+      "replicaSetId": "6afbec986645304c8a895f16"
+    }
+  }
+}
