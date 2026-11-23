@@ -1,0 +1,10 @@
+{
+  "search_term": "wireless",
+  "filter": {
+    "name": {
+      "$regex": "wireless",
+      "$options": "i"
+    }
+  },
+  "other_example": "mouse"
+}

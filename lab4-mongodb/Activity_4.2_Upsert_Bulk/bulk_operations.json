@@ -1,0 +1,15 @@
+{
+  "existing_sku": "A",
+  "updated_price": 27.5,
+  "new_sku": "NEW100",
+  "new_price": 55,
+  "stock_increment_skus": [
+    "A",
+    "B",
+    "C"
+  ],
+  "deactivate_skus": [
+    "D",
+    "E"
+  ]
+}

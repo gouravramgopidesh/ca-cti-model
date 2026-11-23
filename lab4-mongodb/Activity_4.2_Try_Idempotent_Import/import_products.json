@@ -1,0 +1,34 @@
+[
+  {
+    "sku": "IMP-001",
+    "name": "Imported Wireless Adapter",
+    "price": 34,
+    "stock": 9,
+    "tags": [
+      "electronics",
+      "wireless"
+    ],
+    "is_active": true
+  },
+  {
+    "sku": "IMP-002",
+    "name": "Imported USB Cable",
+    "price": 12,
+    "stock": 32,
+    "tags": [
+      "electronics",
+      "accessories"
+    ],
+    "is_active": true
+  },
+  {
+    "sku": "IMP-003",
+    "name": "Imported Desk Mat",
+    "price": 28,
+    "stock": 15,
+    "tags": [
+      "office"
+    ],
+    "is_active": true
+  }
+]

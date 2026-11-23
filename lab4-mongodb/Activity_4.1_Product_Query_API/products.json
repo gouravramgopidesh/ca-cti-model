@@ -1,0 +1,135 @@
+[
+  {
+    "sku": "A",
+    "name": "Wireless Mouse",
+    "price": 25,
+    "stock": 15,
+    "tags": [
+      "electronics",
+      "wireless",
+      "premium"
+    ],
+    "is_active": true
+  },
+  {
+    "sku": "B",
+    "name": "Bluetooth Headphones",
+    "price": 45,
+    "stock": 8,
+    "tags": [
+      "electronics",
+      "wireless"
+    ],
+    "is_active": true
+  },
+  {
+    "sku": "C",
+    "name": "USB Keyboard",
+    "price": 30,
+    "stock": 0,
+    "tags": [
+      "electronics",
+      "accessories"
+    ],
+    "is_active": true
+  },
+  {
+    "sku": "D",
+    "name": "Laptop Stand",
+    "price": 22,
+    "stock": 18,
+    "tags": [
+      "office",
+      "accessories"
+    ],
+    "is_active": true
+  },
+  {
+    "sku": "E",
+    "name": "Gaming Monitor",
+    "price": 180,
+    "stock": 4,
+    "tags": [
+      "electronics",
+      "premium"
+    ],
+    "is_active": true
+  },
+  {
+    "sku": "F",
+    "name": "Desk Lamp",
+    "price": 35,
+    "stock": 0,
+    "tags": [
+      "home",
+      "lighting"
+    ],
+    "is_active": true
+  },
+  {
+    "sku": "G",
+    "name": "Wireless Charger",
+    "price": 42,
+    "stock": 12,
+    "tags": [
+      "electronics",
+      "wireless",
+      "premium"
+    ],
+    "is_active": true
+  },
+  {
+    "sku": "H",
+    "name": "Notebook",
+    "price": 8,
+    "stock": 50,
+    "tags": [
+      "stationery"
+    ],
+    "is_active": true
+  },
+  {
+    "sku": "I",
+    "name": "Web Camera",
+    "price": 110,
+    "stock": 3,
+    "tags": [
+      "electronics",
+      "premium"
+    ],
+    "is_active": true
+  },
+  {
+    "sku": "J",
+    "name": "Phone Case",
+    "price": 18,
+    "stock": 30,
+    "tags": [
+      "mobile",
+      "accessories"
+    ],
+    "is_active": true
+  },
+  {
+    "sku": "K",
+    "name": "Speaker",
+    "price": 75,
+    "stock": 0,
+    "tags": [
+      "electronics",
+      "audio"
+    ],
+    "is_active": true
+  },
+  {
+    "sku": "L",
+    "name": "Premium Desk",
+    "price": 145,
+    "stock": 7,
+    "tags": [
+      "office",
+      "premium"
+    ],
+    "is_active": true
+  }
+]
