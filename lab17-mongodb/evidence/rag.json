@@ -1,0 +1,114 @@
+{
+  "model": "qwen2.5:0.5b",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "chunks": 15,
+  "chunk_words": [
+    100,
+    100,
+    34,
+    100,
+    100,
+    24,
+    100,
+    100,
+    35,
+    100,
+    100,
+    23,
+    100,
+    100,
+    23
+  ],
+  "native_vector_search": true,
+  "results": [
+    {
+      "query": "What is ransomware and how can defenders recover?",
+      "retrieval_query": "Memory fixture 5 user What is ransomware and how can defenders recover?",
+      "answer": "Ransomware is a type of malicious software that encrypts files, preventing access to the system or data. Attackers may also steal information and threaten to publish it. Defenders should maintain offline or immutable backups and regularly test restoration. Network segmentation can restrict lateral movement. Multifactor authentication and timely patching reduce common entry opportunities. Endpoint monitoring can identify unusual file modifications, suspicious processes, and attempts to disable security software. Incident response teams should isolate affected devices and preserve evidence. A ransomware investigation should distinguish confirmed observations from hypotheses. Analysts can compare file hashes, domains, and network addresses against trusted reports but shared infrastructure can create false positives. Recovery should prioritize critical services and verify restored systems before reconnecting them. Backups must be protected from the same credentials used to administer production systems. An incident timeline helps responders understand initial access, execution, persistence, and data movement. Organizations should document lessons",
+      "sources": [
+        {
+          "_id": "ransomware-0",
+          "source": "ransomware.txt",
+          "text": "Ransomware is malicious software that denies access to systems or data, commonly by encrypting files. Attackers may also steal information and threaten to publish it. Threat intelligence analysts study reported incidents, indicators of compromise and attacker behavior to assess exposure. Initial access can involve phishing, compromised credentials or exploitation of vulnerable services. Defenders should maintain offline or immutable backups and regularly test restoration. Network segmentation can restrict lateral movement. Multifactor authentication and timely patching reduce common entry opportunities. Endpoint monitoring can identify unusual file modifications, suspicious processes and attempts to disable security software. Incident response teams should isolate affected devices",
+          "score": 0.8062067031860352
+        },
+        {
+          "_id": "ransomware-1",
+          "source": "ransomware.txt",
+          "text": "can identify unusual file modifications, suspicious processes and attempts to disable security software. Incident response teams should isolate affected devices and preserve evidence. A ransomware investigation should distinguish confirmed observations from hypotheses. Analysts can compare file hashes, domains and network addresses against trusted reports, but shared infrastructure can create false positives. Recovery should prioritize critical services and verify restored systems before reconnecting them. Backups must be protected from the same credentials used to administer production systems. An incident timeline helps responders understand initial access, execution, persistence and data movement. Organizations should document lessons learned and update controls after containment. Threat",
+          "score": 0.8042548298835754
+        },
+        {
+          "_id": "phishing-1",
+          "source": "phishing.txt",
+          "text": "results as supporting context. No single indicator proves malicious intent, and investigation should consider the complete evidence. Credential theft can lead to unauthorized account access even after a phishing message is removed. Incident responders should review login activity, revoke suspicious sessions and reset affected credentials according to policy. Phishing-resistant authentication can reduce dependence on passwords and one-time codes. Organizations should monitor lookalike domains and provide clear reporting instructions. Analysts should avoid opening suspicious attachments outside an isolated analysis environment. An investigation report should document observed indicators, affected users, confidence and recommended mitigations. These records support future detection and allow teams",
+          "score": 0.6695175170898438
+        }
+      ],
+      "history_messages": 10,
+      "history_exchanges": 5,
+      "prompt": "Answer using only the documents. Cite source numbers like [1]. If insufficient say so. Documents:\n[1] ransomware.txt: Ransomware is malicious software that denies access to systems or data, commonly by encrypting files. Attackers may also steal information and threaten to publish it. Threat intelligence analysts study reported incidents, indicators of compromise and attacker behavior to assess exposure. Initial access can involve phishing, compromised credentials or exploitation of vulnerable services. Defenders should maintain offline or immutable backups and regularly test restoration. Network segmentation can restrict lateral movement. Multifactor authentication and timely patching reduce common entry opportunities. Endpoint monitoring can identify unusual file modifications, suspicious processes and attempts to disable security software. Incident response teams should isolate affected devices\n[2] ransomware.txt: can identify unusual file modifications, suspicious processes and attempts to disable security software. Incident response teams should isolate affected devices and preserve evidence. A ransomware investigation should distinguish confirmed observations from hypotheses. Analysts can compare file hashes, domains and network addresses against trusted reports, but shared infrastructure can create false positives. Recovery should prioritize critical services and verify restored systems before reconnecting them. Backups must be protected from the same credentials used to administer production systems. An incident timeline helps responders understand initial access, execution, persistence and data movement. Organizations should document lessons learned and update controls after containment. Threat\n[3] phishing.txt: results as supporting context. No single indicator proves malicious intent, and investigation should consider the complete evidence. Credential theft can lead to unauthorized account access even after a phishing message is removed. Incident responders should review login activity, revoke suspicious sessions and reset affected credentials according to policy. Phishing-resistant authentication can reduce dependence on passwords and one-time codes. Organizations should monitor lookalike domains and provide clear reporting instructions. Analysts should avoid opening suspicious attachments outside an isolated analysis environment. An investigation report should document observed indicators, affected users, confidence and recommended mitigations. These records support future detection and allow teams\nConversation:\nuser: Memory fixture 1 user\nassistant: Memory fixture 1 assistant\nuser: Memory fixture 2 user\nassistant: Memory fixture 2 assistant\nuser: Memory fixture 3 user\nassistant: Memory fixture 3 assistant\nuser: Memory fixture 4 user\nassistant: Memory fixture 4 assistant\nuser: Memory fixture 5 user\nassistant: Memory fixture 5 assistant\nQuestion: What is ransomware and how can defenders recover?\nAnswer:",
+      "generation_seconds": 7.075563297999906
+    },
+    {
+      "query": "What backups should they maintain?",
+      "retrieval_query": "What is ransomware and how can defenders recover? What backups should they maintain?",
+      "answer": "Backup should be protected from the same credentials used to administer production systems.",
+      "sources": [
+        {
+          "_id": "ransomware-1",
+          "source": "ransomware.txt",
+          "text": "can identify unusual file modifications, suspicious processes and attempts to disable security software. Incident response teams should isolate affected devices and preserve evidence. A ransomware investigation should distinguish confirmed observations from hypotheses. Analysts can compare file hashes, domains and network addresses against trusted reports, but shared infrastructure can create false positives. Recovery should prioritize critical services and verify restored systems before reconnecting them. Backups must be protected from the same credentials used to administer production systems. An incident timeline helps responders understand initial access, execution, persistence and data movement. Organizations should document lessons learned and update controls after containment. Threat",
+          "score": 0.8310599327087402
+        },
+        {
+          "_id": "ransomware-0",
+          "source": "ransomware.txt",
+          "text": "Ransomware is malicious software that denies access to systems or data, commonly by encrypting files. Attackers may also steal information and threaten to publish it. Threat intelligence analysts study reported incidents, indicators of compromise and attacker behavior to assess exposure. Initial access can involve phishing, compromised credentials or exploitation of vulnerable services. Defenders should maintain offline or immutable backups and regularly test restoration. Network segmentation can restrict lateral movement. Multifactor authentication and timely patching reduce common entry opportunities. Endpoint monitoring can identify unusual file modifications, suspicious processes and attempts to disable security software. Incident response teams should isolate affected devices",
+          "score": 0.8295623064041138
+        },
+        {
+          "_id": "vulnerabilities-0",
+          "source": "vulnerabilities.txt",
+          "text": "Vulnerability management identifies, prioritizes and remediates weaknesses in software and infrastructure. CVE identifiers provide a common reference for publicly disclosed vulnerabilities. Severity scores help describe technical impact, but organizations also need to consider asset exposure, exploitation evidence and business criticality. A vulnerability that is actively exploited may require urgent action even when other weaknesses have higher numerical severity. Threat intelligence provides context about exploitation campaigns and affected products. Defenders should maintain an accurate inventory, apply vendor updates and validate remediation. When immediate patching is impractical, compensating controls may reduce exposure until a permanent fix is available. Security teams should distinguish",
+          "score": 0.6527824401855469
+        }
+      ],
+      "history_messages": 10,
+      "history_exchanges": 5,
+      "prompt": "Answer using only the documents. Cite source numbers like [1]. If insufficient say so. Documents:\n[1] ransomware.txt: can identify unusual file modifications, suspicious processes and attempts to disable security software. Incident response teams should isolate affected devices and preserve evidence. A ransomware investigation should distinguish confirmed observations from hypotheses. Analysts can compare file hashes, domains and network addresses against trusted reports, but shared infrastructure can create false positives. Recovery should prioritize critical services and verify restored systems before reconnecting them. Backups must be protected from the same credentials used to administer production systems. An incident timeline helps responders understand initial access, execution, persistence and data movement. Organizations should document lessons learned and update controls after containment. Threat\n[2] ransomware.txt: Ransomware is malicious software that denies access to systems or data, commonly by encrypting files. Attackers may also steal information and threaten to publish it. Threat intelligence analysts study reported incidents, indicators of compromise and attacker behavior to assess exposure. Initial access can involve phishing, compromised credentials or exploitation of vulnerable services. Defenders should maintain offline or immutable backups and regularly test restoration. Network segmentation can restrict lateral movement. Multifactor authentication and timely patching reduce common entry opportunities. Endpoint monitoring can identify unusual file modifications, suspicious processes and attempts to disable security software. Incident response teams should isolate affected devices\n[3] vulnerabilities.txt: Vulnerability management identifies, prioritizes and remediates weaknesses in software and infrastructure. CVE identifiers provide a common reference for publicly disclosed vulnerabilities. Severity scores help describe technical impact, but organizations also need to consider asset exposure, exploitation evidence and business criticality. A vulnerability that is actively exploited may require urgent action even when other weaknesses have higher numerical severity. Threat intelligence provides context about exploitation campaigns and affected products. Defenders should maintain an accurate inventory, apply vendor updates and validate remediation. When immediate patching is impractical, compensating controls may reduce exposure until a permanent fix is available. Security teams should distinguish\nConversation:\nuser: Memory fixture 2 user\nassistant: Memory fixture 2 assistant\nuser: Memory fixture 3 user\nassistant: Memory fixture 3 assistant\nuser: Memory fixture 4 user\nassistant: Memory fixture 4 assistant\nuser: Memory fixture 5 user\nassistant: Memory fixture 5 assistant\nuser: What is ransomware and how can defenders recover?\nassistant: Ransomware is a type of malicious software that encrypts files, preventing access to the system or data. Attackers may also steal information and threaten to publish it. Defenders should maintain offline or immutable backups and regularly test restoration. Network segmentation can restrict lateral movement. Multifactor authentication and timely patching reduce common entry opportunities. Endpoint monitoring can identify unusual file modifications, suspicious processes, and attempts to disable security software. Incident response teams should isolate affected devices and preserve evidence. A ransomware investigation should distinguish confirmed observations from hypotheses. Analysts can compare file hashes, domains, and network addresses against trusted reports but shared infrastructure can create false positives. Recovery should prioritize critical services and verify restored systems before reconnecting them. Backups must be protected from the same credentials used to administer production systems. An incident timeline helps responders understand initial access, execution, persistence, and data movement. Organizations should document lessons\nQuestion: What backups should they maintain?\nAnswer:",
+      "generation_seconds": 3.6432444870006293
+    },
+    {
+      "query": "What is phishing?",
+      "retrieval_query": "What is phishing?",
+      "answer": "Phishing uses deceptive messages to persuade recipients to disclose information or perform unsafe actions. Common techniques include impersonating trusted organizations, creating urgency and linking to fraudulent login pages. Spear phishing targets a specific individual or organization using tailored details. Analysts examine sender identity, message headers, links and attachment metadata. A suspicious message should be reported through approved channels rather than forwarded broadly. Multifactor authentication, email filtering and user training can reduce risk. Defenders can use domain registration information and authentication results as supporting context. No single indicator proves malicious intent, and investigation should consider the complete evidence. Credential theft can lead to unauthorized account access even after a phishing message is removed. Incident responders should review login activity, revoke suspicious sessions and reset affected credentials according to policy. Phishing-resistant authentication can reduce dependence on passwords and one-time codes. Organizations should monitor lookalike domains and provide clear reporting instructions. Analysts should",
+      "sources": [
+        {
+          "_id": "phishing-0",
+          "source": "phishing.txt",
+          "text": "Phishing uses deceptive messages to persuade recipients to disclose information or perform unsafe actions. Common techniques include impersonating trusted organizations, creating urgency and linking to fraudulent login pages. Spear phishing targets a specific individual or organization using tailored details. Analysts examine sender identity, message headers, links and attachment metadata. A suspicious message should be reported through approved channels rather than forwarded broadly. Multifactor authentication, email filtering and user training can reduce risk. Defenders can use domain registration information and authentication results as supporting context. No single indicator proves malicious intent, and investigation should consider the complete evidence. Credential theft can",
+          "score": 0.8458311557769775
+        },
+        {
+          "_id": "phishing-1",
+          "source": "phishing.txt",
+          "text": "results as supporting context. No single indicator proves malicious intent, and investigation should consider the complete evidence. Credential theft can lead to unauthorized account access even after a phishing message is removed. Incident responders should review login activity, revoke suspicious sessions and reset affected credentials according to policy. Phishing-resistant authentication can reduce dependence on passwords and one-time codes. Organizations should monitor lookalike domains and provide clear reporting instructions. Analysts should avoid opening suspicious attachments outside an isolated analysis environment. An investigation report should document observed indicators, affected users, confidence and recommended mitigations. These records support future detection and allow teams",
+          "score": 0.7800112366676331
+        },
+        {
+          "_id": "ransomware-0",
+          "source": "ransomware.txt",
+          "text": "Ransomware is malicious software that denies access to systems or data, commonly by encrypting files. Attackers may also steal information and threaten to publish it. Threat intelligence analysts study reported incidents, indicators of compromise and attacker behavior to assess exposure. Initial access can involve phishing, compromised credentials or exploitation of vulnerable services. Defenders should maintain offline or immutable backups and regularly test restoration. Network segmentation can restrict lateral movement. Multifactor authentication and timely patching reduce common entry opportunities. Endpoint monitoring can identify unusual file modifications, suspicious processes and attempts to disable security software. Incident response teams should isolate affected devices",
+          "score": 0.6690619587898254
+        }
+      ],
+      "history_messages": 0,
+      "history_exchanges": 0,
+      "prompt": "Answer using only the documents. Cite source numbers like [1]. If insufficient say so. Documents:\n[1] phishing.txt: Phishing uses deceptive messages to persuade recipients to disclose information or perform unsafe actions. Common techniques include impersonating trusted organizations, creating urgency and linking to fraudulent login pages. Spear phishing targets a specific individual or organization using tailored details. Analysts examine sender identity, message headers, links and attachment metadata. A suspicious message should be reported through approved channels rather than forwarded broadly. Multifactor authentication, email filtering and user training can reduce risk. Defenders can use domain registration information and authentication results as supporting context. No single indicator proves malicious intent, and investigation should consider the complete evidence. Credential theft can\n[2] phishing.txt: results as supporting context. No single indicator proves malicious intent, and investigation should consider the complete evidence. Credential theft can lead to unauthorized account access even after a phishing message is removed. Incident responders should review login activity, revoke suspicious sessions and reset affected credentials according to policy. Phishing-resistant authentication can reduce dependence on passwords and one-time codes. Organizations should monitor lookalike domains and provide clear reporting instructions. Analysts should avoid opening suspicious attachments outside an isolated analysis environment. An investigation report should document observed indicators, affected users, confidence and recommended mitigations. These records support future detection and allow teams\n[3] ransomware.txt: Ransomware is malicious software that denies access to systems or data, commonly by encrypting files. Attackers may also steal information and threaten to publish it. Threat intelligence analysts study reported incidents, indicators of compromise and attacker behavior to assess exposure. Initial access can involve phishing, compromised credentials or exploitation of vulnerable services. Defenders should maintain offline or immutable backups and regularly test restoration. Network segmentation can restrict lateral movement. Multifactor authentication and timely patching reduce common entry opportunities. Endpoint monitoring can identify unusual file modifications, suspicious processes and attempts to disable security software. Incident response teams should isolate affected devices\nConversation:\n\nQuestion: What is phishing?\nAnswer:",
+      "generation_seconds": 4.9739287970005535
+    }
+  ],
+  "memory_verified": true,
+  "fixture_exchanges": 6
+}

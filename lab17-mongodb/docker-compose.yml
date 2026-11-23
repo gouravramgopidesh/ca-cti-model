@@ -1,0 +1,47 @@
+name: lab17-mongodb
+services:
+  mongo:
+    image: mongodb/mongodb-atlas-local:8.0
+    hostname: mongo
+    volumes:
+      - mongo_data:/data/db
+      - mongo_config:/data/configdb
+      - search_data:/data/mongot
+    healthcheck:
+      test: [CMD, mongosh, --quiet, --eval, 'db.adminCommand({ping:1}).ok']
+      interval: 10s
+      timeout: 10s
+      retries: 60
+  ollama:
+    image: ollama/ollama:0.6.8
+    volumes: [ollama_data:/root/.ollama]
+    environment:
+      OLLAMA_NUM_PARALLEL: '1'
+      OLLAMA_MAX_LOADED_MODELS: '1'
+    healthcheck:
+      test: [CMD, ollama, list]
+      interval: 10s
+      timeout: 10s
+      retries: 30
+  app:
+    image: gouravram77/lab17-mongodb:1.0
+    build: .
+    command: [python, -u, -c, 'import time; time.sleep(10**9)']
+    environment:
+      MONGO_URI: '${MONGO_URI:-mongodb://mongo:27017/?directConnection=true}'
+      OLLAMA_URL: http://ollama:11434
+      LLM_MODEL: '${LLM_MODEL:-qwen2.5:0.5b}'
+      HF_HOME: /models
+      OMP_NUM_THREADS: '2'
+      MKL_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+    depends_on:
+      mongo: {condition: service_healthy}
+      ollama: {condition: service_healthy}
+    volumes: [./evidence:/lab/evidence, model_data:/models]
+volumes:
+  mongo_data:
+  mongo_config:
+  search_data:
+  ollama_data:
+  model_data:
