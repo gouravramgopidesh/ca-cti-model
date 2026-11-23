@@ -1,0 +1,7 @@
+Recreating only the workingSet collection with 100,000 documents.
+Working set ready: 100,000 docs, 179 MiB BSON; estimated cache fit is reported below.
+Cache and page counters are server-wide; cache-fit is an estimate, not measured residency for this collection.
+Report sources sync every 10 minute(s); cache samples run every 10 seconds. One-shot mode enabled.
+2026-11-16T16:59:17.480Z report sync: 1 new CTI articles, 0 new annual reports.
+2026-11-16T16:59:17.927Z {"collectionDocuments":100000,"collectionBsonMiB":178.99,"maximumDocumentBytes":1877,"cacheUsedMiB":202.7,"cacheCapacityMiB":3362,"estimatedDatasetCacheFitPct":100,"pagesReadDelta10s":null,"pagesRequestedDelta10s":null,"approximateCacheHitPct":null}
+2026-11-16T16:59:28.382Z {"collectionDocuments":100000,"collectionBsonMiB":178.99,"maximumDocumentBytes":1877,"cacheUsedMiB":202.7,"cacheCapacityMiB":3362,"estimatedDatasetCacheFitPct":100,"pagesReadDelta10s":0,"pagesRequestedDelta10s":2000,"approximateCacheHitPct":100}
