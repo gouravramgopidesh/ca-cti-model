@@ -1,0 +1,35 @@
+[
+  {
+    "_id": "1",
+    "product": "ArangoDB",
+    "family": "Multi-model: document, graph, key-value",
+    "best_for": "E-commerce recommendations plus product records",
+    "reason": "JSON documents support attribute queries; edges connect vertices for traversals; primary document keys support direct lookups. It spans three families, not just one.",
+    "limitation": "Multi-model flexibility adds design overhead; it is not a dedicated wide-column store.",
+    "reference": "https://docs.arango.ai/arangodb/stable/concepts/data-models/"
+  },
+  {
+    "_id": "2",
+    "product": "DynamoDB",
+    "family": "Key-value and document",
+    "best_for": "Shopping carts",
+    "reason": "Primary keys support direct access and nested document attributes support structured values.",
+    "limitation": "Access patterns must be planned around keys and indexes."
+  },
+  {
+    "_id": "3",
+    "product": "InfluxDB",
+    "family": "Time-series (specialized, outside the four core families)",
+    "best_for": "Telemetry",
+    "reason": "Time-indexed measurements support time-window queries and aggregates; it does not fit neatly into a single core family.",
+    "limitation": "Not a general-purpose relationship database."
+  },
+  {
+    "_id": "4",
+    "product": "OrientDB",
+    "family": "Multi-model: document and graph",
+    "best_for": "Connected customer records",
+    "reason": "Documents represent structured records and graph links support traversals.",
+    "limitation": "Multiple modeling paradigms increase design complexity."
+  }
+]

@@ -1,0 +1,87 @@
+[
+  {
+    "_id": "1",
+    "product": "Amazon S3",
+    "family": "Key-value (object store)",
+    "best_for": "Media archives and backup objects",
+    "reason": "Objects are retrieved by unique object keys; the value is an object, not a queryable document.",
+    "limitation": "Not a general-purpose database; field queries need other services.",
+    "use_case_why": "Large binary objects need inexpensive durable storage and key retrieval, not field-level database queries."
+  },
+  {
+    "_id": "10",
+    "product": "Elasticsearch",
+    "family": "Search engine (document-oriented)",
+    "best_for": "Full-text search",
+    "reason": "Indexes JSON documents for search; it is not a pure member of the four families.",
+    "limitation": "Not a transactional system of record."
+  },
+  {
+    "_id": "2",
+    "product": "Couchbase",
+    "family": "Document",
+    "best_for": "Product catalogs with varied attributes",
+    "reason": "JSON documents can contain nested fields and be indexed and queried by attributes.",
+    "limitation": "Cross-document access and indexing require careful design.",
+    "use_case_why": "Different catalog items have different attributes; indexed JSON supports flexible filtering without a fixed schema."
+  },
+  {
+    "_id": "3",
+    "product": "Apache HBase",
+    "family": "Wide-column",
+    "best_for": "Large sparse sensor histories",
+    "reason": "Rows are keyed and organized into column families, supporting ordered range scans.",
+    "limitation": "Ad hoc queries across arbitrary fields are difficult.",
+    "use_case_why": "Sparse timestamped measurements benefit from ordered row-key scans and scalable writes."
+  },
+  {
+    "_id": "4",
+    "product": "Amazon Neptune",
+    "family": "Graph",
+    "best_for": "Fraud and referral network analysis",
+    "reason": "Property graphs and RDF graphs support relationship traversals and pattern matching.",
+    "limitation": "Not ideal for simple high-volume key lookups or tabular aggregation.",
+    "use_case_why": "Fraud investigations require multi-hop relationship traversal rather than independent record lookups."
+  },
+  {
+    "_id": "5",
+    "product": "Memcached",
+    "family": "Key-value",
+    "best_for": "Short-lived session or query-result cache",
+    "reason": "A string key maps to an opaque value in memory for rapid retrieval.",
+    "limitation": "Volatile cache; evictions or restarts can lose data.",
+    "use_case_why": "Repeated lookups of temporary values benefit from in-memory access; durable storage is unnecessary for a disposable cache."
+  },
+  {
+    "_id": "6",
+    "product": "MongoDB",
+    "family": "Document",
+    "best_for": "Flexible application records",
+    "reason": "BSON documents support field indexes.",
+    "limitation": "Joins and cross-shard queries can cost more."
+  },
+  {
+    "_id": "7",
+    "product": "Redis",
+    "family": "Key-value",
+    "best_for": "Counters and sessions",
+    "reason": "Keys address values and data structures.",
+    "limitation": "Memory capacity and durability settings matter."
+  },
+  {
+    "_id": "8",
+    "product": "Cassandra",
+    "family": "Wide-column",
+    "best_for": "High-write event history",
+    "reason": "Partition keys organize wide-column rows.",
+    "limitation": "Queries must be designed around partition keys."
+  },
+  {
+    "_id": "9",
+    "product": "Neo4j",
+    "family": "Graph",
+    "best_for": "Relationship traversal",
+    "reason": "Nodes and relationships support traversal.",
+    "limitation": "Graph-specific modeling and operations."
+  }
+]

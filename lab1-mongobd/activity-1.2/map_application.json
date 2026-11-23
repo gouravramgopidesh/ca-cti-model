@@ -1,0 +1,74 @@
+[
+  {
+    "_id": "1",
+    "application": "Ride sharing",
+    "domain": "Driver locations",
+    "family": "Key-value",
+    "recommended_db": "Redis",
+    "read_write_pattern": "Frequent updates; read by driver ID",
+    "rationale": "Fast direct lookup and expiration suit transient GPS state; nearby-driver search additionally needs a geospatial index."
+  },
+  {
+    "_id": "2",
+    "application": "Ride sharing",
+    "domain": "User profiles",
+    "family": "Document",
+    "recommended_db": "MongoDB",
+    "read_write_pattern": "Read or update one profile",
+    "rationale": "Nested preferences and addresses can be stored and retrieved together."
+  },
+  {
+    "_id": "3",
+    "application": "Ride sharing",
+    "domain": "Ride history",
+    "family": "Wide-column",
+    "recommended_db": "Cassandra",
+    "read_write_pattern": "Append rides; range scan by rider and date",
+    "rationale": "Partition by rider and time bucket for efficient chronological history."
+  },
+  {
+    "_id": "4",
+    "application": "Ride sharing",
+    "domain": "Driver-rider relationships",
+    "family": "Graph",
+    "recommended_db": "Neo4j",
+    "read_write_pattern": "Traverse multi-hop connections",
+    "rationale": "Edges represent ride links, referrals and suspicious relationship patterns."
+  },
+  {
+    "_id": "5",
+    "application": "Social media analytics",
+    "domain": "Raw posts",
+    "family": "Wide-column",
+    "recommended_db": "Cassandra",
+    "read_write_pattern": "High-volume append; scan by time bucket",
+    "rationale": "Partitioned writes and time-range reads suit millions of posts per day."
+  },
+  {
+    "_id": "6",
+    "application": "Social media analytics",
+    "domain": "Real-time trends",
+    "family": "Key-value",
+    "recommended_db": "Redis",
+    "read_write_pattern": "Increment counters; retrieve top topics",
+    "rationale": "Atomic increments and sorted sets support frequently updated rankings."
+  },
+  {
+    "_id": "7",
+    "application": "Social media analytics",
+    "domain": "User dashboards",
+    "family": "Document",
+    "recommended_db": "MongoDB",
+    "read_write_pattern": "Read precomputed dashboard per user",
+    "rationale": "A compact document groups metrics and preferences for fast display."
+  },
+  {
+    "_id": "8",
+    "application": "Social media analytics",
+    "domain": "Durable analytics history",
+    "family": "Wide-column",
+    "recommended_db": "Cassandra",
+    "read_write_pattern": "Append aggregates; query time ranges",
+    "rationale": "Persists historical trend counts behind the live Redis layer."
+  }
+]

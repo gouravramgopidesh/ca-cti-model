@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "1",
+    "application": "Cyber threat intelligence",
+    "domain": "Live indicator cache",
+    "family": "Key-value",
+    "recommended_db": "Redis",
+    "read_write_pattern": "Frequent updates and lookup by indicator",
+    "rationale": "Fast key access with TTL suits temporary reputation results; durable evidence is stored elsewhere."
+  },
+  {
+    "_id": "2",
+    "application": "Cyber threat intelligence",
+    "domain": "Threat reports",
+    "family": "Document",
+    "recommended_db": "MongoDB",
+    "read_write_pattern": "Read and filter nested report fields",
+    "rationale": "Flexible documents preserve source attribution, tags and assessment details together."
+  },
+  {
+    "_id": "3",
+    "application": "Cyber threat intelligence",
+    "domain": "Security event history",
+    "family": "Wide-column",
+    "recommended_db": "Cassandra",
+    "read_write_pattern": "Append many events; query source and time",
+    "rationale": "Time-bucketed partitions support high-volume event history and bounded scans."
+  },
+  {
+    "_id": "4",
+    "application": "Cyber threat intelligence",
+    "domain": "Threat actor and indicator relationships",
+    "family": "Graph",
+    "recommended_db": "Neo4j",
+    "read_write_pattern": "Traverse shared infrastructure and related indicators",
+    "rationale": "Nodes and edges expose multi-hop associations for analyst review; a link is not proof of malicious activity."
+  }
+]
